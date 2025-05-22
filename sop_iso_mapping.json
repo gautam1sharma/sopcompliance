@@ -1,0 +1,1460 @@
+{
+  "SOP-1": {
+    "sop_text": "Document Owner: CISO, Information Security",
+    "iso_id": "6.1.1",
+    "iso_text": "Information security roles and responsibilities",
+    "similarity": 0.44427770376205444
+  },
+  "SOP-2": {
+    "sop_text": "This document is the property of and proprietary to Paytm. Contents of this document should not be disclosed to any",
+    "iso_id": "18.1.4",
+    "iso_text": "Privacy and protection of personally identifiable information",
+    "similarity": 0.35231417417526245
+  },
+  "SOP-3": {
+    "sop_text": "unauthorized person. This document may not, in whole or in part, be reduced, reproduced, stored in a retrieval",
+    "iso_id": "9.4.1",
+    "iso_text": "Information access restriction",
+    "similarity": 0.38758525252342224
+  },
+  "SOP-4": {
+    "sop_text": "system, translated, or transmitted in any form or by any means, electronic or manual.",
+    "iso_id": "13.2.1",
+    "iso_text": "Information transfer policies and procedures",
+    "similarity": 0.40830835700035095
+  },
+  "SOP-5": {
+    "sop_text": "Organization Name  One97 Communication Ltd (Paytm)",
+    "iso_id": "6.1.3",
+    "iso_text": "Contact with authorities",
+    "similarity": 0.3034055829048157
+  },
+  "SOP-6": {
+    "sop_text": "Document Name & Number  ISMS / POL -20 / Information Security Policy",
+    "iso_id": "13.2.1",
+    "iso_text": "Information transfer policies and procedures",
+    "similarity": 0.40781575441360474
+  },
+  "SOP-7": {
+    "sop_text": "Document Classification  Internal",
+    "iso_id": "8.2.1",
+    "iso_text": "Classification guidelines",
+    "similarity": 0.5548005104064941
+  },
+  "SOP-8": {
+    "sop_text": "Sl. No.  Version  Reviewed  /Approved By  Approval Date",
+    "iso_id": "18.1.1",
+    "iso_text": "Identification of applicable legislation",
+    "similarity": 0.2969161570072174
+  },
+  "SOP-9": {
+    "sop_text": "1. Objective  ................................ ................................ ................................ ................................ ...4",
+    "iso_id": "8.2.1",
+    "iso_text": "Classification guidelines",
+    "similarity": 0.3662768304347992
+  },
+  "SOP-10": {
+    "sop_text": "2. Scope  ................................ ................................ ................................ ................................ ......... 4",
+    "iso_id": "7.1.1",
+    "iso_text": "Screening",
+    "similarity": 0.3277426064014435
+  },
+  "SOP-11": {
+    "sop_text": "3. Compliance with Code of Conduct  ................................ ................................ ............................ 4",
+    "iso_id": "18.2.2",
+    "iso_text": "Compliance with security policies and standards",
+    "similarity": 0.5074256062507629
+  },
+  "SOP-12": {
+    "sop_text": "4. Policy Owner/Custodian  ................................ ................................ ................................ ........... 4",
+    "iso_id": "16.1.1",
+    "iso_text": "Responsibilities and procedures",
+    "similarity": 0.4984622895717621
+  },
+  "SOP-13": {
+    "sop_text": "5. Confidentiality  ................................ ................................ ................................ .......................... 4",
+    "iso_id": "18.1.4",
+    "iso_text": "Privacy and protection of personally identifiable information",
+    "similarity": 0.5787449479103088
+  },
+  "SOP-14": {
+    "sop_text": "6. Policy Linkage ................................ ................................ ................................ ........................... 4",
+    "iso_id": "18.1.1",
+    "iso_text": "Identification of applicable legislation",
+    "similarity": 0.34930819272994995
+  },
+  "SOP-15": {
+    "sop_text": "7. Policy Statement  ................................ ................................ ................................ ....................... 5",
+    "iso_id": "5.1.1",
+    "iso_text": "Policies for information security",
+    "similarity": 0.5269456505775452
+  },
+  "SOP-16": {
+    "sop_text": "7.1 What is Information? ................................ ................................ ................................ ................................ ...... 5",
+    "iso_id": "8.2.2",
+    "iso_text": "Labelling of information",
+    "similarity": 0.4484586715698242
+  },
+  "SOP-17": {
+    "sop_text": "7.2 What is Information Asset?  ................................ ................................ ................................ ............................  5",
+    "iso_id": "8.1.1",
+    "iso_text": "Inventory of Assets",
+    "similarity": 0.3871575891971588
+  },
+  "SOP-18": {
+    "sop_text": "7.3 What is Information Security?  ................................ ................................ ................................ .......................  5",
+    "iso_id": "5.1.1",
+    "iso_text": "Policies for information security",
+    "similarity": 0.4762306809425354
+  },
+  "SOP-19": {
+    "sop_text": "7.4 Principles of Information Security  ................................ ................................ ................................ .................  5",
+    "iso_id": "5.1.1",
+    "iso_text": "Policies for information security",
+    "similarity": 0.6715794205665588
+  },
+  "SOP-20": {
+    "sop_text": "7.5 What is Information Security Risk Management?  ................................ ................................ .........................  5",
+    "iso_id": "6.1.1",
+    "iso_text": "Information security roles and responsibilities",
+    "similarity": 0.4338585138320923
+  },
+  "SOP-21": {
+    "sop_text": "7.6 Information Security Objectives  ................................ ................................ ................................ ....................  6",
+    "iso_id": "5.1.1",
+    "iso_text": "Policies for information security",
+    "similarity": 0.5832518935203552
+  },
+  "SOP-22": {
+    "sop_text": "8. Ownership and Management  ................................ ................................ ................................ ....6",
+    "iso_id": "7.2.1",
+    "iso_text": "Management responsibilities",
+    "similarity": 0.5758153796195984
+  },
+  "SOP-23": {
+    "sop_text": "9. Information Security Governance  ................................ ................................ ............................. 6",
+    "iso_id": "5.1.1",
+    "iso_text": "Policies for information security",
+    "similarity": 0.5482808947563171
+  },
+  "SOP-24": {
+    "sop_text": "10. Information Security Requirement  ................................ ................................ ......................... 7",
+    "iso_id": "14.1.1",
+    "iso_text": "Information security requirements analysis and specification",
+    "similarity": 0.6713871955871582
+  },
+  "SOP-25": {
+    "sop_text": "11. Continual Improvement of Information Security Governance  ................................ ................ 7",
+    "iso_id": "17.1.2",
+    "iso_text": "Implementing information security continuity",
+    "similarity": 0.5974827408790588
+  },
+  "SOP-26": {
+    "sop_text": "12. ISMS Reference  ................................ ................................ ................................ ...................... 8",
+    "iso_id": "13.2.3",
+    "iso_text": "Electronic messaging",
+    "similarity": 0.5464234948158264
+  },
+  "SOP-27": {
+    "sop_text": "13.  Information Security Policy ................................ ................................ ................................ ....8",
+    "iso_id": "5.1.1",
+    "iso_text": "Policies for information security",
+    "similarity": 0.7302229404449463
+  },
+  "SOP-28": {
+    "sop_text": "14. Organization of Information Security  ................................ ................................ ..................... 8",
+    "iso_id": "6.1.1",
+    "iso_text": "Information security roles and responsibilities",
+    "similarity": 0.49352219700813293
+  },
+  "SOP-29": {
+    "sop_text": "15. Human Resource Security  ................................ ................................ ................................ ....... 9",
+    "iso_id": "11.1.3",
+    "iso_text": "Securing offices, rooms and facilities",
+    "similarity": 0.3880625069141388
+  },
+  "SOP-30": {
+    "sop_text": "16. Asset Management  ................................ ................................ ................................ .................. 9",
+    "iso_id": "8.2.3",
+    "iso_text": "Handling of assets",
+    "similarity": 0.4972209632396698
+  },
+  "SOP-31": {
+    "sop_text": "17. Identity & Access Management  ................................ ................................ ............................... 9",
+    "iso_id": "5.1.1",
+    "iso_text": "Policies for information security",
+    "similarity": 0.45676344633102417
+  },
+  "SOP-32": {
+    "sop_text": "18. Cryptography  ................................ ................................ ................................ .......................... 9",
+    "iso_id": "18.1.4",
+    "iso_text": "Privacy and protection of personally identifiable information",
+    "similarity": 0.3459182381629944
+  },
+  "SOP-33": {
+    "sop_text": "19. Physical and Environmental Security  ................................ ................................ ...................... 9",
+    "iso_id": "11.1.4",
+    "iso_text": "Protecting against external and environmental attacks",
+    "similarity": 0.49872061610221863
+  },
+  "SOP-34": {
+    "sop_text": "20. Operations Security  ................................ ................................ ................................ ................. 9",
+    "iso_id": "11.1.3",
+    "iso_text": "Securing offices, rooms and facilities",
+    "similarity": 0.4545004069805145
+  },
+  "SOP-35": {
+    "sop_text": "21. Communications Security  ................................ ................................ ................................ ....... 9",
+    "iso_id": "15.1.3",
+    "iso_text": "Informaiton and communication technology supply chain",
+    "similarity": 0.4116133749485016
+  },
+  "SOP-36": {
+    "sop_text": "22. System Acquisition, Development and Maintenance  ................................ ............................... 9",
+    "iso_id": "11.2.4",
+    "iso_text": "Equipment maintenance",
+    "similarity": 0.4255295991897583
+  },
+  "SOP-37": {
+    "sop_text": "23. Supplier Relationships  ................................ ................................ ................................ ..........  10",
+    "iso_id": "15.1.1",
+    "iso_text": "Information security policy for supplier relationships",
+    "similarity": 0.4998990595340729
+  },
+  "SOP-38": {
+    "sop_text": "24. Information Security  Incident Management  ................................ ................................ .........  10",
+    "iso_id": "16.1.5",
+    "iso_text": "Response in information security incidents",
+    "similarity": 0.46827268600463867
+  },
+  "SOP-39": {
+    "sop_text": "25. Information Security aspects of Business Continuity Management  ................................ .......  10",
+    "iso_id": "17.1.2",
+    "iso_text": "Implementing information security continuity",
+    "similarity": 0.5576972365379333
+  },
+  "SOP-40": {
+    "sop_text": "26. Compliance  ................................ ................................ ................................ ...........................  10",
+    "iso_id": "18.2.3",
+    "iso_text": "Technical compliance review",
+    "similarity": 0.4666083753108978
+  },
+  "SOP-41": {
+    "sop_text": "27. Policy Compliance  ................................ ................................ ................................ .................  10",
+    "iso_id": "18.2.2",
+    "iso_text": "Compliance with security policies and standards",
+    "similarity": 0.5649642944335938
+  },
+  "SOP-42": {
+    "sop_text": "27.1 Compliance Measurement  ................................ ................................ ................................ ..........................  10",
+    "iso_id": "18.2.3",
+    "iso_text": "Technical compliance review",
+    "similarity": 0.4615401029586792
+  },
+  "SOP-43": {
+    "sop_text": "27.2 Deviations and Exceptions  ................................ ................................ ................................ .........................  10",
+    "iso_id": "18.2.2",
+    "iso_text": "Compliance with security policies and standards",
+    "similarity": 0.16611655056476593
+  },
+  "SOP-44": {
+    "sop_text": "27.3 Non -Compliance  ................................ ................................ ................................ ................................ ........  11",
+    "iso_id": "18.2.3",
+    "iso_text": "Technical compliance review",
+    "similarity": 0.4693945646286011
+  },
+  "SOP-45": {
+    "sop_text": "28. Policy Review  ................................ ................................ ................................ ........................  11",
+    "iso_id": "16.1.1",
+    "iso_text": "Responsibilities and procedures",
+    "similarity": 0.4146074950695038
+  },
+  "SOP-46": {
+    "sop_text": "The objective of this policy is to ensure that management will establish an information security management",
+    "iso_id": "5.1.2",
+    "iso_text": "Review of the policies for information security",
+    "similarity": 0.6907812356948853
+  },
+  "SOP-47": {
+    "sop_text": "process to address information security risk requirements. It may include information security objectives",
+    "iso_id": "14.1.1",
+    "iso_text": "Information security requirements analysis and specification",
+    "similarity": 0.6604799628257751
+  },
+  "SOP-48": {
+    "sop_text": "which shall be reviewed and updated on a regular basis, to be made available as documented information",
+    "iso_id": "12.1.1",
+    "iso_text": "Documented operating procedures",
+    "similarity": 0.46158164739608765
+  },
+  "SOP-49": {
+    "sop_text": "for all colleagues within the organization and communicated in a timely manner, in line with business",
+    "iso_id": "13.2.1",
+    "iso_text": "Information transfer policies and procedures",
+    "similarity": 0.44291484355926514
+  },
+  "SOP-50": {
+    "sop_text": "related security risks, relevant complia nce, legal and regulatory requirements.",
+    "iso_id": "18.2.2",
+    "iso_text": "Compliance with security policies and standards",
+    "similarity": 0.4818774163722992
+  },
+  "SOP-51": {
+    "sop_text": "One97 Communications Limited and its subsidiaries, affiliates and any other investments for the purpose",
+    "iso_id": "8.1.4",
+    "iso_text": "Return of assets",
+    "similarity": 0.3337744176387787
+  },
+  "SOP-52": {
+    "sop_text": "of this policy are collectively referred to as \u201cOne97\u201d or \u201cthe Company\u201d or \u201cPaytm\u201d. One97 is committed",
+    "iso_id": "7.1.2",
+    "iso_text": "Terms and conditions of employment",
+    "similarity": 0.2922899127006531
+  },
+  "SOP-53": {
+    "sop_text": "to maintain the highest level of professional and  ethical standards in the conduct of the  business in India",
+    "iso_id": "16.1.1",
+    "iso_text": "Responsibilities and procedures",
+    "similarity": 0.478290855884552
+  },
+  "SOP-54": {
+    "sop_text": "and around the world. This Policy is applicable to One97 including all full -time or part -time employees,",
+    "iso_id": "7.1.2",
+    "iso_text": "Terms and conditions of employment",
+    "similarity": 0.38530439138412476
+  },
+  "SOP-55": {
+    "sop_text": "interns , trainees , vendors, customers, third parties including contractors, sub -contractors to third parties or",
+    "iso_id": "7.1.2",
+    "iso_text": "Terms and conditions of employment",
+    "similarity": 0.4669038653373718
+  },
+  "SOP-56": {
+    "sop_text": "anyone who has access to, handles, use or process corporate information. All users must understand and",
+    "iso_id": "6.1.1",
+    "iso_text": "Information security roles and responsibilities",
+    "similarity": 0.46368664503097534
+  },
+  "SOP-57": {
+    "sop_text": "adopt use of this policy and are responsible for ensuring the safety and security of the Organization\u2019s",
+    "iso_id": "18.2.2",
+    "iso_text": "Compliance with security policies and standards",
+    "similarity": 0.6594856381416321
+  },
+  "SOP-58": {
+    "sop_text": "systems and the information t hat they use or manipulate.",
+    "iso_id": "17.2.1",
+    "iso_text": "Availability of information processing facilities",
+    "similarity": 0.4880290925502777
+  },
+  "SOP-59": {
+    "sop_text": "3. Compliance with Code of Conduct",
+    "iso_id": "16.1.1",
+    "iso_text": "Responsibilities and procedures",
+    "similarity": 0.5252707004547119
+  },
+  "SOP-60": {
+    "sop_text": "Policy end users remain responsible to ensure the confidentiality, integrity and availability of Paytm\u2019s",
+    "iso_id": "5.1.2",
+    "iso_text": "Review of the policies for information security",
+    "similarity": 0.44238609075546265
+  },
+  "SOP-61": {
+    "sop_text": "information assets. Any employee to have violated this policy may be subjected to disciplinary action, up",
+    "iso_id": "5.1.2",
+    "iso_text": "Review of the policies for information security",
+    "similarity": 0.4619763195514679
+  },
+  "SOP-62": {
+    "sop_text": "to and including termination of employment as  per the disciplinary procedures at Paytm as outlined in the",
+    "iso_id": "7.3.1",
+    "iso_text": "Termination or change of employment responsibilities",
+    "similarity": 0.5306612849235535
+  },
+  "SOP-63": {
+    "sop_text": "Consequence Management policy . Any violation of this policy by the supplier shall be reported to his/ her",
+    "iso_id": "15.1.1",
+    "iso_text": "Information security policy for supplier relationships",
+    "similarity": 0.5053942203521729
+  },
+  "SOP-64": {
+    "sop_text": "organization in order to take appropriate action. The supplier organization may be subjected to penalties",
+    "iso_id": "15.1.1",
+    "iso_text": "Information security policy for supplier relationships",
+    "similarity": 0.5516379475593567
+  },
+  "SOP-65": {
+    "sop_text": "and/ or Legal Action as per the contractual agreement between both parties. Non -compliance to this policy",
+    "iso_id": "7.3.1",
+    "iso_text": "Termination or change of employment responsibilities",
+    "similarity": 0.4621661305427551
+  },
+  "SOP-66": {
+    "sop_text": "may lead to civil litig ation and/or criminal prosecution under applicable national and federal statutes.",
+    "iso_id": "6.1.3",
+    "iso_text": "Contact with authorities",
+    "similarity": 0.4055575430393219
+  },
+  "SOP-67": {
+    "sop_text": "This document is owned by the Chief Information Security Officer (CISO) and he is responsible for",
+    "iso_id": "13.2.1",
+    "iso_text": "Information transfer policies and procedures",
+    "similarity": 0.46304240822792053
+  },
+  "SOP-68": {
+    "sop_text": "maintaining versions, ensuring dissemination and  issuing clarifications whenever required.",
+    "iso_id": "16.1.1",
+    "iso_text": "Responsibilities and procedures",
+    "similarity": 0.5282090902328491
+  },
+  "SOP-69": {
+    "sop_text": "This document is internal and hence would be made available to employees through Paytm\u2019s Intranet Portal",
+    "iso_id": "9.4.1",
+    "iso_text": "Information access restriction",
+    "similarity": 0.345186710357666
+  },
+  "SOP-70": {
+    "sop_text": "and other similar channels/websites.",
+    "iso_id": "13.2.3",
+    "iso_text": "Electronic messaging",
+    "similarity": 0.2083534300327301
+  },
+  "SOP-71": {
+    "sop_text": "This document is primarily based on ISO 27001:2013 guidelines and has linkages & references from",
+    "iso_id": "18.2.2",
+    "iso_text": "Compliance with security policies and standards",
+    "similarity": 0.468363881111145
+  },
+  "SOP-72": {
+    "sop_text": "industry standard security framework and relevant regulatory publications.",
+    "iso_id": "18.2.2",
+    "iso_text": "Compliance with security policies and standards",
+    "similarity": 0.5886905193328857
+  },
+  "SOP-73": {
+    "sop_text": "The primary goal is to safeguard Paytm\u2019s information and systems from damage, destruction,",
+    "iso_id": "5.1.1",
+    "iso_text": "Policies for information security",
+    "similarity": 0.3948255479335785
+  },
+  "SOP-74": {
+    "sop_text": "unau thorized disclosure, or modification, whether accidental or intentional. Additionally, Paytm's",
+    "iso_id": "18.1.4",
+    "iso_text": "Privacy and protection of personally identifiable information",
+    "similarity": 0.36833080649375916
+  },
+  "SOP-75": {
+    "sop_text": "information systems must adhere to relevant laws, regulations, and contractual obligations. Paytm is",
+    "iso_id": "18.2.2",
+    "iso_text": "Compliance with security policies and standards",
+    "similarity": 0.3910723924636841
+  },
+  "SOP-76": {
+    "sop_text": "dedicated to maintaining and continually enhancing its infor mation security measures.",
+    "iso_id": "17.1.2",
+    "iso_text": "Implementing information security continuity",
+    "similarity": 0.5843973159790039
+  },
+  "SOP-77": {
+    "sop_text": "Information is the result of processing data in a way that adds to the knowledge of the receiver.",
+    "iso_id": "8.2.2",
+    "iso_text": "Labelling of information",
+    "similarity": 0.504960834980011
+  },
+  "SOP-78": {
+    "sop_text": "Information can exist in many forms. It can be printed or written on paper, stored electronically,",
+    "iso_id": "8.2.2",
+    "iso_text": "Labelling of information",
+    "similarity": 0.5841725468635559
+  },
+  "SOP-79": {
+    "sop_text": "transmitted by post or by using electronic means, shown on films, or spoken in conversation.",
+    "iso_id": "13.2.3",
+    "iso_text": "Electronic messaging",
+    "similarity": 0.5277613401412964
+  },
+  "SOP-80": {
+    "sop_text": "An asset is anything that has value to an organization. Any information, like other important business",
+    "iso_id": "8.2.3",
+    "iso_text": "Handling of assets",
+    "similarity": 0.5146709084510803
+  },
+  "SOP-81": {
+    "sop_text": "assets, which has value to business , is Information Asset. Information Systems which help in",
+    "iso_id": "8.2.3",
+    "iso_text": "Handling of assets",
+    "similarity": 0.5523930191993713
+  },
+  "SOP-82": {
+    "sop_text": "processing, storing and disseminating information are also Information Assets.",
+    "iso_id": "17.2.1",
+    "iso_text": "Availability of information processing facilities",
+    "similarity": 0.5262552499771118
+  },
+  "SOP-83": {
+    "sop_text": "7.3 What is Information Security?",
+    "iso_id": "5.1.1",
+    "iso_text": "Policies for information security",
+    "similarity": 0.5919713973999023
+  },
+  "SOP-84": {
+    "sop_text": "Information Security is protection of Information and Information Assets, from a  wide range of threats",
+    "iso_id": "6.1.1",
+    "iso_text": "Information security roles and responsibilities",
+    "similarity": 0.6076785922050476
+  },
+  "SOP-85": {
+    "sop_text": "to ensure business continuity and to minimize business risk thereby enhancing the return on",
+    "iso_id": "17.1.2",
+    "iso_text": "Implementing information security continuity",
+    "similarity": 0.4565490782260895
+  },
+  "SOP-86": {
+    "sop_text": "investments. This is achieved by implementing a suitable set of controls, including policies, processes,",
+    "iso_id": "12.7.1",
+    "iso_text": "Information systems audit controls",
+    "similarity": 0.48871201276779175
+  },
+  "SOP-87": {
+    "sop_text": "procedures, organizational structure s and technology. These controls need to be established,",
+    "iso_id": "18.1.5",
+    "iso_text": "Regulation of cryptographic controls",
+    "similarity": 0.5375437140464783
+  },
+  "SOP-88": {
+    "sop_text": "implemented, monitored, reviewed and improved to ensure that the specific security and business",
+    "iso_id": "18.2.2",
+    "iso_text": "Compliance with security policies and standards",
+    "similarity": 0.6234623789787292
+  },
+  "SOP-89": {
+    "sop_text": "objectives of the organization are met. This should be done in conjunction with other business",
+    "iso_id": "7.2.1",
+    "iso_text": "Management responsibilities",
+    "similarity": 0.46127253770828247
+  },
+  "SOP-90": {
+    "sop_text": "7.4 Principles of Information Security",
+    "iso_id": "5.1.1",
+    "iso_text": "Policies for information security",
+    "similarity": 0.6906477212905884
+  },
+  "SOP-91": {
+    "sop_text": "Information Security Program is based on the following principles:",
+    "iso_id": "5.1.1",
+    "iso_text": "Policies for information security",
+    "similarity": 0.6445636749267578
+  },
+  "SOP-92": {
+    "sop_text": "a. Confidentiality:  Protection of information by ensuring that information is accessible only to",
+    "iso_id": "9.4.1",
+    "iso_text": "Information access restriction",
+    "similarity": 0.5543158054351807
+  },
+  "SOP-93": {
+    "sop_text": "b. Integrity:  Assurin g the accuracy and completeness of information and its associated",
+    "iso_id": "13.2.2",
+    "iso_text": "Agreements on information transfer",
+    "similarity": 0.37456631660461426
+  },
+  "SOP-94": {
+    "sop_text": "information processing methods and ensuring controls for preventing unauthorized",
+    "iso_id": "13.2.1",
+    "iso_text": "Information transfer policies and procedures",
+    "similarity": 0.5765976309776306
+  },
+  "SOP-95": {
+    "sop_text": "c. Availability:  Ensuring that information and associated assets or systems are available to",
+    "iso_id": "17.2.1",
+    "iso_text": "Availability of information processing facilities",
+    "similarity": 0.33939462900161743
+  },
+  "SOP-96": {
+    "sop_text": "authorized users when required.",
+    "iso_id": "9.1.1",
+    "iso_text": "Access control policy",
+    "similarity": 0.5274370908737183
+  },
+  "SOP-97": {
+    "sop_text": "7.5 What is Information Security Risk Management?",
+    "iso_id": "6.1.5",
+    "iso_text": "Information Security in Project Management",
+    "similarity": 0.5135904550552368
+  },
+  "SOP-98": {
+    "sop_text": "An Information Security Risk is the probability that an Information Asset will be subjecte d to loss,",
+    "iso_id": "6.1.1",
+    "iso_text": "Information security roles and responsibilities",
+    "similarity": 0.46188315749168396
+  },
+  "SOP-99": {
+    "sop_text": "destruction, unauthorized modification and/or disclosure.",
+    "iso_id": "8.3.2",
+    "iso_text": "Disposal of media",
+    "similarity": 0.4288899600505829
+  },
+  "SOP-100": {
+    "sop_text": "Information Security Risk Management pertains to protecting critical information & reducing",
+    "iso_id": "6.1.1",
+    "iso_text": "Information security roles and responsibilities",
+    "similarity": 0.5464429259300232
+  },
+  "SOP-101": {
+    "sop_text": "Information Security Risk for Paytm, including associated corporate assets and services by:",
+    "iso_id": "6.1.5",
+    "iso_text": "Information Security in Project Management",
+    "similarity": 0.45888957381248474
+  },
+  "SOP-102": {
+    "sop_text": "a. Identification of security requirements and associated controls, based on a pre -defined",
+    "iso_id": "14.1.1",
+    "iso_text": "Information security requirements analysis and specification",
+    "similarity": 0.6699510812759399
+  },
+  "SOP-103": {
+    "sop_text": "assessment of Information Security Risks.",
+    "iso_id": "18.2.1",
+    "iso_text": "Independent review of information security",
+    "similarity": 0.6938067674636841
+  },
+  "SOP-104": {
+    "sop_text": "b. Effective implementation of controls to minimize Information Security breach.",
+    "iso_id": "5.1.1",
+    "iso_text": "Policies for information security",
+    "similarity": 0.6216443181037903
+  },
+  "SOP-105": {
+    "sop_text": "c. Continuous monitoring & review of controls to deter mine their effectiveness.",
+    "iso_id": "11.2.4",
+    "iso_text": "Equipment maintenance",
+    "similarity": 0.4533325433731079
+  },
+  "SOP-106": {
+    "sop_text": "7.6 Information Security Objectives",
+    "iso_id": "5.1.1",
+    "iso_text": "Policies for information security",
+    "similarity": 0.5824090242385864
+  },
+  "SOP-107": {
+    "sop_text": "\uf0b7 Protect Information and Systems: Ensure that Paytm\u2019s information and systems are safeguarded",
+    "iso_id": "6.1.5",
+    "iso_text": "Information Security in Project Management",
+    "similarity": 0.4800482392311096
+  },
+  "SOP-108": {
+    "sop_text": "against damage, destruction, unauthorized access, and changes, whether they occur accidentally  or",
+    "iso_id": "11.1.3",
+    "iso_text": "Securing offices, rooms and facilities",
+    "similarity": 0.5149156451225281
+  },
+  "SOP-109": {
+    "sop_text": "\uf0b7 Compliance: Ensure that Paytm\u2019s information systems comply with all applicable laws,",
+    "iso_id": "18.2.3",
+    "iso_text": "Technical compliance review",
+    "similarity": 0.5212088227272034
+  },
+  "SOP-110": {
+    "sop_text": "regulations, and contractual obligations.",
+    "iso_id": "16.1.1",
+    "iso_text": "Responsibilities and procedures",
+    "similarity": 0.524899959564209
+  },
+  "SOP-111": {
+    "sop_text": "\uf0b7 Continuous Improvement: Maintain and continually improve Paytm\u2019s information security",
+    "iso_id": "17.1.2",
+    "iso_text": "Implementing information security continuity",
+    "similarity": 0.4888702630996704
+  },
+  "SOP-112": {
+    "sop_text": "practices to adapt to evo lving threats and standards.",
+    "iso_id": "11.1.4",
+    "iso_text": "Protecting against external and environmental attacks",
+    "similarity": 0.5619749426841736
+  },
+  "SOP-113": {
+    "sop_text": "\uf0b7 To avoid conflict of interest , formulation of policy and implementati on / compliance to the policy",
+    "iso_id": "6.1.4",
+    "iso_text": "Contact with special interest groups",
+    "similarity": 0.4744163453578949
+  },
+  "SOP-114": {
+    "sop_text": "\uf0b7 The Chief Information Security Officer (CISO) is responsible for articulating the IS Policy that",
+    "iso_id": "5.1.1",
+    "iso_text": "Policies for information security",
+    "similarity": 0.6410199999809265
+  },
+  "SOP-115": {
+    "sop_text": "Paytm uses to protect the information assets apart from coordinating the security related Issues",
+    "iso_id": "6.1.5",
+    "iso_text": "Information Security in Project Management",
+    "similarity": 0.43756380677223206
+  },
+  "SOP-116": {
+    "sop_text": "within the organization as well as relevant external agencies.",
+    "iso_id": "16.1.1",
+    "iso_text": "Responsibilities and procedures",
+    "similarity": 0.44643932580947876
+  },
+  "SOP-117": {
+    "sop_text": "\uf0b7 All the employees and external parties as defined in policy are responsible for ensuring the",
+    "iso_id": "16.1.1",
+    "iso_text": "Responsibilities and procedures",
+    "similarity": 0.6437498331069946
+  },
+  "SOP-118": {
+    "sop_text": "confidentiality, integrity, and availability of Paytm\u2019s information assets.",
+    "iso_id": "18.1.4",
+    "iso_text": "Privacy and protection of personally identifiable information",
+    "similarity": 0.573671817779541
+  },
+  "SOP-119": {
+    "sop_text": "\uf0b7 The information se curity policy shall be approved by the Board if there are any changes or",
+    "iso_id": "5.1.2",
+    "iso_text": "Review of the policies for information security",
+    "similarity": 0.5219841599464417
+  },
+  "SOP-120": {
+    "sop_text": "9. Information Security Governance",
+    "iso_id": "5.1.1",
+    "iso_text": "Policies for information security",
+    "similarity": 0.6185338497161865
+  },
+  "SOP-121": {
+    "sop_text": "\uf0b7 Executive management acknowledges the importance of ensuring information security and is",
+    "iso_id": "5.1.2",
+    "iso_text": "Review of the policies for information security",
+    "similarity": 0.6068655252456665
+  },
+  "SOP-122": {
+    "sop_text": "committed to supporting the information security goals and principles.",
+    "iso_id": "5.1.1",
+    "iso_text": "Policies for information security",
+    "similarity": 0.6054434776306152
+  },
+  "SOP-123": {
+    "sop_text": "\uf0b7 Paytm should establish an Information security governance program, based on international",
+    "iso_id": "5.1.2",
+    "iso_text": "Review of the policies for information security",
+    "similarity": 0.4554852545261383
+  },
+  "SOP-124": {
+    "sop_text": "standards and globally accepted be st practices like ISO 27001 .",
+    "iso_id": "18.2.2",
+    "iso_text": "Compliance with security policies and standards",
+    "similarity": 0.56480473279953
+  },
+  "SOP-125": {
+    "sop_text": "\uf0b7 CISO is accountable for Paytm\u2019s information security governance program and enforcement of this",
+    "iso_id": "6.1.1",
+    "iso_text": "Information security roles and responsibilities",
+    "similarity": 0.5044237375259399
+  },
+  "SOP-126": {
+    "sop_text": "\uf0b7 The information security team is responsible for monitoring and reviewing I nformation Systems",
+    "iso_id": "6.1.1",
+    "iso_text": "Information security roles and responsibilities",
+    "similarity": 0.6451090574264526
+  },
+  "SOP-127": {
+    "sop_text": "for compliance with information security policies and producing regular management reports on",
+    "iso_id": "6.1.1",
+    "iso_text": "Information security roles and responsibilities",
+    "similarity": 0.622925877571106
+  },
+  "SOP-128": {
+    "sop_text": "the status of information security. Team is also responsible for ensuring information security",
+    "iso_id": "6.1.1",
+    "iso_text": "Information security roles and responsibilities",
+    "similarity": 0.7075774669647217
+  },
+  "SOP-129": {
+    "sop_text": "policies are regularly reviewed and updated as n ecessary to ensure that they remain appropriate in",
+    "iso_id": "18.2.2",
+    "iso_text": "Compliance with security policies and standards",
+    "similarity": 0.5526148676872253
+  },
+  "SOP-130": {
+    "sop_text": "the case of any relevant changes to the law, organizational policies, or contractual changes.",
+    "iso_id": "12.1.2",
+    "iso_text": "Change management",
+    "similarity": 0.5767108798027039
+  },
+  "SOP-131": {
+    "sop_text": "\uf0b7 Paytm shall carry out comprehensive security risk assessment of their people, IT, business process",
+    "iso_id": "6.1.5",
+    "iso_text": "Information Security in Project Management",
+    "similarity": 0.4005339741706848
+  },
+  "SOP-132": {
+    "sop_text": "environment,  etc., to identify risk exposures with remedial measures and residual risks.",
+    "iso_id": "12.6.1",
+    "iso_text": "Management of technical vulnerabilities",
+    "similarity": 0.4364534318447113
+  },
+  "SOP-133": {
+    "sop_text": "\uf0b7 Reports on risk assessment, security compliance posture, security audit reports and security",
+    "iso_id": "16.1.3",
+    "iso_text": "Reporting information security weaknesses",
+    "similarity": 0.6330051422119141
+  },
+  "SOP-134": {
+    "sop_text": "incidents  shall be presented to the management .",
+    "iso_id": "16.1.2",
+    "iso_text": "Reporting information security events",
+    "similarity": 0.5208925008773804
+  },
+  "SOP-135": {
+    "sop_text": "\uf0b7 Paytm shall carry out and submit to th e management  annually , internal and annual external audit",
+    "iso_id": "18.2.3",
+    "iso_text": "Technical compliance review",
+    "similarity": 0.43872305750846863
+  },
+  "SOP-136": {
+    "sop_text": "reports; annual Vulnerability Assessment / Penetration Test (VAPT) reports.",
+    "iso_id": "16.1.3",
+    "iso_text": "Reporting information security weaknesses",
+    "similarity": 0.48880961537361145
+  },
+  "SOP-137": {
+    "sop_text": "10. Information Security Requirement",
+    "iso_id": "14.1.1",
+    "iso_text": "Information security requirements analysis and specification",
+    "similarity": 0.6844038963317871
+  },
+  "SOP-138": {
+    "sop_text": "\uf0b7 Paytm should follow a risk -driven methodology to minimize the security risk level for its processes",
+    "iso_id": "14.2.1",
+    "iso_text": "Secure development policy",
+    "similarity": 0.3720947802066803
+  },
+  "SOP-139": {
+    "sop_text": "and information assets, including (but not limited to) data, facilities, technology, application",
+    "iso_id": "17.2.1",
+    "iso_text": "Availability of information processing facilities",
+    "similarity": 0.5093081593513489
+  },
+  "SOP-140": {
+    "sop_text": "\uf0b7 Paytm should develop and follow a detailed set of enforceable policies and procedures",
+    "iso_id": "16.1.1",
+    "iso_text": "Responsibilities and procedures",
+    "similarity": 0.4744494557380676
+  },
+  "SOP-141": {
+    "sop_text": "commensurate with the criticality a nd sensitivity of information and processing facilities",
+    "iso_id": "17.2.1",
+    "iso_text": "Availability of information processing facilities",
+    "similarity": 0.7279447913169861
+  },
+  "SOP-142": {
+    "sop_text": "\uf0b7 Paytm should apply all reasonable, appropriate, practical, and effective security measures to",
+    "iso_id": "18.2.2",
+    "iso_text": "Compliance with security policies and standards",
+    "similarity": 0.4256134629249573
+  },
+  "SOP-143": {
+    "sop_text": "adequately protect its critical information and information processing facilities.",
+    "iso_id": "17.2.1",
+    "iso_text": "Availability of information processing facilities",
+    "similarity": 0.6012625694274902
+  },
+  "SOP-144": {
+    "sop_text": "\uf0b7 Paytm should apply the necessary security controls required to meet its contractual, legislative,",
+    "iso_id": "18.2.2",
+    "iso_text": "Compliance with security policies and standards",
+    "similarity": 0.4903746545314789
+  },
+  "SOP-145": {
+    "sop_text": "regulatory, privacy and ethical responsibilities.",
+    "iso_id": "18.1.5",
+    "iso_text": "Regulation of cryptographic controls",
+    "similarity": 0.4942106604576111
+  },
+  "SOP-146": {
+    "sop_text": "\uf0b7 Paytm management must ensure that information security requirements are assessed and identified",
+    "iso_id": "14.1.1",
+    "iso_text": "Information security requirements analysis and specification",
+    "similarity": 0.5629552602767944
+  },
+  "SOP-147": {
+    "sop_text": "during the initiation of every info rmation system or service project.",
+    "iso_id": "13.2.1",
+    "iso_text": "Information transfer policies and procedures",
+    "similarity": 0.5438562035560608
+  },
+  "SOP-148": {
+    "sop_text": "\uf0b7 Any information system or service hosted or managed by Paytm should follow and comply with",
+    "iso_id": "18.2.2",
+    "iso_text": "Compliance with security policies and standards",
+    "similarity": 0.406781405210495
+  },
+  "SOP-149": {
+    "sop_text": "Paytm\u2019s information security policies and procedures.",
+    "iso_id": "5.1.1",
+    "iso_text": "Policies for information security",
+    "similarity": 0.5974825024604797
+  },
+  "SOP-150": {
+    "sop_text": "\uf0b7 A standard Information Security Confidentiality Clause (including a Non-Disclosure Agreement)",
+    "iso_id": "13.2.4",
+    "iso_text": "Confidentiality or non-disclosure agreements",
+    "similarity": 0.6740851998329163
+  },
+  "SOP-151": {
+    "sop_text": "and relevant compliance obligations should be included in all agreements, contracts, and purchase",
+    "iso_id": "18.2.2",
+    "iso_text": "Compliance with security policies and standards",
+    "similarity": 0.5212650895118713
+  },
+  "SOP-152": {
+    "sop_text": "orders between Paytm, and any third party being granted access to confidential or sensitive data,",
+    "iso_id": "18.1.4",
+    "iso_text": "Privacy and protection of personally identifiable information",
+    "similarity": 0.4135145843029022
+  },
+  "SOP-153": {
+    "sop_text": "\uf0b7 Paytm sho uld ensure that it respects the intellectual property rights of any third party whose",
+    "iso_id": "18.1.2",
+    "iso_text": "Intellectual Property Rights",
+    "similarity": 0.5582796931266785
+  },
+  "SOP-154": {
+    "sop_text": "products are used for business purposes.",
+    "iso_id": "8.1.1",
+    "iso_text": "Inventory of Assets",
+    "similarity": 0.3964936435222626
+  },
+  "SOP-155": {
+    "sop_text": "\uf0b7 Paytm should ensure continuity for critical business processes, in case of any disturbance, by",
+    "iso_id": "17.1.2",
+    "iso_text": "Implementing information security continuity",
+    "similarity": 0.4508437514305115
+  },
+  "SOP-156": {
+    "sop_text": "implementing proper business conti nuity & disaster recovery plans and solutions.",
+    "iso_id": "17.1.1",
+    "iso_text": "Planning information security continuity",
+    "similarity": 0.5528568029403687
+  },
+  "SOP-157": {
+    "sop_text": "\uf0b7 It is the responsibility of all users to report any security related or suspected incidents to the",
+    "iso_id": "16.1.3",
+    "iso_text": "Reporting information security weaknesses",
+    "similarity": 0.5688920617103577
+  },
+  "SOP-158": {
+    "sop_text": "Information Security team. All breaches of information security should be reported to the",
+    "iso_id": "16.1.2",
+    "iso_text": "Reporting information security events",
+    "similarity": 0.6875560283660889
+  },
+  "SOP-159": {
+    "sop_text": "Information Security  team and investigated by the appropriate staff, depending upon the type of",
+    "iso_id": "16.1.5",
+    "iso_text": "Response in information security incidents",
+    "similarity": 0.5754996538162231
+  },
+  "SOP-160": {
+    "sop_text": "\uf0b7 Any violation, non -adherence to this policy should be considered seriously and should be liable for",
+    "iso_id": "18.2.2",
+    "iso_text": "Compliance with security policies and standards",
+    "similarity": 0.4818650484085083
+  },
+  "SOP-161": {
+    "sop_text": "disciplinary action that may include termination.",
+    "iso_id": "7.2.3",
+    "iso_text": "Disciplinary process",
+    "similarity": 0.5346350073814392
+  },
+  "SOP-162": {
+    "sop_text": "11. Continual Improvement of Information Security Governance",
+    "iso_id": "17.1.2",
+    "iso_text": "Implementing information security continuity",
+    "similarity": 0.6174881458282471
+  },
+  "SOP-163": {
+    "sop_text": "\uf0b7 The Information Security Policy should be reviewed and approved by the Board whenever there is",
+    "iso_id": "5.1.2",
+    "iso_text": "Review of the policies for information security",
+    "similarity": 0.681996762752533
+  },
+  "SOP-164": {
+    "sop_text": "\uf0b7 The Information Security Team should facilitate the overall policy review process.",
+    "iso_id": "5.1.2",
+    "iso_text": "Review of the policies for information security",
+    "similarity": 0.6505855321884155
+  },
+  "SOP-165": {
+    "sop_text": "\uf0b7 Paytm should define and establish responsibility for implementing and maintaining all relevant",
+    "iso_id": "16.1.1",
+    "iso_text": "Responsibilities and procedures",
+    "similarity": 0.45288315415382385
+  },
+  "SOP-166": {
+    "sop_text": "compliance program across the environment.",
+    "iso_id": "18.2.3",
+    "iso_text": "Technical compliance review",
+    "similarity": 0.5302091836929321
+  },
+  "SOP-167": {
+    "sop_text": "\uf0b7 All employees should have an acceptable level of security education and knowledge and be aware",
+    "iso_id": "7.2.2",
+    "iso_text": "Information security awareness, education and training",
+    "similarity": 0.6760258674621582
+  },
+  "SOP-168": {
+    "sop_text": "of their responsibilit ies towards information security. Therefore, the Information Security Team",
+    "iso_id": "6.1.1",
+    "iso_text": "Information security roles and responsibilities",
+    "similarity": 0.7093919515609741
+  },
+  "SOP-169": {
+    "sop_text": "should introduce various programs for security awareness. All employees should participate in the",
+    "iso_id": "18.2.2",
+    "iso_text": "Compliance with security policies and standards",
+    "similarity": 0.6010645627975464
+  },
+  "SOP-170": {
+    "sop_text": "security awareness programs during induction and annual basis.",
+    "iso_id": "7.2.2",
+    "iso_text": "Information security awareness, education and training",
+    "similarity": 0.6460344791412354
+  },
+  "SOP-171": {
+    "sop_text": "\uf0b7 The Information Security Team must deliver all approved and endorsed policies, standards, and",
+    "iso_id": "5.1.1",
+    "iso_text": "Policies for information security",
+    "similarity": 0.6064145565032959
+  },
+  "SOP-172": {
+    "sop_text": "procedures to all employees via its official channel, in addition to other efficient channels.",
+    "iso_id": "12.1.1",
+    "iso_text": "Documented operating procedures",
+    "similarity": 0.5091878175735474
+  },
+  "SOP-173": {
+    "sop_text": "For ease of reference, this document is organized following the  14 security domains of ISO 27001:2013",
+    "iso_id": "18.2.2",
+    "iso_text": "Compliance with security policies and standards",
+    "similarity": 0.598156213760376
+  },
+  "SOP-174": {
+    "sop_text": "2. Organization of Information Security",
+    "iso_id": "5.1.1",
+    "iso_text": "Policies for information security",
+    "similarity": 0.6349247694015503
+  },
+  "SOP-175": {
+    "sop_text": "5. Identity & Access Management",
+    "iso_id": "9.2.4",
+    "iso_text": "Management of secret authentication information of users",
+    "similarity": 0.5427083969116211
+  },
+  "SOP-176": {
+    "sop_text": "7. Physical and Environmental Security",
+    "iso_id": "11.1.3",
+    "iso_text": "Securing offices, rooms and facilities",
+    "similarity": 0.6553074717521667
+  },
+  "SOP-177": {
+    "sop_text": "10. System Acquisition, Development and Maintenance",
+    "iso_id": "14.2.2",
+    "iso_text": "System change control procedures",
+    "similarity": 0.5527645349502563
+  },
+  "SOP-178": {
+    "sop_text": "12. Information Security Incident Management",
+    "iso_id": "16.1.5",
+    "iso_text": "Response in information security incidents",
+    "similarity": 0.6878794431686401
+  },
+  "SOP-179": {
+    "sop_text": "13. Information Security aspects of Business Continuity Management",
+    "iso_id": "17.1.2",
+    "iso_text": "Implementing information security continuity",
+    "similarity": 0.7011577486991882
+  },
+  "SOP-180": {
+    "sop_text": "13.  Information Security Policy",
+    "iso_id": "5.1.1",
+    "iso_text": "Policies for information security",
+    "similarity": 0.71977698802948
+  },
+  "SOP-181": {
+    "sop_text": "The Information Security policy provides management direction and support to Information Security. It",
+    "iso_id": "5.1.2",
+    "iso_text": "Review of the policies for information security",
+    "similarity": 0.7251673936843872
+  },
+  "SOP-182": {
+    "sop_text": "explains the policies, principles, legislative, regulatory, and contractual compliance requirements for",
+    "iso_id": "16.1.1",
+    "iso_text": "Responsibilities and procedures",
+    "similarity": 0.6332654356956482
+  },
+  "SOP-183": {
+    "sop_text": "14. Organization of Information Security",
+    "iso_id": "6.1.1",
+    "iso_text": "Information security roles and responsibilities",
+    "similarity": 0.6360825300216675
+  },
+  "SOP-184": {
+    "sop_text": "The Or ganization of Information Security policy provides a structured framework for managing",
+    "iso_id": "5.1.1",
+    "iso_text": "Policies for information security",
+    "similarity": 0.7308031320571899
+  },
+  "SOP-185": {
+    "sop_text": "Information Security at Paytm. Refer (Organization of Information Security Policy)  for detailed policy.",
+    "iso_id": "5.1.2",
+    "iso_text": "Review of the policies for information security",
+    "similarity": 0.5312274694442749
+  },
+  "SOP-186": {
+    "sop_text": "All employees / contractors at all le vels shall understand their responsibilities towards Information Security",
+    "iso_id": "7.2.2",
+    "iso_text": "Information security awareness, education and training",
+    "similarity": 0.6661790013313293
+  },
+  "SOP-187": {
+    "sop_text": "and shall be suitable for the roles for which they are considered. This includes Information Security",
+    "iso_id": "14.1.1",
+    "iso_text": "Information security requirements analysis and specification",
+    "similarity": 0.4902341365814209
+  },
+  "SOP-188": {
+    "sop_text": "responsibilities in job definitions, user training and response to Information S ecurity incidents. Refer",
+    "iso_id": "6.1.1",
+    "iso_text": "Information security roles and responsibilities",
+    "similarity": 0.7836867570877075
+  },
+  "SOP-189": {
+    "sop_text": "(Human Resources Security Policy)  for detailed policy.",
+    "iso_id": "5.1.1",
+    "iso_text": "Policies for information security",
+    "similarity": 0.5454937219619751
+  },
+  "SOP-190": {
+    "sop_text": "Assets associated with information / information systems and information processing facilities shall be",
+    "iso_id": "8.2.3",
+    "iso_text": "Handling of assets",
+    "similarity": 0.5744956731796265
+  },
+  "SOP-191": {
+    "sop_text": "identified and documented to indicate the ownership, importance and shall be classified, used and protected",
+    "iso_id": "8.2.2",
+    "iso_text": "Labelling of information",
+    "similarity": 0.4869672358036041
+  },
+  "SOP-192": {
+    "sop_text": "in accordance with their importance to Paytm . Refer (Asset Management Policy)  for detailed policy.",
+    "iso_id": "8.2.3",
+    "iso_text": "Handling of assets",
+    "similarity": 0.5227692127227783
+  },
+  "SOP-193": {
+    "sop_text": "17. Identity & Access Management",
+    "iso_id": "9.1.1",
+    "iso_text": "Access control policy",
+    "similarity": 0.543855607509613
+  },
+  "SOP-194": {
+    "sop_text": "Access to information / information systems (operating systems, applications, databases, network",
+    "iso_id": "9.1.2",
+    "iso_text": "Access to networks and network services",
+    "similarity": 0.627632200717926
+  },
+  "SOP-195": {
+    "sop_text": "equipment and other technologies deployed at Paytm) and information pro cessing facilities shall be",
+    "iso_id": "15.1.3",
+    "iso_text": "Informaiton and communication technology supply chain",
+    "similarity": 0.4955477714538574
+  },
+  "SOP-196": {
+    "sop_text": "controlled to prevent unauthorized access and at the same time ensure that the access is provided to",
+    "iso_id": "9.1.1",
+    "iso_text": "Access control policy",
+    "similarity": 0.7026956081390381
+  },
+  "SOP-197": {
+    "sop_text": "authorized personnel. Refer (Identity & Access Management Policy)  for detailed policy.",
+    "iso_id": "9.1.1",
+    "iso_text": "Access control policy",
+    "similarity": 0.5800646543502808
+  },
+  "SOP-198": {
+    "sop_text": "Effective use of crypto graphy controls to protect the Confidentiality, Authenticity and/or Integrity of",
+    "iso_id": "10.1.1",
+    "iso_text": "Policy on the use of cryptographic controls",
+    "similarity": 0.5960838198661804
+  },
+  "SOP-199": {
+    "sop_text": "information. Refer (Cryptography Policy)  for detailed policy.",
+    "iso_id": "5.1.1",
+    "iso_text": "Policies for information security",
+    "similarity": 0.5394574999809265
+  },
+  "SOP-200": {
+    "sop_text": "19. Physical and Environmental Security",
+    "iso_id": "11.1.3",
+    "iso_text": "Securing offices, rooms and facilities",
+    "similarity": 0.6427861452102661
+  },
+  "SOP-201": {
+    "sop_text": "Operational facilities that contain proprietary or confidential informati on and information processing",
+    "iso_id": "17.2.1",
+    "iso_text": "Availability of information processing facilities",
+    "similarity": 0.591889500617981
+  },
+  "SOP-202": {
+    "sop_text": "facilities shall be physically protected from unauthorized access, damage and interference. Information",
+    "iso_id": "11.1.3",
+    "iso_text": "Securing offices, rooms and facilities",
+    "similarity": 0.6930934190750122
+  },
+  "SOP-203": {
+    "sop_text": "assets shall be sited in secure areas, protected by a defined security perimeter, with appropriate entry",
+    "iso_id": "11.1.1",
+    "iso_text": "Physical security perimeter",
+    "similarity": 0.5980532765388489
+  },
+  "SOP-204": {
+    "sop_text": "controls and secu rity mechanisms. Refer (Physical and Environmental Security Policy ) for detailed policy.",
+    "iso_id": "5.1.1",
+    "iso_text": "Policies for information security",
+    "similarity": 0.5018048882484436
+  },
+  "SOP-205": {
+    "sop_text": "Secure operational processes for information processing facilities should be established to address the",
+    "iso_id": "17.2.1",
+    "iso_text": "Availability of information processing facilities",
+    "similarity": 0.6420153379440308
+  },
+  "SOP-206": {
+    "sop_text": "Confidentiality, Integrity and Availabi lity of Information assets. Refer ( Operations Security Policy ) for",
+    "iso_id": "13.2.1",
+    "iso_text": "Information transfer policies and procedures",
+    "similarity": 0.5874668955802917
+  },
+  "SOP-207": {
+    "sop_text": "The network infrastructure shall be secured to protect information from unauthorized access and enable",
+    "iso_id": "13.1.2",
+    "iso_text": "Security of network services",
+    "similarity": 0.5394766926765442
+  },
+  "SOP-208": {
+    "sop_text": "effective usage of various networking, communications and computing facilities. Refer (Communications",
+    "iso_id": "17.2.1",
+    "iso_text": "Availability of information processing facilities",
+    "similarity": 0.5754103660583496
+  },
+  "SOP-209": {
+    "sop_text": "Security Policy)  for detailed policy.",
+    "iso_id": "5.1.1",
+    "iso_text": "Policies for information security",
+    "similarity": 0.6474283337593079
+  },
+  "SOP-210": {
+    "sop_text": "22. System Ac quisition, Development and Maintenance",
+    "iso_id": "14.2.2",
+    "iso_text": "System change control procedures",
+    "similarity": 0.557964563369751
+  },
+  "SOP-211": {
+    "sop_text": "Adequate controls shall be deployed in the software development process to address risks in meeting",
+    "iso_id": "12.6.1",
+    "iso_text": "Management of technical vulnerabilities",
+    "similarity": 0.5044158697128296
+  },
+  "SOP-212": {
+    "sop_text": "functional and security requirements. Refer (System Acquisition, Development & Maintenance Policy)  for",
+    "iso_id": "14.1.1",
+    "iso_text": "Information security requirements analysis and specification",
+    "similarity": 0.6339795589447021
+  },
+  "SOP-213": {
+    "sop_text": "All the suppliers (outsourcing vendors, agents, third parties and other contract employees) who have access",
+    "iso_id": "15.1.2",
+    "iso_text": "Addressing security within supplier agreements",
+    "similarity": 0.5883657932281494
+  },
+  "SOP-214": {
+    "sop_text": "to internal information / information assets to maintain confidentiality and adopt security procedures.",
+    "iso_id": "13.2.1",
+    "iso_text": "Information transfer policies and procedures",
+    "similarity": 0.6343944072723389
+  },
+  "SOP-215": {
+    "sop_text": "Supplier's acc ess to internal information / information assets shall be restricted. Refer (Supplier",
+    "iso_id": "15.1.1",
+    "iso_text": "Information security policy for supplier relationships",
+    "similarity": 0.5916553139686584
+  },
+  "SOP-216": {
+    "sop_text": "Relationship Management Policy) for detailed policy.",
+    "iso_id": "16.1.1",
+    "iso_text": "Responsibilities and procedures",
+    "similarity": 0.4329453408718109
+  },
+  "SOP-217": {
+    "sop_text": "24. Information Security Incident Management",
+    "iso_id": "16.1.5",
+    "iso_text": "Response in information security incidents",
+    "similarity": 0.6101589202880859
+  },
+  "SOP-218": {
+    "sop_text": "Information security incidents and abnormal behaviour associated with i nformation and/or information",
+    "iso_id": "16.1.5",
+    "iso_text": "Response in information security incidents",
+    "similarity": 0.6992747187614441
+  },
+  "SOP-219": {
+    "sop_text": "systems need to be reported and responded appropriately to minimize their damage. Refer ( Incident",
+    "iso_id": "16.1.2",
+    "iso_text": "Reporting information security events",
+    "similarity": 0.600090742111206
+  },
+  "SOP-220": {
+    "sop_text": "Management Policy ) for detailed policy.",
+    "iso_id": "7.2.1",
+    "iso_text": "Management responsibilities",
+    "similarity": 0.533237099647522
+  },
+  "SOP-221": {
+    "sop_text": "25. Information Security aspects of Business Continuity Management",
+    "iso_id": "17.1.2",
+    "iso_text": "Implementing information security continuity",
+    "similarity": 0.7063300609588623
+  },
+  "SOP-222": {
+    "sop_text": "Controls shall be planned and implemented to mitigate the impact of disaster and timely resumption of",
+    "iso_id": "14.2.2",
+    "iso_text": "System change control procedures",
+    "similarity": 0.4235963821411133
+  },
+  "SOP-223": {
+    "sop_text": "business activities to minimize information security losses. Refer ( Business Continuity Management Policy )",
+    "iso_id": "17.1.1",
+    "iso_text": "Planning information security continuity",
+    "similarity": 0.6395382881164551
+  },
+  "SOP-224": {
+    "sop_text": "Paytm shall comply with rele vant laws, regulations, industry standards and contractual agreements which",
+    "iso_id": "18.2.3",
+    "iso_text": "Technical compliance review",
+    "similarity": 0.3950522243976593
+  },
+  "SOP-225": {
+    "sop_text": "impact its information security activities. Refer ( Compliance Policy ) for detailed policy.",
+    "iso_id": "18.2.2",
+    "iso_text": "Compliance with security policies and standards",
+    "similarity": 0.6473519206047058
+  },
+  "SOP-226": {
+    "sop_text": "The information security management team will verify compliance to this policy through various methods,",
+    "iso_id": "18.2.2",
+    "iso_text": "Compliance with security policies and standards",
+    "similarity": 0.552764356136322
+  },
+  "SOP-227": {
+    "sop_text": "including but not limited to, business tool reports, internal and external audits, and feedback to the policy",
+    "iso_id": "18.2.3",
+    "iso_text": "Technical compliance review",
+    "similarity": 0.5273449420928955
+  },
+  "SOP-228": {
+    "sop_text": "\uf0b7 Compliance to the requirements outline d in this document is mandatory and deviations, if any,",
+    "iso_id": "18.2.2",
+    "iso_text": "Compliance with security policies and standards",
+    "similarity": 0.518342912197113
+  },
+  "SOP-229": {
+    "sop_text": "shall be treated as exceptions. An Exception Management process shall be defined for handling",
+    "iso_id": "18.2.2",
+    "iso_text": "Compliance with security policies and standards",
+    "similarity": 0.3846392035484314
+  },
+  "SOP-230": {
+    "sop_text": "short term and long term / recurring deviations to this policy. All exceptions shall be validated",
+    "iso_id": "18.2.2",
+    "iso_text": "Compliance with security policies and standards",
+    "similarity": 0.49260157346725464
+  },
+  "SOP-231": {
+    "sop_text": "by Paytm  Information Security Team and shall be approved by Paytm Senior Management.",
+    "iso_id": "18.2.3",
+    "iso_text": "Technical compliance review",
+    "similarity": 0.3748554587364197
+  },
+  "SOP-232": {
+    "sop_text": "\uf0b7 All Exceptions shall be granted for a limited period post which the exception requirement shall",
+    "iso_id": "7.1.2",
+    "iso_text": "Terms and conditions of employment",
+    "similarity": 0.368693083524704
+  },
+  "SOP-233": {
+    "sop_text": "\uf0b7 Any long term / recurring deviations due to technical / operational limitations, shall b e",
+    "iso_id": "12.6.1",
+    "iso_text": "Management of technical vulnerabilities",
+    "similarity": 0.42139676213264465
+  },
+  "SOP-234": {
+    "sop_text": "communicated to the management team review and tracking. Validated by Paytm Information",
+    "iso_id": "18.2.3",
+    "iso_text": "Technical compliance review",
+    "similarity": 0.40664219856262207
+  },
+  "SOP-235": {
+    "sop_text": "Security team and shall be approved by Paytm Senior Management; and Shall be reviewed",
+    "iso_id": "18.2.3",
+    "iso_text": "Technical compliance review",
+    "similarity": 0.43897300958633423
+  },
+  "SOP-236": {
+    "sop_text": "\uf0b7 Shall be accompanied with a valid busi ness justification and recorded. The record shall capture",
+    "iso_id": "16.1.1",
+    "iso_text": "Responsibilities and procedures",
+    "similarity": 0.45239129662513733
+  },
+  "SOP-237": {
+    "sop_text": "exception details, business justification, exception validity, supporting documents and associated",
+    "iso_id": "12.1.1",
+    "iso_text": "Documented operating procedures",
+    "similarity": 0.466030478477478
+  },
+  "SOP-238": {
+    "sop_text": "approvals; and Shall be assessed for associated risks.",
+    "iso_id": "18.2.3",
+    "iso_text": "Technical compliance review",
+    "similarity": 0.46668317914009094
+  },
+  "SOP-239": {
+    "sop_text": "An employee found to have violated this policy may be subject to disciplinary action, up to and including",
+    "iso_id": "18.2.2",
+    "iso_text": "Compliance with security policies and standards",
+    "similarity": 0.4458875060081482
+  },
+  "SOP-240": {
+    "sop_text": "termination of employment as per HR policies and disciplinary process.",
+    "iso_id": "7.3.1",
+    "iso_text": "Termination or change of employment responsibilities",
+    "similarity": 0.6976929903030396
+  },
+  "SOP-241": {
+    "sop_text": "Third parties found in violation would be subject to a fine/termination and/or possible legal action  taken.",
+    "iso_id": "18.2.2",
+    "iso_text": "Compliance with security policies and standards",
+    "similarity": 0.4134957790374756
+  },
+  "SOP-242": {
+    "sop_text": "The Information Security Function is responsible for coordinating policy reviews and seeking Board",
+    "iso_id": "5.1.2",
+    "iso_text": "Review of the policies for information security",
+    "similarity": 0.5886760950088501
+  },
+  "SOP-243": {
+    "sop_text": "approval if there are any changes. The change log must be kept up -to-date, with immediate updates made",
+    "iso_id": "14.2.2",
+    "iso_text": "System change control procedures",
+    "similarity": 0.5406903028488159
+  }
+}
