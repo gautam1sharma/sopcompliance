@@ -55,12 +55,12 @@ def main():
     parser.add_argument('--output', default='sop_iso_mapping.json', help='Output JSON file')
     args = parser.parse_args()
 
-    # Load ISO standards from embedded JSON
-    iso_json = os.path.join(os.path.dirname(__file__), 'ISO_IEC_27002.json')
-    with open(iso_json, 'r', encoding='utf8') as f:
-        iso_data = json.load(f)
-    iso_ids = [item['code'] for item in iso_data['values']]
-    iso_texts = [item['label'] for item in iso_data['values']]
+    # # Load ISO standards from embedded JSON
+    # iso_json = os.path.join(os.path.dirname(__file__), 'ISO_IEC_27002.json')
+    # with open(iso_json, 'r', encoding='utf8') as f:
+    #     iso_data = json.load(f)
+    # iso_ids = [item['code'] for item in iso_data['values']]
+    # iso_texts = [item['label'] for item in iso_data['values']]
 
     # Determine SOP path and load clauses
     sop_path = args.sop or select_file('Select SOP document:')
@@ -68,28 +68,28 @@ def main():
     sop_ids = [f'SOP-{i+1}' for i in range(len(sop_texts))]
 
     # Embedding
-    print('Loading embedding model...')
-    model = SentenceTransformer('all-roberta-large-v1')
-    iso_emb = model.encode(iso_texts, convert_to_tensor=True)
-    sop_emb = model.encode(sop_texts, convert_to_tensor=True)
+    # print('Loading embedding model...')
+    # model = SentenceTransformer('all-roberta-large-v1')
+    # iso_emb = model.encode(iso_texts, convert_to_tensor=True)
+    # sop_emb = model.encode(sop_texts, convert_to_tensor=True)
 
     # Mapping
     print('Computing mappings...')
     mappings = {}
     for i, sop_id in enumerate(sop_ids):
-        sims = cosine_similarity(sop_emb[i].unsqueeze(0), iso_emb)
-        best = torch.argmax(sims).item()
+        # sims = cosine_similarity(sop_emb[i].unsqueeze(0), iso_emb)
+        # best = torch.argmax(sims).item()
         mappings[sop_id] = {
-            'sop_text': sop_texts[i],
-            'iso_id': iso_ids[best],
-            'iso_text': iso_texts[best],
-            'similarity': float(sims[best])
+            'sop_text': sop_texts[i]
+            # 'iso_id': iso_ids[best],
+            # 'iso_text': iso_texts[best],
+            # 'similarity': float(sims[best])
         }
 
     # Save
     with open(args.output, 'w', encoding='utf8') as f:
         json.dump(mappings, f, indent=2)
-    print(f'Mapping saved to {args.output}')
+    # print(f'Mapping saved to {args.output}')
 
 
 if __name__ == '__main__':
