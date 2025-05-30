@@ -1,0 +1,96 @@
+Clause ID,Clause Name,Similarity Score
+6.2,T erms and conditions of employment,0.564
+6.1,Screening,0.55
+5.36,"C ompliance with policies, rules and standards for information security",0.55
+5.27,Learning fr om information security incidents,0.549
+6.5,R esponsibilities after termination or change of employment,0.548
+5.35,Independent r eview of information security,0.544
+5.29,Information secur ity during disruption,0.54
+6.3,"Information secur ity awareness, education and training",0.54
+6.4,Disciplinary pr ocess,0.539
+5.34,Pri vacy and protection of PII,0.537
+5.33,Pr otection of records,0.537
+8.3,Information ac cess restriction,0.536
+5.30,ICT r eadiness for business continuity,0.533
+5.1,P olicies for information security,0.532
+5.31,"Leg al, statutory, regulatory and contractual requirements",0.529
+5.32,Int ellectual property rights,0.527
+5.28,C ollection of evidence,0.524
+8.5,S ecure authentication,0.523
+5.37,Document ed operating procedures,0.523
+6.8,Information secur ity event reporting,0.52
+7.11,Supporting utilitie s,0.519
+5.7,Thr eat intelligence,0.518
+8.8,Management of t echnical vulnerabilities,0.518
+5.26,R esponse to information security incidents,0.517
+8.2,Pri vileged access rights,0.516
+8.9,Configuration 	management,0.515
+6.7,R emote working,0.513
+5.24,Information secur ity incident management planning and preparation,0.512
+8.1,User endpoint de vices,0.512
+7.9,S ecurity of assets off-premises,0.512
+5.22,"Monit oring, review and change management of supplier services",0.511
+8.10,Information deleti on,0.51
+7.8,E quipment siting and protection,0.51
+7.14,S ecure disposal or re-use of equipment,0.508
+8.6,Capacity managem ent,0.508
+5.21,Managing informa tion security in the ICT supply chain,0.508
+5.16,Identity management,0.505
+7.13,E quipment maintenance,0.505
+5.8,Information secur ity in project management,0.504
+8.4,A ccess to source code,0.504
+7.10,St orage media,0.503
+8.7,Pr otection against malware,0.503
+5.15,A ccess control,0.502
+5.25,Assessment and de cision on information security events,0.501
+5.20,A ddressing information security within supplier agreements,0.501
+6.6,Confidentiality 	or	non-disclosur e 	 agreements,0.5
+5.23,Information secur ity for use of cloud services,0.5
+7.4,Ph ysical security monitoring,0.499
+8.17,Clock s ynchronization,0.498
+0.3,,0.498
+8.14,R edundancy of information processing facilities,0.498
+5.11,R eturn of assets,0.498
+8.15,Logging,0.497
+5.17,A uthentication information,0.496
+8.20,Netw orks security,0.495
+5.12,Classification 	of	information,0.495
+7.3,"Securing 	offices,	rooms	and	facilities",0.494
+5.4,Management r esponsibilities,0.493
+8.13,Information back up,0.491
+5.14,Information tr ansfer,0.49
+5.6,C ontact with special interest groups,0.49
+7.6,W orking in secure areas,0.49
+7.1,Ph ysical security perimeters,0.49
+7.2,Ph ysical entry,0.49
+7.7,Clear desk and clear scr een,0.489
+7.12,Cabling security,0.488
+5.10,A cceptable use of information and other associated assets,0.488
+5.2,Information secur ity roles and responsibilities,0.488
+5.3,S egregation of duties,0.487
+7.5,Pr otecting against physical and environmental threats,0.486
+5.5,C ontact with authorities,0.481
+8.12,Data leakage pr evention,0.478
+5.19,Information secur ity in supplier relationships,0.478
+8.18,Use of pri vileged utility programs,0.477
+8.19,Installation of soft ware on operational systems,0.477
+8.16,Monit oring activities,0.475
+8.11,Data masking,0.475
+5.9,In ventory of information and other associated assets,0.475
+5.18,A ccess rights,0.473
+8.21,S ecurity of network services,0.472
+8.23,Web 	filtering,0.467
+8.26,A pplication security requirements,0.462
+8.22,S egregation of networks,0.459
+5.13,Labelling of inform ation,0.457
+8.27,S ecure system architecture and engineering principles,0.452
+8.25,S ecure development life cycle,0.443
+8.24,Use of crypt ography,0.435
+8.29,S ecurity testing in development and acceptance,0.425
+8.28,S ecure coding,0.418
+8.30,Outsour ced development,0.392
+8.32,Change manageme nt,0.383
+8.31,"S eparation of development, test and production environments",0.382
+8.33,T est information,0.356
+8.34,Pr otection of information systems during audit testing,0.286
+2.1,8.7,0.213
