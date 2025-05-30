@@ -1,0 +1,267 @@
+{
+  "compliance_score": 100.0,
+  "total_controls": 23,
+  "matched_controls": 23,
+  "details": [
+    {
+      "control_id": "5.1",
+      "control_name": "Information security policies",
+      "score": 0.9333333333333333,
+      "status": "Compliant",
+      "evidence": [
+        "1 3 date of release 19-july-2023 4 document owner head -cyber security 5 document author head -cyber security 6 process owner respective it leads  head of cyber security 7 document approver head - it ...",
+        "1 19-july- 2023 mohd irfan head -it - scope - role change - frequency of isc  mrm 19-july- 2023 information security policy internal page 3 of 41 information security policy internal page 4 of 41 tabl...",
+        "policy statement and objective  a"
+      ]
+    },
+    {
+      "control_id": "5.2",
+      "control_name": "Information security roles and responsibilities",
+      "score": 1.0,
+      "status": "Compliant",
+      "evidence": [
+        "1 organization structure - roles and responsibility  a",
+        "2 contact with authorities and special interest groups  a",
+        "1 information and software exchange agreements a"
+      ]
+    },
+    {
+      "control_id": "6.1",
+      "control_name": "Internal organization",
+      "score": 0.7,
+      "status": "Compliant",
+      "evidence": [
+        "1 19-july- 2023 mohd irfan head -it - scope - role change - frequency of isc  mrm 19-july- 2023 information security policy internal page 3 of 41 information security policy internal page 4 of 41 tabl...",
+        "information security organization",
+        "1 organization structure - roles and responsibility  a"
+      ]
+    },
+    {
+      "control_id": "6.2",
+      "control_name": "Mobile device policy",
+      "score": 0.4714285714285714,
+      "status": "Compliant",
+      "evidence": [
+        "1 user registration  a",
+        "3 mobile computing and teleworking  a",
+        "1 mobile computing and communication"
+      ]
+    },
+    {
+      "control_id": "7.1",
+      "control_name": "Human resource security",
+      "score": 0.6333333333333333,
+      "status": "Compliant",
+      "evidence": [
+        "human resource security",
+        "1 background checks  screening  a",
+        "2 terms and conditions of employment - a"
+      ]
+    },
+    {
+      "control_id": "7.2",
+      "control_name": "During employment",
+      "score": 0.9333333333333333,
+      "status": "Compliant",
+      "evidence": [
+        "4 user awareness and training - a",
+        "5 disciplinary process - a",
+        "all employees, contractors, sub -contractors, and vendors shall be committed to comply with the information security policy wherev er applicable"
+      ]
+    },
+    {
+      "control_id": "7.3",
+      "control_name": "Termination and change of employment",
+      "score": 0.38,
+      "status": "Compliant",
+      "evidence": [
+        "6 termination process - a",
+        "in the cases of serious misconduct, the process shall allow for the instant removal of duties, access rights, and the various allocated privileges up to and including termination",
+        "6 termination process - a"
+      ]
+    },
+    {
+      "control_id": "8.1",
+      "control_name": "Asset management",
+      "score": 1.0,
+      "status": "Compliant",
+      "evidence": [
+        "asset management",
+        "1 information asset inventory  a",
+        "2 information classification  a"
+      ]
+    },
+    {
+      "control_id": "8.2",
+      "control_name": "Information classification",
+      "score": 0.9333333333333333,
+      "status": "Compliant",
+      "evidence": [
+        "2 information classification  a",
+        "3 information classification category",
+        "5 public access, delivery and loading areas a11"
+      ]
+    },
+    {
+      "control_id": "8.3",
+      "control_name": "Media handling",
+      "score": 0.5,
+      "status": "Compliant",
+      "evidence": [
+        "8 disposal of media a11",
+        "6 media handling",
+        "1 management of removable media  a"
+      ]
+    },
+    {
+      "control_id": "9.1",
+      "control_name": "Access control",
+      "score": 0.92,
+      "status": "Compliant",
+      "evidence": [
+        "access control  a",
+        "2 privilege management a",
+        "2 network access control  a"
+      ]
+    },
+    {
+      "control_id": "9.2",
+      "control_name": "User access management",
+      "score": 0.92,
+      "status": "Compliant",
+      "evidence": [
+        "1 user registration  a",
+        "2 privilege management a",
+        "the advisories will be based on gpis policies  latest development in cyber security and potential impact to gpi  information security training calendar creation and delivery management across all gpis..."
+      ]
+    },
+    {
+      "control_id": "9.3",
+      "control_name": "User responsibilities",
+      "score": 0.92,
+      "status": "Compliant",
+      "evidence": [
+        "4 user password management - a",
+        "1 user authentication for external connections",
+        "4 all employees, contractors and third -party users shall return all gpls assets in their possession upon cessation termination of their employment, contract, or agreement"
+      ]
+    },
+    {
+      "control_id": "9.4",
+      "control_name": "System and application access control",
+      "score": 0.92,
+      "status": "Compliant",
+      "evidence": [
+        "8 head -enterprise applications an d team",
+        "6 operating system access controls  a",
+        "8 application and information access control  a"
+      ]
+    },
+    {
+      "control_id": "10.1",
+      "control_name": "Cryptographic controls",
+      "score": 0.54,
+      "status": "Compliant",
+      "evidence": [
+        "cryptography",
+        "2 key management a",
+        "cryptography 7"
+      ]
+    },
+    {
+      "control_id": "11.1",
+      "control_name": "Physical and environmental security",
+      "score": 0.7,
+      "status": "Compliant",
+      "evidence": [
+        "physical  environmental security",
+        "1 physical security controls",
+        "1 physical security perimeter  a11"
+      ]
+    },
+    {
+      "control_id": "12.1",
+      "control_name": "Operational security",
+      "score": 0.7,
+      "status": "Compliant",
+      "evidence": [
+        "1 operational procedures and responsibility",
+        "1 documented operating procedures a",
+        "4 separation of development, test, and operational facilities a"
+      ]
+    },
+    {
+      "control_id": "13.1",
+      "control_name": "Communications security",
+      "score": 0.7,
+      "status": "Compliant",
+      "evidence": [
+        "12 network administrator",
+        "communications and operations management",
+        "3 segregation of duties  a"
+      ]
+    },
+    {
+      "control_id": "14.1",
+      "control_name": "System acquisition, development and maintenance",
+      "score": 0.6200000000000001,
+      "status": "Compliant",
+      "evidence": [
+        "1 security requirements of information systems",
+        "1 information security requirements analysis and specification a",
+        "7 system security and acceptance testing a"
+      ]
+    },
+    {
+      "control_id": "15.1",
+      "control_name": "Supplier relationships",
+      "score": 0.4833333333333334,
+      "status": "Compliant",
+      "evidence": [
+        "2 third -party service delivery a",
+        "it shall also be ensured that all legal, regulatory, statutory, and contractual obligations are met",
+        "all employees, contractors, sub -contractors, and vendors shall be committed to comply with the information security policy wherev er applicable"
+      ]
+    },
+    {
+      "control_id": "16.1",
+      "control_name": "Incident management",
+      "score": 0.9428571428571428,
+      "status": "Compliant",
+      "evidence": [
+        "incident ma nagement a",
+        "all suspected breaches of information security are assessed, reported, investigated, and responded",
+        "post review, responsible parties shall be identified, and stipulated timelines shall be defined for corrective actions which shall be taken to eliminate the cause of non -conformity or other undesirab..."
+      ]
+    },
+    {
+      "control_id": "17.1",
+      "control_name": "Business continuity management",
+      "score": 0.54,
+      "status": "Compliant",
+      "evidence": [
+        "4 backup management a",
+        "1 backup restoration",
+        "business continuity management"
+      ]
+    },
+    {
+      "control_id": "18.1",
+      "control_name": "Compliance",
+      "score": 0.6428571428571428,
+      "status": "Compliant",
+      "evidence": [
+        "5 manager -cyber security compliance lead",
+        "6 compliance lead",
+        "1 audit logging a"
+      ]
+    }
+  ],
+  "semantic_analysis": {
+    "asset_management": 104,
+    "policies": 109,
+    "access_control": 97,
+    "training": 37,
+    "incident_management": 31
+  }
+}

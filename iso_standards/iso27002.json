@@ -1,0 +1,228 @@
+{
+    "5.1": {
+        "name": "Information security policies",
+        "description": "A set of policies for information security should be defined, approved by management, published and communicated to employees and relevant external parties.",
+        "controls": [
+            "Information security policy document",
+            "Review of the information security policy"
+        ]
+    },
+    "5.2": {
+        "name": "Information security roles and responsibilities",
+        "description": "All information security responsibilities should be clearly defined and allocated.",
+        "controls": [
+            "Confidentiality agreements",
+            "Contact with authorities",
+            "Contact with special interest groups",
+            "Information security in project management"
+        ]
+    },
+    "6.1": {
+        "name": "Internal organization",
+        "description": "A management framework should be established to initiate and control the implementation and operation of information security within the organization.",
+        "controls": [
+            "Information security roles and responsibilities",
+            "Segregation of duties",
+            "Contact with authorities",
+            "Contact with special interest groups",
+            "Information security in project management"
+        ]
+    },
+    "6.2": {
+        "name": "Mobile device policy",
+        "description": "Security measures should be implemented to manage the risks introduced by using mobile devices.",
+        "controls": [
+            "Registration of mobile devices",
+            "Physical protection",
+            "Secure configuration",
+            "Secure disposal"
+        ]
+    },
+    "7.1": {
+        "name": "Human resource security",
+        "description": "Security responsibilities should be addressed prior to employment, during employment, and after employment.",
+        "controls": [
+            "Screening",
+            "Terms and conditions of employment"
+        ]
+    },
+    "7.2": {
+        "name": "During employment",
+        "description": "All employees and contractors should be aware of information security threats and concerns, their responsibilities and liabilities.",
+        "controls": [
+            "Management responsibilities",
+            "Information security awareness, education and training",
+            "Disciplinary process"
+        ]
+    },
+    "7.3": {
+        "name": "Termination and change of employment",
+        "description": "Security responsibilities and duties that remain valid after termination or change of employment should be defined, communicated to the employee or contractor and enforced.",
+        "controls": [
+            "Return of assets",
+            "Removal of access rights"
+        ]
+    },
+    "8.1": {
+        "name": "Asset management",
+        "description": "Assets should be identified and an inventory of all important assets should be drawn up and maintained.",
+        "controls": [
+            "Inventory of assets",
+            "Ownership of assets",
+            "Acceptable use of assets",
+            "Return of assets"
+        ]
+    },
+    "8.2": {
+        "name": "Information classification",
+        "description": "Information should be classified according to the security needs of the organization.",
+        "controls": [
+            "Classification guidelines",
+            "Information labeling and handling"
+        ]
+    },
+    "8.3": {
+        "name": "Media handling",
+        "description": "Appropriate procedures should be implemented for the handling and storage of information to protect it from unauthorized disclosure or misuse.",
+        "controls": [
+            "Management of removable media",
+            "Disposal of media",
+            "Physical media transfer"
+        ]
+    },
+    "9.1": {
+        "name": "Access control",
+        "description": "Access to information and information processing facilities should be controlled on the basis of business and security requirements.",
+        "controls": [
+            "Access control policy",
+            "User registration and de-registration",
+            "User access provisioning",
+            "Management of privileged access rights",
+            "Management of secret authentication information of users",
+            "Review of user access rights",
+            "Removal or adjustment of access rights"
+        ]
+    },
+    "9.2": {
+        "name": "User access management",
+        "description": "Formal user registration and de-registration procedures should be implemented to enable assignment of access rights.",
+        "controls": [
+            "User registration",
+            "Privilege management",
+            "User password management",
+            "Review of user access rights"
+        ]
+    },
+    "9.3": {
+        "name": "User responsibilities",
+        "description": "Users should be made aware of their responsibilities for maintaining effective access controls.",
+        "controls": [
+            "Use of secret authentication information",
+            "Information access restriction",
+            "Secure log-on procedures",
+            "Password management system",
+            "Use of privileged utility programs",
+            "Access control to program source code"
+        ]
+    },
+    "9.4": {
+        "name": "System and application access control",
+        "description": "Access to systems and applications should be controlled by a secure log-on procedure.",
+        "controls": [
+            "Information access restriction",
+            "Secure log-on procedures",
+            "Password management system",
+            "Use of privileged utility programs",
+            "Access control to program source code"
+        ]
+    },
+    "10.1": {
+        "name": "Cryptographic controls",
+        "description": "Cryptographic controls should be used to protect the confidentiality, authenticity and/or integrity of information.",
+        "controls": [
+            "Policy on the use of cryptographic controls",
+            "Key management"
+        ]
+    },
+    "11.1": {
+        "name": "Physical and environmental security",
+        "description": "Secure areas should be used to protect information processing facilities.",
+        "controls": [
+            "Physical security perimeter",
+            "Physical entry controls",
+            "Securing offices, rooms and facilities",
+            "Protecting against external and environmental threats",
+            "Working in secure areas",
+            "Delivery and loading areas"
+        ]
+    },
+    "12.1": {
+        "name": "Operational security",
+        "description": "Operational procedures and responsibilities should be established and maintained.",
+        "controls": [
+            "Documented operating procedures",
+            "Change management",
+            "Capacity management",
+            "Separation of development, testing and operational environments"
+        ]
+    },
+    "13.1": {
+        "name": "Communications security",
+        "description": "Networks should be managed and controlled to protect information in systems and applications.",
+        "controls": [
+            "Network controls",
+            "Security of network services",
+            "Segregation in networks"
+        ]
+    },
+    "14.1": {
+        "name": "System acquisition, development and maintenance",
+        "description": "Security should be built into information systems.",
+        "controls": [
+            "Security requirements analysis and specification",
+            "Securing application services on public networks",
+            "Protecting application services transactions"
+        ]
+    },
+    "15.1": {
+        "name": "Supplier relationships",
+        "description": "Security requirements for mitigating the risks associated with supplier's access to the organization's assets should be agreed with the supplier.",
+        "controls": [
+            "Supplier service delivery management",
+            "Managing changes to supplier services"
+        ]
+    },
+    "16.1": {
+        "name": "Incident management",
+        "description": "Events and information security incidents should be reported and managed.",
+        "controls": [
+            "Responsibilities and procedures",
+            "Reporting information security events",
+            "Reporting information security weaknesses",
+            "Assessment of and decision on information security events",
+            "Response to information security incidents",
+            "Learning from information security incidents",
+            "Collection of evidence"
+        ]
+    },
+    "17.1": {
+        "name": "Business continuity management",
+        "description": "Information security continuity should be embedded in the organization's business continuity management systems.",
+        "controls": [
+            "Planning information security continuity",
+            "Implementing information security continuity",
+            "Verify, review and evaluate information security continuity"
+        ]
+    },
+    "18.1": {
+        "name": "Compliance",
+        "description": "The organization should avoid breaches of legal, statutory, regulatory or contractual obligations related to information security.",
+        "controls": [
+            "Identification of applicable legislation and contractual requirements",
+            "Intellectual property rights",
+            "Protection of organizational records",
+            "Privacy and protection of PII",
+            "Regulation of cryptographic controls"
+        ]
+    }
+} 

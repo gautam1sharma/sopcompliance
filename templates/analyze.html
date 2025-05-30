@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISO Compliance - Document Analysis</title>
+    
+    <!-- Meta Information -->
+    <meta name="description" content="AI-powered compliance analysis for ISO 27002 standards" />
+    <meta name="author" content="ISO Compliance" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    
+    <!-- External CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-50: #eff6ff;
+            --primary-100: #dbeafe;
+            --primary-500: #3b82f6;
+            --primary-600: #2563eb;
+            --primary-700: #1d4ed8;
+            --primary-800: #1e40af;
+            --primary-900: #1e3a8a;
+            
+            --slate-50: #f8fafc;
+            --slate-100: #f1f5f9;
+            --slate-200: #e2e8f0;
+            --slate-300: #cbd5e1;
+            --slate-400: #94a3b8;
+            --slate-500: #64748b;
+            --slate-600: #475569;
+            --slate-700: #334155;
+            --slate-800: #1e293b;
+            --slate-900: #0f172a;
+            
+            --success-500: #10b981;
+            --success-600: #059669;
+            --warning-500: #f59e0b;
+            --warning-600: #d97706;
+            --danger-500: #ef4444;
+            --danger-600: #dc2626;
+            
+            --gradient-primary: linear-gradient(135deg, var(--primary-500), var(--primary-700));
+            --gradient-bg: linear-gradient(135deg, var(--primary-50) 0%, #e0f2fe 100%);
+            --gradient-success: linear-gradient(135deg, var(--success-500), var(--success-600));
+            --gradient-danger: linear-gradient(135deg, var(--danger-500), var(--danger-600));
+            
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            background: var(--gradient-bg);
+            min-height: 100vh;
+            color: var(--slate-800);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Animated Background */
+        .animated-background {
+            position: fixed;
+            inset: 0;
+            z-index: -10;
+            overflow: hidden;
+        }
+
+        .floating-shape {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .shape-1 {
+            top: -10rem;
+            right: -10rem;
+            width: 24rem;
+            height: 24rem;
+            background: var(--primary-400);
+            filter: blur(3rem);
+        }
+
+        .shape-2 {
+            top: 50%;
+            left: 5rem;
+            width: 16rem;
+            height: 16rem;
+            background: var(--primary-300);
+            filter: blur(3rem);
+            animation-delay: -1s;
+        }
+
+        .shape-3 {
+            bottom: 10rem;
+            right: 5rem;
+            width: 20rem;
+            height: 20rem;
+            background: var(--primary-500);
+            filter: blur(3rem);
+            animation-delay: -2s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* Navigation */
+        .navbar {
+            background: rgba(255, 255, 255, 0.8) !important;
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--slate-800) !important;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        .navbar-brand .logo {
+            width: 2rem;
+            height: 2rem;
+            background: var(--gradient-primary);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 2s infinite;
+        }
+
+        .navbar-brand .logo i {
+            color: white;
+            font-size: 1rem;
+        }
+
+        .back-button {
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid var(--slate-300);
+            color: var(--slate-700);
+            padding: 0.5rem 1rem;
+            border-radius: 0.75rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(12px);
+            font-weight: 500;
+        }
+
+        .back-button:hover {
+            background: white;
+            border-color: var(--primary-300);
+            color: var(--primary-600);
+            transform: translateX(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Main Content */
+        .container-main {
+            padding: 2rem 0;
+            max-width: 1200px;
+        }
+
+        /* Glass Card Component */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 1rem;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .glass-card-header {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1.5rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        /* Upload Zone */
+        .upload-zone {
+            border: 3px dashed var(--slate-300);
+            border-radius: 1rem;
+            padding: 4rem 2rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: linear-gradient(45deg, var(--slate-50), var(--primary-50));
+            position: relative;
+            overflow: hidden;
+        }
+
+        .upload-zone::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+            transition: left 0.6s;
+        }
+
+        .upload-zone:hover::before {
+            left: 100%;
+        }
+
+        .upload-zone:hover {
+            border-color: var(--primary-500);
+            background: linear-gradient(45deg, var(--primary-50), #e0f2fe);
+            transform: scale(1.02);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .upload-zone.dragover {
+            border-color: var(--success-500);
+            background: linear-gradient(45deg, #ecfdf5, #dcfce7);
+            transform: scale(1.05);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .upload-icon {
+            font-size: 5rem;
+            color: var(--primary-500);
+            margin-bottom: 1.5rem;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .upload-zone:hover .upload-icon {
+            transform: scale(1.1) rotate(3deg);
+            color: var(--primary-600);
+        }
+
+        .upload-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--slate-800);
+            margin-bottom: 0.75rem;
+        }
+
+        .upload-subtitle {
+            color: var(--slate-600);
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+
+        .upload-hint {
+            color: var(--slate-500);
+            font-size: 0.875rem;
+        }
+
+        /* Method Selection */
+        .method-selector {
+            background: var(--slate-50);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            border: 1px solid var(--slate-200);
+            transition: all 0.3s ease;
+        }
+
+        .method-selector:hover {
+            border-color: var(--primary-300);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .method-info {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            border: 1px solid var(--slate-200);
+            transition: all 0.3s ease;
+        }
+
+        .method-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .method-badge.enhanced {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            color: white;
+        }
+
+        .method-badge.semantic {
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+            color: white;
+        }
+
+        /* Loading Overlay */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(8px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            color: white;
+        }
+
+        .loading-content {
+            text-align: center;
+            max-width: 400px;
+            padding: 2rem;
+        }
+
+        .loading-spinner {
+            width: 4rem;
+            height: 4rem;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid var(--primary-500);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1.5rem;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .loading-subtext {
+            color: var(--slate-300);
+            font-size: 0.875rem;
+        }
+
+        /* Results Section */
+        #resultsSection {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+
+        #resultsSection.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .compliance-score {
+            font-size: 4rem;
+            font-weight: 800;
+            background: var(--gradient-success);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-align: center;
+            margin: 1rem 0;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .compliance-score.low {
+            background: var(--gradient-danger);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .compliance-score.medium {
+            background: linear-gradient(135deg, var(--warning-500), var(--warning-600));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Progress Bar */
+        .progress-modern {
+            height: 1rem;
+            border-radius: 50px;
+            background: var(--slate-200);
+            overflow: hidden;
+            margin: 1rem 0;
+            position: relative;
+        }
+
+        .progress-bar-modern {
+            height: 100%;
+            border-radius: 50px;
+            background: var(--gradient-success);
+            transition: width 2s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .progress-bar-modern::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            border-radius: 1rem;
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-primary);
+            border-radius: 1rem 1rem 0 0;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-600);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .stat-label {
+            color: var(--slate-600);
+            font-weight: 500;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Control Cards */
+        .control-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 1rem;
+            overflow: hidden;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .control-card.animate-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .control-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .control-card-body {
+            padding: 1.5rem;
+        }
+
+        .control-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .control-id {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .status-badge {
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .status-compliant {
+            background: var(--gradient-success);
+            color: white;
+        }
+
+        .status-non-compliant {
+            background: var(--gradient-danger);
+            color: white;
+        }
+
+        .control-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--slate-800);
+            margin-bottom: 1rem;
+        }
+
+        .control-score {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .score-bar {
+            flex: 1;
+            height: 8px;
+            background: var(--slate-200);
+            border-radius: 50px;
+            overflow: hidden;
+            margin-right: 1rem;
+        }
+
+        .score-fill {
+            height: 100%;
+            background: var(--gradient-primary);
+            border-radius: 50px;
+            transition: width 1s ease;
+        }
+
+        .score-text {
+            font-weight: 600;
+            color: var(--slate-700);
+            font-size: 0.875rem;
+        }
+
+        /* Evidence Section */
+        .evidence-section {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: var(--slate-50);
+            border-radius: 0.75rem;
+            border-left: 4px solid var(--primary-500);
+        }
+
+        .evidence-title {
+            font-weight: 600;
+            color: var(--slate-700);
+            font-size: 0.875rem;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .evidence-item {
+            font-size: 0.875rem;
+            color: var(--slate-600);
+            margin-bottom: 0.5rem;
+            padding: 0.75rem;
+            background: white;
+            border-radius: 0.5rem;
+            border: 1px solid var(--slate-200);
+            line-height: 1.5;
+        }
+
+        .evidence-item:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Method Badge in Results */
+        .method-used-badge {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Animations */
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        @keyframes fade-in {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fade-in {
+            animation: fade-in 0.6s ease-out;
+        }
+
+        .animate-fade-in-delay {
+            animation: fade-in 0.6s ease-out 0.2s both;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .upload-zone {
+                padding: 3rem 1.5rem;
+            }
+            
+            .upload-icon {
+                font-size: 4rem;
+            }
+            
+            .compliance-score {
+                font-size: 3rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .control-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.75rem;
+            }
+        }
+
+        /* Toast Notifications */
+        .toast-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 10000;
+        }
+
+        .toast-custom {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 0.75rem;
+            box-shadow: var(--shadow-lg);
+            min-width: 300px;
+            max-width: 400px;
+        }
+
+        .toast-success {
+            border-left: 4px solid var(--success-500);
+        }
+
+        .toast-error {
+            border-left: 4px solid var(--danger-500);
+        }
+
+        .toast-warning {
+            border-left: 4px solid var(--warning-500);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="animated-background">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <div class="loading-text" id="loadingText">Analyzing your document...</div>
+            <div class="loading-subtext" id="loadingSubtext">This may take a few moments</div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <div class="logo">
+                    <i class="fas fa-shield-check"></i>
+                </div>
+                <span>ISO Compliance</span>
+            </a>
+            <div class="navbar-nav ms-auto">
+                <a href="/" class="back-button">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Home
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container container-main">
+        <!-- Page Header -->
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <div class="animate-fade-in">
+                    <h1 class="display-5 fw-bold text-slate-800 mb-3">
+                        Document Analysis
+                    </h1>
+                    <p class="lead text-slate-600">
+                        Upload your SOP document and choose your preferred analysis method
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Upload Section -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="glass-card animate-fade-in-delay">
+                    <div class="glass-card-header">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <span>Upload & Configure Analysis</span>
+                    </div>
+                    <div class="p-4">
+                        <!-- Method Selection -->
+                        <div class="row mb-4">
+                            <div class="col-lg-6 mb-3">
+                                <label for="analysisMethod" class="form-label fw-bold mb-3">
+                                    <i class="fas fa-cogs me-2"></i>Analysis Method
+                                </label>
+                                <div class="method-selector">
+                                    <select class="form-select form-select-lg" id="analysisMethod">
+                                        <option value="enhanced">Enhanced Analysis</option>
+                                        <option value="semantic">Semantic Analysis</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-3">
+                                <label class="form-label fw-bold mb-3">
+                                    <i class="fas fa-info-circle me-2"></i>Method Information
+                                </label>
+                                <div class="method-info" id="methodInfo">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <span class="method-badge enhanced me-2">Fast</span>
+                                        <strong>Enhanced Analysis</strong>
+                                    </div>
+                                    <p class="text-muted small mb-0">
+                                        Fast keyword and pattern matching with semantic features. 
+                                        Best for quick assessments and well-structured documents.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Upload Zone -->
+                        <div class="upload-zone" id="uploadZone">
+                            <i class="fas fa-file-pdf upload-icon"></i>
+                            <h4 class="upload-title">Drop your PDF file here</h4>
+                            <p class="upload-subtitle">or click to browse and select a file</p>
+                            <p class="upload-hint">Supports PDF files up to 16MB</p>
+                            <input type="file" id="fileInput" class="d-none" accept=".pdf">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Section -->
+        <div id="resultsSection" style="display: none;">
+            <!-- Method Used Badge -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h2 class="text-slate-800 mb-0">
+                            <i class="fas fa-chart-line me-2"></i>
+                            Analysis Results
+                        </h2>
+                        <span class="method-used-badge" id="methodBadge">
+                            <i class="fas fa-robot me-1"></i>
+                            <!-- Method will be set by JavaScript -->
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Overview Cards -->
+            <div class="row mb-5">
+                <div class="col-lg-6 mb-4">
+                    <div class="glass-card h-100">
+                        <div class="glass-card-header">
+                            <i class="fas fa-chart-pie"></i>
+                            <span>Compliance Overview</span>
+                        </div>
+                        <div class="p-4 text-center">
+                            <div class="compliance-score" id="complianceScore">-</div>
+                            <p class="text-muted mb-3 fw-medium">Overall Compliance Score</p>
+                            <div class="progress-modern">
+                                <div class="progress-bar-modern" id="progressBar" style="width: 0%"></div>
+                            </div>
+                            <p class="small text-muted mt-2" id="complianceMessage">
+                                Processing your document...
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="glass-card h-100">
+                        <div class="glass-card-header">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Analysis Statistics</span>
+                        </div>
+                        <div class="p-4">
+                            <div class="stats-grid">
+                                <div class="stat-card">
+                                    <span class="stat-number" id="compliantCount">0</span>
+                                    <div class="stat-label">Compliant</div>
+                                </div>
+                                <div class="stat-card">
+                                    <span class="stat-number" id="totalControls">0</span>
+                                    <div class="stat-label">Total</div>
+                                </div>
+                                <div class="stat-card">
+                                    <span class="stat-number" id="documentLength">0</span>
+                                    <div class="stat-label">Characters</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls Details -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="glass-card">
+                        <div class="glass-card-header">
+                            <i class="fas fa-list-check"></i>
+                            <span>Detailed Control Analysis</span>
+                        </div>
+                        <div class="p-4">
+                            <div class="row" id="controlsList">
+                                <!-- Controls will be dynamically added here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const uploadZone = document.getElementById('uploadZone');
+        const fileInput = document.getElementById('fileInput');
+        const loadingOverlay = document.getElementById('loadingOverlay');
+        const resultsSection = document.getElementById('resultsSection');
+        const analysisMethod = document.getElementById('analysisMethod');
+        const methodInfo = document.getElementById('methodInfo');
+
+        // Method selection handler
+        analysisMethod.addEventListener('change', updateMethodInfo);
+
+        function updateMethodInfo() {
+            const method = analysisMethod.value;
+            if (method === 'semantic') {
+                methodInfo.innerHTML = `
+                    <div class="d-flex align-items-center mb-2">
+                        <span class="method-badge semantic me-2">AI-Powered</span>
+                        <strong>Semantic Analysis</strong>
+                    </div>
+                    <p class="text-muted small mb-0">
+                        Advanced AI models (RoBERTa-Large) for deep semantic understanding.
+                        More accurate but slower. Best for complex documents.
+                    </p>
+                `;
+            } else {
+                methodInfo.innerHTML = `
+                    <div class="d-flex align-items-center mb-2">
+                        <span class="method-badge enhanced me-2">Fast</span>
+                        <strong>Enhanced Analysis</strong>
+                    </div>
+                    <p class="text-muted small mb-0">
+                        Fast keyword and pattern matching with semantic features. 
+                        Best for quick assessments and well-structured documents.
+                    </p>
+                `;
+            }
+        }
+
+        // Upload zone click handler
+        uploadZone.addEventListener('click', () => {
+            fileInput.click();
+        });
+
+        // Drag and drop handlers
+        uploadZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadZone.classList.add('dragover');
+        });
+
+        uploadZone.addEventListener('dragleave', () => {
+            uploadZone.classList.remove('dragover');
+        });
+
+        uploadZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadZone.classList.remove('dragover');
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                handleFileUpload(files[0]);
+            }
+        });
+
+        // File input change handler
+        fileInput.addEventListener('change', (e) => {
+            if (e.target.files.length > 0) {
+                handleFileUpload(e.target.files[0]);
+            }
+        });
+
+        async function handleFileUpload(file) {
+            if (!file.type.includes('pdf')) {
+                showToast('Please select a PDF file.', 'error');
+                return;
+            }
+
+            if (file.size > 16 * 1024 * 1024) { // 16MB limit
+                showToast('File size must be less than 16MB.', 'error');
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('file', file);
+            formData.append('method', analysisMethod.value);
+
+            // Show loading overlay with method-specific message
+            const loadingText = document.getElementById('loadingText');
+            const loadingSubtext = document.getElementById('loadingSubtext');
+            
+            if (analysisMethod.value === 'semantic') {
+                loadingText.textContent = 'Loading AI model and analyzing...';
+                loadingSubtext.textContent = 'This may take 30-60 seconds for semantic analysis';
+            } else {
+                loadingText.textContent = 'Analyzing your document...';
+                loadingSubtext.textContent = 'This should take just a few seconds';
+            }
+            
+            loadingOverlay.style.display = 'flex';
+
+            try {
+                const response = await fetch('/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    updateComplianceResults(data);
+                    showToast('Document analyzed successfully!', 'success');
+                } else {
+                    showToast('Error: ' + data.error, 'error');
+                }
+            } catch (error) {
+                showToast('Error uploading file: ' + error.message, 'error');
+            } finally {
+                loadingOverlay.style.display = 'none';
+            }
+        }
+
+        function updateComplianceResults(data) {
+            const results = data.results;
+            
+            // Update method badge
+            const methodBadge = document.getElementById('methodBadge');
+            const methodText = data.method_used === 'semantic' 
+                ? 'Semantic Analysis (AI)' 
+                : 'Enhanced Analysis';
+            methodBadge.innerHTML = `
+                <i class="fas fa-${data.method_used === 'semantic' ? 'robot' : 'bolt'} me-1"></i>
+                ${methodText}
+            `;
+            
+            // Update compliance score with animation and color
+            const scoreElement = document.getElementById('complianceScore');
+            const score = Math.round(results.compliance_score);
+            
+            // Set score color based on value
+            scoreElement.className = 'compliance-score';
+            if (score >= 70) {
+                scoreElement.classList.add('high');
+            } else if (score >= 40) {
+                scoreElement.classList.add('medium');
+            } else {
+                scoreElement.classList.add('low');
+            }
+            
+            animateNumber('complianceScore', score, '%');
+            
+            // Update compliance message
+            const messageElement = document.getElementById('complianceMessage');
+            if (score >= 70) {
+                messageElement.textContent = 'Excellent compliance! Your document aligns well with ISO 27002 standards.';
+                messageElement.className = 'small text-success mt-2 fw-medium';
+            } else if (score >= 40) {
+                messageElement.textContent = 'Good compliance with room for improvement in some areas.';
+                messageElement.className = 'small text-warning mt-2 fw-medium';
+            } else {
+                messageElement.textContent = 'Consider reviewing your document to improve compliance coverage.';
+                messageElement.className = 'small text-danger mt-2 fw-medium';
+            }
+            
+            // Update progress bar
+            const progressBar = document.getElementById('progressBar');
+            setTimeout(() => {
+                progressBar.style.width = results.compliance_score + '%';
+                
+                // Change progress bar color based on score
+                if (score >= 70) {
+                    progressBar.style.background = 'var(--gradient-success)';
+                } else if (score >= 40) {
+                    progressBar.style.background = 'linear-gradient(135deg, var(--warning-500), var(--warning-600))';
+                } else {
+                    progressBar.style.background = 'var(--gradient-danger)';
+                }
+            }, 500);
+
+            // Update statistics
+            animateNumber('compliantCount', results.matched_controls);
+            animateNumber('totalControls', results.total_controls);
+            animateNumber('documentLength', data.document_length.toLocaleString());
+
+            // Update controls list
+            updateControlsList(results.details);
+
+            // Show results section with animation
+            resultsSection.style.display = 'block';
+            setTimeout(() => {
+                resultsSection.classList.add('show');
+            }, 100);
+        }
+
+        function updateControlsList(controls) {
+            const controlsList = document.getElementById('controlsList');
+            controlsList.innerHTML = '';
+
+            controls.forEach((control, index) => {
+                const controlCard = document.createElement('div');
+                controlCard.className = 'col-lg-6 col-xl-4 mb-4';
+                
+                const statusClass = control.status === 'Compliant' ? 'status-compliant' : 'status-non-compliant';
+                const statusIcon = control.status === 'Compliant' ? 'fa-check-circle' : 'fa-times-circle';
+                
+                let evidenceHtml = '';
+                if (control.evidence && control.evidence.length > 0) {
+                    evidenceHtml = `
+                        <div class="evidence-section">
+                            <div class="evidence-title">
+                                <i class="fas fa-search"></i>
+                                Evidence Found
+                            </div>
+                            ${control.evidence.map(evidence => `
+                                <div class="evidence-item">${evidence}</div>
+                            `).join('')}
+                        </div>
+                    `;
+                }
+                
+                controlCard.innerHTML = `
+                    <div class="control-card">
+                        <div class="control-card-body">
+                            <div class="control-header">
+                                <span class="control-id">${control.control_id}</span>
+                                <span class="status-badge ${statusClass}">
+                                    <i class="fas ${statusIcon}"></i>
+                                    ${control.status}
+                                </span>
+                            </div>
+                            <h6 class="control-title">${control.control_name}</h6>
+                            <div class="control-score">
+                                <div class="score-bar">
+                                    <div class="score-fill" style="width: ${control.score * 100}%"></div>
+                                </div>
+                                <span class="score-text">${(control.score * 100).toFixed(1)}%</span>
+                            </div>
+                            ${evidenceHtml}
+                        </div>
+                    </div>
+                `;
+                
+                controlsList.appendChild(controlCard);
+                
+                // Add staggered animation
+                setTimeout(() => {
+                    controlCard.querySelector('.control-card').classList.add('animate-in');
+                }, index * 100);
+            });
+        }
+
+        function animateNumber(elementId, targetValue, suffix = '') {
+            const element = document.getElementById(elementId);
+            const startValue = 0;
+            const duration = 2000;
+            const startTime = performance.now();
+
+            function updateNumber(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                
+                // Easing function for smooth animation
+                const easeOut = 1 - Math.pow(1 - progress, 3);
+                const currentValue = Math.round(startValue + (targetValue - startValue) * easeOut);
+                
+                element.textContent = currentValue + suffix;
+                
+                if (progress < 1) {
+                    requestAnimationFrame(updateNumber);
+                }
+            }
+            
+            requestAnimationFrame(updateNumber);
+        }
+
+        function showToast(message, type = 'success') {
+            const toastContainer = document.getElementById('toastContainer');
+            const toastId = 'toast-' + Date.now();
+            
+            const typeConfig = {
+                success: { icon: 'fa-check-circle', class: 'toast-success' },
+                error: { icon: 'fa-times-circle', class: 'toast-error' },
+                warning: { icon: 'fa-exclamation-triangle', class: 'toast-warning' }
+            };
+            
+            const config = typeConfig[type] || typeConfig.success;
+            
+            const toastHtml = `
+                <div id="${toastId}" class="toast toast-custom ${config.class} show" role="alert">
+                    <div class="toast-body d-flex align-items-center">
+                        <i class="fas ${config.icon} me-2"></i>
+                        <span class="flex-grow-1">${message}</span>
+                        <button type="button" class="btn-close btn-close-sm ms-2" onclick="this.closest('.toast').remove()"></button>
+                    </div>
+                </div>
+            `;
+            
+            toastContainer.insertAdjacentHTML('beforeend', toastHtml);
+            
+            // Auto-remove after 5 seconds
+            setTimeout(() => {
+                const toast = document.getElementById(toastId);
+                if (toast) {
+                    toast.remove();
+                }
+            }, 5000);
+        }
+
+        // Initialize method info on page load
+        updateMethodInfo();
+    </script>
+</body>
+
+</html> 
