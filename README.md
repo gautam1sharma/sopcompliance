@@ -226,9 +226,6 @@ The semantic analyzer uses `all-roberta-large-v1` which provides:
 4. Add tests
 5. Submit a pull request
 
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## 🙏 Acknowledgments
 
@@ -236,11 +233,3 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - **Hugging Face** for transformer models
 - **Bootstrap Team** for UI framework
 - **Flask Community** for web framework
-
-## 📞 Support
-
-For support, please open an issue on GitHub or contact the development team.
-
----
-
-**Made with ❤️ for information security compliance** 
