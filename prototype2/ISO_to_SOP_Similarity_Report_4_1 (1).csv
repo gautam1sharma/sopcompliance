@@ -1,0 +1,94 @@
+Clause ID,Clause Name,Similarity Score,Remarks
+5.27,Learning fr om information security incidents,0.649,Partially Fulfilled
+5.26,R esponse to information security incidents,0.648,Partially Fulfilled
+5.24,Information secur ity incident management planning and preparation,0.646,Partially Fulfilled
+5.33,Pr otection of records,0.642,Partially Fulfilled
+5.35,Independent r eview of information security,0.639,Partially Fulfilled
+5.36,"C ompliance with policies, rules and standards for information security",0.636,Partially Fulfilled
+5.21,Managing informa tion security in the ICT supply chain,0.634,Partially Fulfilled
+5.22,"Monit oring, review and change management of supplier services",0.633,Partially Fulfilled
+5.37,Document ed operating procedures,0.629,Partially Fulfilled
+5.34,Pri vacy and protection of PII,0.627,Partially Fulfilled
+6.5,R esponsibilities after termination or change of employment,0.626,Partially Fulfilled
+5.23,Information secur ity for use of cloud services,0.624,Partially Fulfilled
+6.4,Disciplinary pr ocess,0.622,Partially Fulfilled
+5.31,"Leg al, statutory, regulatory and contractual requirements",0.62,Partially Fulfilled
+5.19,Information secur ity in supplier relationships,0.62,Partially Fulfilled
+5.20,A ddressing information security within supplier agreements,0.615,Partially Fulfilled
+5.18,A ccess rights,0.615,Partially Fulfilled
+6.2,T erms and conditions of employment,0.613,Partially Fulfilled
+5.25,Assessment and de cision on information security events,0.61,Partially Fulfilled
+5.29,Information secur ity during disruption,0.61,Partially Fulfilled
+5.32,Int ellectual property rights,0.608,Partially Fulfilled
+6.1,Screening,0.604,Partially Fulfilled
+6.3,"Information secur ity awareness, education and training",0.602,Partially Fulfilled
+5.28,C ollection of evidence,0.597,Partially Fulfilled
+5.30,ICT r eadiness for business continuity,0.596,Partially Fulfilled
+5.17,A uthentication information,0.59,Partially Fulfilled
+5.16,Identity management,0.583,Partially Fulfilled
+6.6,Confidentiality 	or	non-disclosur e 	 agreements,0.578,Partially Fulfilled
+6.7,R emote working,0.564,Partially Fulfilled
+6.8,Information secur ity event reporting,0.561,Partially Fulfilled
+8.4,A ccess to source code,0.554,Partially Fulfilled
+5.1,P olicies for information security,0.552,Partially Fulfilled
+8.7,Pr otection against malware,0.551,Partially Fulfilled
+8.3,Information ac cess restriction,0.549,Partially Fulfilled
+8.32,Change manageme nt,0.546,Partially Fulfilled
+8.8,Management of t echnical vulnerabilities,0.544,Partially Fulfilled
+8.26,A pplication security requirements,0.542,Partially Fulfilled
+8.5,S ecure authentication,0.541,Partially Fulfilled
+8.6,Capacity managem ent,0.541,Partially Fulfilled
+7.11,Supporting utilitie s,0.541,Partially Fulfilled
+5.7,Thr eat intelligence,0.532,Partially Fulfilled
+5.3,S egregation of duties,0.531,Partially Fulfilled
+5.15,A ccess control,0.531,Partially Fulfilled
+5.4,Management r esponsibilities,0.528,Partially Fulfilled
+8.33,T est information,0.528,Partially Fulfilled
+5.12,Classification 	of	information,0.527,Partially Fulfilled
+5.11,R eturn of assets,0.527,Partially Fulfilled
+8.27,S ecure system architecture and engineering principles,0.526,Partially Fulfilled
+8.10,Information deleti on,0.526,Partially Fulfilled
+5.8,Information secur ity in project management,0.521,Partially Fulfilled
+5.2,Information secur ity roles and responsibilities,0.521,Partially Fulfilled
+8.2,Pri vileged access rights,0.518,Partially Fulfilled
+8.11,Data masking,0.517,Partially Fulfilled
+5.5,C ontact with authorities,0.515,Partially Fulfilled
+5.13,Labelling of inform ation,0.513,Partially Fulfilled
+8.25,S ecure development life cycle,0.513,Partially Fulfilled
+7.4,Ph ysical security monitoring,0.512,Partially Fulfilled
+8.1,User endpoint de vices,0.511,Partially Fulfilled
+8.9,Configuration 	management,0.511,Partially Fulfilled
+8.14,R edundancy of information processing facilities,0.511,Partially Fulfilled
+5.10,A cceptable use of information and other associated assets,0.511,Partially Fulfilled
+7.12,Cabling security,0.511,Partially Fulfilled
+8.31,"S eparation of development, test and production environments",0.51,Partially Fulfilled
+5.14,Information tr ansfer,0.51,Partially Fulfilled
+7.1,Ph ysical security perimeters,0.509,Partially Fulfilled
+8.29,S ecurity testing in development and acceptance,0.508,Partially Fulfilled
+5.6,C ontact with special interest groups,0.508,Partially Fulfilled
+7.3,"Securing 	offices,	rooms	and	facilities",0.508,Partially Fulfilled
+7.13,E quipment maintenance,0.507,Partially Fulfilled
+8.15,Logging,0.503,Partially Fulfilled
+8.21,S ecurity of network services,0.502,Partially Fulfilled
+8.12,Data leakage pr evention,0.501,Partially Fulfilled
+8.22,S egregation of networks,0.501,Partially Fulfilled
+8.23,Web 	filtering,0.501,Partially Fulfilled
+8.28,S ecure coding,0.5,Partially Fulfilled
+7.8,E quipment siting and protection,0.499,Not Fulfilled
+7.10,St orage media,0.497,Not Fulfilled
+7.2,Ph ysical entry,0.496,Not Fulfilled
+7.5,Pr otecting against physical and environmental threats,0.496,Not Fulfilled
+7.14,S ecure disposal or re-use of equipment,0.495,Not Fulfilled
+8.30,Outsour ced development,0.492,Not Fulfilled
+8.24,Use of crypt ography,0.488,Not Fulfilled
+7.9,S ecurity of assets off-premises,0.483,Not Fulfilled
+5.9,In ventory of information and other associated assets,0.477,Not Fulfilled
+8.13,Information back up,0.475,Not Fulfilled
+7.7,Clear desk and clear scr een,0.47,Not Fulfilled
+8.17,Clock s ynchronization,0.468,Not Fulfilled
+8.19,Installation of soft ware on operational systems,0.465,Not Fulfilled
+7.6,W orking in secure areas,0.464,Not Fulfilled
+8.20,Netw orks security,0.459,Not Fulfilled
+8.18,Use of pri vileged utility programs,0.45,Not Fulfilled
+8.34,Pr otection of information systems during audit testing,0.446,Not Fulfilled
+8.16,Monit oring activities,0.444,Not Fulfilled
