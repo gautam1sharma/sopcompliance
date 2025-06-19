@@ -1,0 +1,141 @@
+====================================================================================================
+COMPREHENSIVE SOP COMPLIANCE ANALYSIS REPORT
+InformationSecurityPolicy-godfreyphillips.pdf vs ISO 27002 Controls
+====================================================================================================
+Generated: 2025-06-19 12:45:36
+
+EXECUTIVE SUMMARY
+--------------------------------------------------
+Overall Compliance Score: 98.9%
+Compliant Controls: 92/93
+Compliance Rate: 98.9%
+Average Similarity Score: 0.484
+SOP Sentences Analyzed: 504
+Analysis Processing Time: 35.14 seconds
+
+DOCUMENT STATISTICS
+--------------------------------------------------
+Document Length: 106,081 characters
+Estimated Pages: 53
+Sentences Extracted: 504
+Average Sentence Length: 210 characters
+
+TOP 10 PERFORMING CONTROLS
+--------------------------------------------------
+ 1. 7.12: Cabling security
+    Max Similarity: 0.778 | Avg: 0.488 | Coverage: 97.4%
+ 2. 5.1: Policies for information security
+    Max Similarity: 0.771 | Avg: 0.525 | Coverage: 98.8%
+ 3. 5.2: Information security roles and responsibilities
+    Max Similarity: 0.771 | Avg: 0.522 | Coverage: 98.8%
+ 4. 5.3: Segregation of duties
+    Max Similarity: 0.771 | Avg: 0.522 | Coverage: 98.8%
+ 5. 5.4: Management responsibilities
+    Max Similarity: 0.771 | Avg: 0.522 | Coverage: 98.8%
+ 6. 5.5: Contact with authorities
+    Max Similarity: 0.771 | Avg: 0.521 | Coverage: 98.8%
+ 7. 5.6: Contact with special interest groups
+    Max Similarity: 0.771 | Avg: 0.519 | Coverage: 98.8%
+ 8. 5.7: Threat intelligence
+    Max Similarity: 0.771 | Avg: 0.519 | Coverage: 98.8%
+ 9. 5.8: Information security in project management
+    Max Similarity: 0.771 | Avg: 0.519 | Coverage: 98.8%
+10. 5.9: Inventory of information and other associated assets
+    Max Similarity: 0.771 | Avg: 0.519 | Coverage: 98.8%
+
+BOTTOM 10 PERFORMING CONTROLS (Need Attention)
+--------------------------------------------------
+ 1. 8.16: Monitoring activities
+    Max Similarity: 0.759 | Avg: 0.443 | Coverage: 95.6%
+ 2. 8.22: Segregation of networks
+    Max Similarity: 0.759 | Avg: 0.440 | Coverage: 96.2%
+ 3. 8.23: Web filtering
+    Max Similarity: 0.759 | Avg: 0.439 | Coverage: 95.6%
+ 4. 8.31: Separation of development, test and production environments
+    Max Similarity: 0.728 | Avg: 0.398 | Coverage: 91.5%
+ 5. 8.32: Change management
+    Max Similarity: 0.727 | Avg: 0.395 | Coverage: 88.9%
+ 6. 8.28: Secure coding
+    Max Similarity: 0.714 | Avg: 0.406 | Coverage: 92.1%
+ 7. 8.30: Outsourced development
+    Max Similarity: 0.712 | Avg: 0.400 | Coverage: 91.3%
+ 8. 8.27: Secure system architecture and engineering principles
+    Max Similarity: 0.706 | Avg: 0.415 | Coverage: 91.7%
+ 9. 8.29: Security testing in development and acceptance
+    Max Similarity: 0.706 | Avg: 0.404 | Coverage: 90.7%
+10. 8.33: Test information
+    Max Similarity: 0.676 | Avg: 0.372 | Coverage: 84.5%
+
+DETAILED CONTROL-BY-CONTROL ANALYSIS
+--------------------------------------------------
+EXCELLENT COMPLIANCE (>0.5): 92 controls
+  • 5.1: Policies for information security (Score: 0.771)
+  • 5.2: Information security roles and responsibilities (Score: 0.771)
+  • 5.3: Segregation of duties (Score: 0.771)
+  • 5.4: Management responsibilities (Score: 0.771)
+  • 5.5: Contact with authorities (Score: 0.771)
+    ... and 87 more
+
+GOOD COMPLIANCE (0.35-0.5): 0 controls
+
+FAIR COMPLIANCE (0.25-0.35): 0 controls
+
+POOR COMPLIANCE (<0.25): 0 controls
+
+EVIDENCE EXAMPLES (Top Matches)
+--------------------------------------------------
+
+1. 7.12: Cabling security
+   Max Similarity: 0.778
+   Match 1 (Similarity: 0.448):
+     SOP: "Information Security Policy Internal Page 1 of 41 Information Security Policy Godfrey Phillips India Limited Effective F..."
+     ISO: "General Security engineering principles should be established, documented and applied to information General New informa..."
+
+   Match 2 (Similarity: 0.477):
+     SOP: "Approver Name Designation Date Signature 1 Mohd Irfan HEAD - IT 19-July-2023 Information Security Policy Internal Page 2..."
+     ISO: "Access to information and other associated assets should be restricted in accordance with the Read and write access to s..."
+
+
+2. 5.1: Policies for information security
+   Max Similarity: 0.771
+   Match 1 (Similarity: 0.585):
+     SOP: "Information Security Policy Internal Page 1 of 41 Information Security Policy Godfrey Phillips India Limited Effective F..."
+     ISO: "Information security policy and topic-specific policies should be defined, approved by management, Information security ..."
+
+   Match 2 (Similarity: 0.576):
+     SOP: "Approver Name Designation Date Signature 1 Mohd Irfan HEAD - IT 19-July-2023 Information Security Policy Internal Page 2..."
+     ISO: "Information security policy and topic-specific policies should be defined, approved by management, Information security ..."
+
+
+3. 5.2: Information security roles and responsibilities
+   Max Similarity: 0.771
+   Match 1 (Similarity: 0.510):
+     SOP: "Information Security Policy Internal Page 1 of 41 Information Security Policy Godfrey Phillips India Limited Effective F..."
+     ISO: "Knowledge gained from information security incidents should be used to strengthen and improve the The organization shoul..."
+
+   Match 2 (Similarity: 0.527):
+     SOP: "Approver Name Designation Date Signature 1 Mohd Irfan HEAD - IT 19-July-2023 Information Security Policy Internal Page 2..."
+     ISO: "Knowledge gained from information security incidents should be used to strengthen and improve the The organization shoul..."
+
+RECOMMENDATIONS
+--------------------------------------------------
+✓ EXCELLENT: Your SOP demonstrates strong ISO 27002 compliance!
+  - Consider minor improvements in lower-scoring controls
+  - Review and strengthen weak areas identified above
+
+Specific Actions:
+1. Address 0 controls with poor compliance scores
+2. Enhance 0 controls with fair compliance
+3. Maintain 92 controls with excellent compliance
+
+TECHNICAL ANALYSIS DETAILS
+--------------------------------------------------
+Analysis Method: Sentence-by-sentence semantic similarity
+ML Model: all-roberta-large-v1 sentence transformer
+Similarity Threshold: 0.25 (configurable)
+ISO Controls Analyzed: 93
+Total ISO Sentences: 0
+
+====================================================================================================
+End of Report
+====================================================================================================

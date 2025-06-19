@@ -44,23 +44,23 @@ def check_semantic_subset(similarity_results, threshold=0.9):
     
     return is_subset, high_similarity_count, total_sentences
 
-def main():
+def comparison_func(para1, para2):
 
-    print("Loading sentence transformer model...")
+    # print("Loading sentence transformer model...")
     model = SentenceTransformer('Qwen/Qwen3-Embedding-0.6B')
     
 
-    para1 = """
-    Machine learning is a subset of artificial intelligence. It enables computers to learn patterns from data. 
-    These algorithms can make predictions on new data without being explicitly programmed for each task.
-    """
+    # para1 = """
+    # Machine learning is a subset of artificial intelligence. It enables computers to learn patterns from data. 
+    # These algorithms can make predictions on new data without being explicitly programmed for each task.
+    # """
     
-    para2 = """
-    Artificial intelligence encompasses various technologies including machine learning. Machine learning is a 
-    powerful subset of AI that allows computers to automatically learn and improve from experience. It involves 
-    algorithms that can identify patterns in data and make predictions or decisions on new, unseen data without 
-    being explicitly programmed for every specific task. This capability makes it valuable for many applications.
-    """
+    # para2 = """
+    # Artificial intelligence encompasses various technologies including machine learning. Machine learning is a 
+    # powerful subset of AI that allows computers to automatically learn and improve from experience. It involves 
+    # algorithms that can identify patterns in data and make predictions or decisions on new, unseen data without 
+    # being explicitly programmed for every specific task. This capability makes it valuable for many applications.
+    # """
     
     print("Paragraph 1:")
     print(para1.strip())
@@ -124,6 +124,3 @@ def main():
     for i, result in enumerate(similarity_results, 1):
         status = "High" if result['similarity_score'] > 0.9 else "Low"
         print(f"Sentence {i}: {result['similarity_score']:.4f} ({status})")
-
-if __name__ == "__main__":
-    main()
