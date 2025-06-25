@@ -198,3 +198,10 @@ If this is a private repository, make sure to pass a token having permission to 
 2025-06-25 11:19:23,878 - compliance_checker - INFO - logger.py:53 - Semantic checker initialized | load_time_seconds=116.38056254386902
 2025-06-25 11:22:30,869 - compliance_checker - INFO - logger.py:53 - Analysis completed using semantic method | method=semantic | compliance_score=100.0 | processing_time_seconds=303.3725173473358 | filename=InformationSecurityPolicy-godfreyphillips.pdf
 2025-06-25 11:22:30,869 - compliance_checker - INFO - logger.py:53 - Performance metrics for semantic_analysis | operation=semantic_analysis | duration_seconds=303.3725173473358 | content_length=106081 | compliance_score=100.0 | matched_controls=93
+2025-06-25 11:27:50,778 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-25 11:27:57,627 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-25 11:29:16,538 - compliance_checker - INFO - logger.py:53 - File upload | filename=information-security-policy.pdf | file_size=240714 | method=enhanced | user_ip=127.0.0.1 | timestamp=2025-06-25T05:59:16.538393
+2025-06-25 11:29:16,922 - compliance_checker - INFO - logger.py:53 - Analysis started using enhanced method | method=enhanced | content_length=28635 | filename=information-security-policy.pdf
+2025-06-25 11:29:16,923 - compliance_checker - INFO - logger.py:53 - Using Enhanced Compliance Checker
+2025-06-25 11:29:17,122 - compliance_checker - INFO - logger.py:53 - Analysis completed using enhanced method | method=enhanced | compliance_score=100.0 | processing_time_seconds=0.19898676872253418 | filename=information-security-policy.pdf
+2025-06-25 11:29:17,123 - compliance_checker - INFO - logger.py:53 - Performance metrics for enhanced_analysis | operation=enhanced_analysis | duration_seconds=0.19898676872253418 | content_length=28635 | compliance_score=100.0 | matched_controls=93
