@@ -6,6 +6,13 @@ from typing import Dict, List, Tuple, Set
 from collections import defaultdict
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
+from utils.cache_manager import (
+    get_content_hash,
+    cache_model_embeddings,
+    get_cached_model_embeddings,
+    cache_document_embeddings,
+    get_cached_document_embeddings,
+)
 
 class SemanticComplianceChecker:
     def __init__(self):
@@ -13,35 +20,12 @@ class SemanticComplianceChecker:
         
         # Initialize the sentence transformer model
         print("Loading sentence transformer model...")
-        self.model = SentenceTransformer('all-roberta-large-v1')
+        self.model_name = 'Qwen/Qwen3-Embedding-0.6B'
+        self.model = SentenceTransformer(self.model_name, trust_remote_code=True)
         print("Model loaded successfully!")
         
-        # Extended keyword mapping for ISO 27002 controls
-        self.control_keywords = {
-            "5.1": ["policy", "policies", "information security", "governance", "management approval", "document"],
-            "5.2": ["roles", "responsibilities", "confidentiality", "agreement", "authorities", "contact"],
-            "6.1": ["organization", "internal", "framework", "management", "segregation", "duties"],
-            "6.2": ["mobile", "device", "bring your own", "byod", "smartphone", "tablet", "registration"],
-            "7.1": ["human resource", "hr", "screening", "background check", "employment", "hiring"],
-            "7.2": ["training", "awareness", "education", "disciplinary", "employee", "contractor"],
-            "7.3": ["termination", "resignation", "return assets", "access removal", "exit process"],
-            "8.1": ["asset", "inventory", "classification", "ownership", "acceptable use", "protection"],
-            "8.2": ["classification", "labeling", "handling", "confidential", "public", "restricted"],
-            "8.3": ["media", "removable", "disposal", "transfer", "secure deletion", "usb", "cd", "dvd"],
-            "9.1": ["access control", "authentication", "authorization", "user management", "privilege"],
-            "9.2": ["user registration", "provisioning", "deprovisioning", "access review", "privilege management"],
-            "9.3": ["password", "authentication", "user responsibility", "login", "session"],
-            "9.4": ["system access", "application", "secure logon", "utility programs", "source code"],
-            "10.1": ["cryptography", "encryption", "key management", "digital signature", "pki"],
-            "11.1": ["physical security", "perimeter", "entry control", "secure area", "environmental"],
-            "12.1": ["operational", "procedures", "change management", "capacity", "backup", "logging"],
-            "13.1": ["network", "communication", "segregation", "firewall", "monitoring", "transfer"],
-            "14.1": ["system development", "security requirements", "testing", "vulnerability", "application security"],
-            "15.1": ["supplier", "vendor", "third party", "outsourcing", "service delivery", "contract"],
-            "16.1": ["incident", "event", "reporting", "response", "forensics", "evidence", "breach"],
-            "17.1": ["business continuity", "disaster recovery", "availability", "resilience", "backup"],
-            "18.1": ["compliance", "legal", "regulatory", "audit", "intellectual property", "privacy", "gdpr"]
-        }
+        # Load keywords from ISO standards file
+        self.control_keywords = self._load_control_keywords()
         
         # Create embeddings for control descriptions and keywords
         self._precompute_control_embeddings()
@@ -51,33 +35,44 @@ class SemanticComplianceChecker:
         standards_path = os.path.join('iso_standards', 'iso27002.json')
         try:
             with open(standards_path, 'r') as f:
-                return json.load(f)
+                data = json.load(f)
+                # Extract only the control data (excluding metadata)
+                return {k: v for k, v in data.items() if k != 'metadata'}
         except FileNotFoundError:
-            return {
-                "5.1": {"name": "Information security policies"},
-                "5.2": {"name": "Information security roles and responsibilities"},
-                "6.1": {"name": "Internal organization"},
-                "6.2": {"name": "Mobile device policy"},
-                "7.1": {"name": "Human resource security"},
-                "7.2": {"name": "During employment"},
-                "7.3": {"name": "Termination and change of employment"},
-                "8.1": {"name": "Asset management"},
-                "8.2": {"name": "Information classification"},
-                "8.3": {"name": "Media handling"},
-                "9.1": {"name": "Access control"},
-                "9.2": {"name": "User access management"},
-                "9.3": {"name": "User responsibilities"},
-                "9.4": {"name": "System and application access control"},
-                "10.1": {"name": "Cryptographic controls"},
-                "11.1": {"name": "Physical and environmental security"},
-                "12.1": {"name": "Operational security"},
-                "13.1": {"name": "Communications security"},
-                "14.1": {"name": "System acquisition, development and maintenance"},
-                "15.1": {"name": "Supplier relationships"},
-                "16.1": {"name": "Incident management"},
-                "17.1": {"name": "Business continuity management"},
-                "18.1": {"name": "Compliance"}
-            }
+            # Fallback with basic controls if file not found
+            print("Warning: ISO standards file not found, using basic fallback controls")
+            return self._get_fallback_standards()
+    
+    def _get_fallback_standards(self) -> Dict:
+        """Provide fallback standards if main file is not available."""
+        return {
+            "5.1": {"name": "Information security policies", "keywords": ["policy", "policies", "information security"]},
+            "5.2": {"name": "Information security roles and responsibilities", "keywords": ["roles", "responsibilities"]},
+            "6.1": {"name": "Screening", "keywords": ["screening", "background", "employment"]},
+            "7.1": {"name": "Physical security perimeters", "keywords": ["physical security", "perimeter"]},
+            "8.1": {"name": "User endpoint devices", "keywords": ["endpoint", "devices", "user"]}
+        }
+    
+    def _load_control_keywords(self) -> Dict[str, List[str]]:
+        """Load control keywords from the standards data."""
+        control_keywords = {}
+        for control_id, control_data in self.standards.items():
+            if isinstance(control_data, dict) and 'keywords' in control_data:
+                control_keywords[control_id] = control_data['keywords']
+            else:
+                # Fallback: generate keywords from control name
+                control_name = control_data.get('name', '') if isinstance(control_data, dict) else str(control_data)
+                control_keywords[control_id] = self._generate_keywords_from_name(control_name)
+        
+        return control_keywords
+    
+    def _generate_keywords_from_name(self, name: str) -> List[str]:
+        """Generate basic keywords from control name."""
+        words = name.lower().split()
+        # Remove common stop words and generate variations
+        stop_words = {'of', 'the', 'and', 'or', 'in', 'on', 'at', 'to', 'for', 'with', 'by'}
+        keywords = [word for word in words if word not in stop_words and len(word) > 2]
+        return keywords
     
     def _precompute_control_embeddings(self):
         """Precompute embeddings for all control descriptions and keywords."""
@@ -96,8 +91,17 @@ class SemanticComplianceChecker:
             keywords = self.control_keywords.get(control_id, [])
             combined_text = f"{control_name} {control_description} {' '.join(keywords)}"
             
-            # Create embedding
-            embedding = self.model.encode([combined_text])
+            # Check cache for embedding
+            text_hash = get_content_hash(combined_text)
+            cached_embedding = get_cached_model_embeddings(self.model_name, text_hash)
+
+            if cached_embedding is not None:
+                embedding = cached_embedding
+            else:
+                # Create embedding
+                embedding = self.model.encode([combined_text])
+                cache_model_embeddings(self.model_name, text_hash, embedding)
+
             self.control_embeddings[control_id] = {
                 'embedding': embedding[0],
                 'text': combined_text,
@@ -106,61 +110,56 @@ class SemanticComplianceChecker:
             }
         print("Control embeddings precomputed successfully!")
     
-    def extract_semantic_features(self, content: str) -> Dict[str, List[str]]:
+    def extract_semantic_features(self, sentences: List[str], sentence_embeddings: np.ndarray) -> Dict[str, List[str]]:
         """Extract semantic features from document content using sentence transformers."""
-        # Clean and prepare content
-        content = self._clean_text(content)
-        sentences = self._advanced_sentence_split(content)
-        
         features = defaultdict(list)
         
-        # Create embeddings for document sentences
-        if sentences:
-            sentence_embeddings = self.model.encode(sentences)
+        if not sentences:
+            return dict(features)
+
+        # Define feature categories with their representative sentences
+        feature_categories = {
+            'policies': [
+                "Information security policy and procedures",
+                "Policy management and governance",
+                "Security standards and guidelines"
+            ],
+            'access_control': [
+                "User access management and authentication",
+                "Authorization and permission controls",
+                "Identity and access management"
+            ],
+            'asset_management': [
+                "Asset classification and inventory",
+                "Data protection and handling",
+                "Information asset management"
+            ],
+            'training': [
+                "Security awareness and training",
+                "Employee education programs",
+                "Competency development"
+            ],
+            'incident_management': [
+                "Security incident response",
+                "Breach management and reporting",
+                "Event monitoring and detection"
+            ]
+        }
+        
+        # Create embeddings for feature categories
+        for category, descriptions in feature_categories.items():
+            category_embeddings = self.model.encode(descriptions)
             
-            # Define feature categories with their representative sentences
-            feature_categories = {
-                'policies': [
-                    "Information security policy and procedures",
-                    "Policy management and governance",
-                    "Security standards and guidelines"
-                ],
-                'access_control': [
-                    "User access management and authentication",
-                    "Authorization and permission controls",
-                    "Identity and access management"
-                ],
-                'asset_management': [
-                    "Asset classification and inventory",
-                    "Data protection and handling",
-                    "Information asset management"
-                ],
-                'training': [
-                    "Security awareness and training",
-                    "Employee education programs",
-                    "Competency development"
-                ],
-                'incident_management': [
-                    "Security incident response",
-                    "Breach management and reporting",
-                    "Event monitoring and detection"
-                ]
-            }
-            
-            # Create embeddings for feature categories
-            for category, descriptions in feature_categories.items():
-                category_embeddings = self.model.encode(descriptions)
+            # Find sentences similar to each category
+            for i, sentence_embedding in enumerate(sentence_embeddings):
+                similarities = cosine_similarity(
+                    np.expand_dims(sentence_embedding, axis=0), 
+                    category_embeddings
+                )[0]
                 
-                # Find sentences similar to each category
-                for i, sentence_embedding in enumerate(sentence_embeddings):
-                    similarities = cosine_similarity(
-                        [sentence_embedding], 
-                        category_embeddings
-                    )[0]
-                    
-                    # If any similarity is above threshold, add to category
-                    if max(similarities) > 0.3:  # Threshold for semantic similarity
-                        features[category].append(sentences[i])
+                # If any similarity is above threshold, add to category
+                if max(similarities) > 0.3:  # Threshold for semantic similarity
+                    features[category].append(sentences[i])
         
         return dict(features)
     
@@ -193,16 +192,18 @@ class SemanticComplianceChecker:
         """Enhanced compliance checking with semantic analysis using sentence transformers."""
         results = {
             'compliance_score': 0,
-            'total_controls': len(self.standards),
-            'matched_controls': 0,
+            'summary': {
+                'total_controls': len(self.standards),
+                'matched_controls': 0,
+                'high_confidence': 0,
+                'medium_confidence': 0,
+                'low_confidence': 0,
+                'non_compliant': 0,
+            },
             'details': [],
             'semantic_analysis': {},
-            'method': 'Sentence Transformers (RoBERTa-Large)'
+            'method': 'Sentence Transformers (Qwen3-Embedding-0.6B)'
         }
-        
-        # Extract semantic features
-        semantic_features = self.extract_semantic_features(content)
-        results['semantic_analysis'] = {k: len(v) for k, v in semantic_features.items()}
         
         # Clean content for processing
         content_clean = self._clean_text(content)
@@ -210,10 +211,20 @@ class SemanticComplianceChecker:
         
         if not sentences:
             return results
-        
-        # Create embeddings for document sentences
-        print("Creating document embeddings...")
-        sentence_embeddings = self.model.encode(sentences)
+
+        # Get document embeddings (from cache or by encoding)
+        content_hash = get_content_hash(content_clean)
+        sentence_embeddings = get_cached_document_embeddings(self.model_name, content_hash)
+        if sentence_embeddings is None:
+            print("Creating document embeddings...")
+            sentence_embeddings = self.model.encode(sentences)
+            cache_document_embeddings(self.model_name, content_hash, sentence_embeddings)
+        else:
+            print("Loaded document embeddings from cache.")
+
+        # Extract semantic features
+        semantic_features = self.extract_semantic_features(sentences, sentence_embeddings)
+        results['semantic_analysis'] = {k: len(v) for k, v in semantic_features.items()}
         
         for control_id, control_info in self.standards.items():
             if isinstance(control_info, dict):
@@ -229,19 +240,43 @@ class SemanticComplianceChecker:
                 semantic_features
             )
             
+            # Determine confidence level and status
+            if score > 0.6:
+                status = 'High Confidence'
+                confidence = 'high'
+                results['summary']['high_confidence'] += 1
+            elif score > 0.4:
+                status = 'Medium Confidence'
+                confidence = 'medium'
+                results['summary']['medium_confidence'] += 1
+            elif score > 0.25:
+                status = 'Low Confidence'
+                confidence = 'low'
+                results['summary']['low_confidence'] += 1
+            else:
+                status = 'Non-compliant'
+                confidence = 'none'
+                results['summary']['non_compliant'] += 1
+            
             results['details'].append({
-                'control_id': control_id,
-                'control_name': control_name,
-                'score': float(score),  # Convert numpy float to Python float
-                'status': 'Compliant' if score > 0.25 else 'Non-compliant',  # Lower threshold for semantic matching
-                'evidence': self._find_semantic_evidence(control_id, sentences, sentence_embeddings)
+                'id': control_id,
+                'name': control_name,
+                'score': float(score),
+                'status': status,
+                'confidence': confidence,
+                'rationale': '\n'.join(self._find_semantic_evidence(control_id, sentences, sentence_embeddings))
             })
             
             if score > 0.25:
-                results['matched_controls'] += 1
+                results['summary']['matched_controls'] += 1
         
         # Calculate overall compliance score
-        results['compliance_score'] = float((results['matched_controls'] / results['total_controls']) * 100)
+        total_controls = results['summary']['total_controls']
+        matched_controls = results['summary']['matched_controls']
+        if total_controls > 0:
+            results['compliance_score'] = float((matched_controls / total_controls) * 100)
+        else:
+            results['compliance_score'] = 0.0
         
         print("Semantic compliance analysis completed!")
         return results
@@ -255,7 +290,7 @@ class SemanticComplianceChecker:
         control_embedding = self.control_embeddings[control_id]['embedding']
         
         # Calculate similarities between control and document sentences
-        similarities = cosine_similarity([control_embedding], sentence_embeddings)[0]
+        similarities = cosine_similarity(np.array([control_embedding]), sentence_embeddings)[0]
         
         # Get top similarities
         top_similarities = np.sort(similarities)[-5:]  # Top 5 matches
@@ -309,7 +344,7 @@ class SemanticComplianceChecker:
         control_embedding = self.control_embeddings[control_id]['embedding']
         
         # Calculate similarities
-        similarities = cosine_similarity([control_embedding], sentence_embeddings)[0]
+        similarities = cosine_similarity(np.array([control_embedding]), sentence_embeddings)[0]
         
         # Get indices of top similar sentences
         top_indices = np.argsort(similarities)[-3:][::-1]  # Top 3, in descending order
@@ -323,4 +358,4 @@ class SemanticComplianceChecker:
                     sentence = sentence[:200] + "..."
                 evidence.append(sentence)
         
-        return evidence 
+        return evidence

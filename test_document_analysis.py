@@ -37,11 +37,15 @@ def analyze_document(filepath):
             print(f"- {category}: {count} instances")
         
         print(f"\nTop Compliant Controls:")
-        compliant_controls = [detail for detail in results['details'] if detail['status'] == 'Compliant']
+        high_confidence_controls = [detail for detail in results['details'] if detail['status'] == 'High Confidence']
+        medium_confidence_controls = [detail for detail in results['details'] if detail['status'] == 'Medium Confidence']
+        low_confidence_controls = [detail for detail in results['details'] if detail['status'] == 'Low Confidence']
+        
+        compliant_controls = high_confidence_controls + medium_confidence_controls + low_confidence_controls
         compliant_controls.sort(key=lambda x: x['score'], reverse=True)
         
         for control in compliant_controls[:5]:
-            print(f"- {control['control_id']}: {control['control_name']} (Score: {control['score']:.2f})")
+            print(f"- {control['control_id']}: {control['control_name']} (Score: {control['score']:.2f}, {control['status']})")
             if control['evidence']:
                 print(f"  Evidence: {control['evidence'][0][:100]}...")
         

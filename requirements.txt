@@ -1,9 +1,32 @@
+# Core dependencies
+Flask
 PyPDF2
 python-docx
-Flask
-nltk
-pandas
-python-dotenv
-reportlab
+
+# AI/ML dependencies
 sentence-transformers
 torch
+scikit-learn
+numpy
+
+# Data processing
+pandas
+nltk
+
+# Security and validation
+Werkzeug
+python-dotenv
+marshmallow
+
+# Report generation
+reportlab
+
+# Development and testing
+pytest
+pytest-flask
+black
+flake8
+
+# Production deployment
+gunicorn
+redis 

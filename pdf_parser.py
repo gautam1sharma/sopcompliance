@@ -6,6 +6,17 @@ class PDFParser:
     def __init__(self, filepath: str):
         self.filepath = filepath
         
+    def is_pdf_loadable(self) -> bool:
+        """Check if the PDF can be opened and is not terminally corrupted."""
+        try:
+            with open(self.filepath, 'rb') as file:
+                PyPDF2.PdfReader(file)
+            return True
+        except PyPDF2.errors.PdfReadError:
+            return False
+        except Exception:
+            return False
+
     def extract_text(self) -> str:
         """Extract text from PDF file."""
         try:

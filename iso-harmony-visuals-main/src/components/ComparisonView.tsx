@@ -11,7 +11,7 @@ interface ComparisonViewProps {
   isoDocument?: any;
 }
 
-const ComparisonView: React.FC<ComparisonViewProps> = ({ 
+const ComparisonView: React.FC<ComparisonViewProps> = ({
   sopDocument = { title: "Security Access Control SOP", content: sampleSopContent },
   isoDocument = { title: "ISO 27002:2022 - Access Control", content: sampleIsoContent }
 }) => {
@@ -51,15 +51,15 @@ const ComparisonView: React.FC<ComparisonViewProps> = ({
           <div className="ml-auto">
             <Tabs defaultValue="side-by-side" className="w-[400px]">
               <TabsList>
-                <TabsTrigger 
-                  value="side-by-side" 
+                <TabsTrigger
+                  value="side-by-side"
                   onClick={() => setViewMode('side-by-side')}
                   className="flex items-center gap-1"
                 >
                   <span>Side by side</span>
                 </TabsTrigger>
-                <TabsTrigger 
-                  value="differences" 
+                <TabsTrigger
+                  value="differences"
                   onClick={() => setViewMode('differences')}
                   className="flex items-center gap-1"
                 >
@@ -70,7 +70,7 @@ const ComparisonView: React.FC<ComparisonViewProps> = ({
           </div>
         </div>
       </div>
-      
+
       <div className="grid grid-cols-2 gap-0 h-[600px] overflow-hidden">
         {viewMode === 'side-by-side' ? (
           <>
@@ -78,8 +78,8 @@ const ComparisonView: React.FC<ComparisonViewProps> = ({
               <h3 className="text-lg font-medium mb-4 animate-slide-in-left">SOP Document</h3>
               <div className="prose dark:prose-invert max-w-none text-sm">
                 {sopDocument.content.map((paragraph: string, idx: number) => (
-                  <div 
-                    key={idx} 
+                  <div
+                    key={idx}
                     className="mb-4 animate-slide-in-left"
                     style={{ animationDelay: `${idx * 0.05}s` }}
                   >
@@ -88,13 +88,13 @@ const ComparisonView: React.FC<ComparisonViewProps> = ({
                 ))}
               </div>
             </div>
-            
+
             <div className="p-6 overflow-y-auto">
               <h3 className="text-lg font-medium mb-4 animate-slide-in-right">ISO 27002 Control</h3>
               <div className="prose dark:prose-invert max-w-none text-sm">
                 {isoDocument.content.map((paragraph: string, idx: number) => (
-                  <div 
-                    key={idx} 
+                  <div
+                    key={idx}
                     className="mb-4 animate-slide-in-right"
                     style={{ animationDelay: `${idx * 0.05}s` }}
                   >
@@ -110,10 +110,15 @@ const ComparisonView: React.FC<ComparisonViewProps> = ({
               {differenceContent.map((item, idx) => (
                 <Card key={idx} className="mb-4 p-4 animate-fade-in" style={{ animationDelay: `${idx * 0.1}s` }}>
                   <div className="flex items-start gap-3">
-                    <div className={`mt-1 ${item.status === 'compliant' ? 'text-green-500' : item.status === 'non-compliant' ? 'text-red-500' : 'text-amber-500'}`}>
-                      {item.status === 'compliant' ? <CheckCircle className="h-5 w-5" /> : 
-                       item.status === 'non-compliant' ? <XCircle className="h-5 w-5" /> :
-                       <HelpCircle className="h-5 w-5" />}
+                    <div className={`mt-1 ${item.status === 'high-confidence' ? 'text-green-500' :
+                        item.status === 'medium-confidence' ? 'text-yellow-500' :
+                          item.status === 'low-confidence' ? 'text-orange-500' :
+                            item.status === 'non-compliant' ? 'text-red-500' : 'text-amber-500'}`}>
+                      {item.status === 'high-confidence' ? <CheckCircle className="h-5 w-5" /> :
+                        item.status === 'medium-confidence' ? <CheckCircle className="h-5 w-5" /> :
+                          item.status === 'low-confidence' ? <HelpCircle className="h-5 w-5" /> :
+                            item.status === 'non-compliant' ? <XCircle className="h-5 w-5" /> :
+                              <HelpCircle className="h-5 w-5" />}
                     </div>
                     <div>
                       <h4 className="text-base font-medium mb-2">{item.title}</h4>
@@ -138,7 +143,7 @@ const ComparisonView: React.FC<ComparisonViewProps> = ({
           </div>
         )}
       </div>
-      
+
       <div className="bg-slate-50 dark:bg-slate-900 p-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
         <Button variant="outline" size="sm" className="flex items-center gap-1">
           <ChevronLeft className="h-4 w-4" />

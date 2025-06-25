@@ -70,15 +70,30 @@ class ComplianceChecker:
             # Calculate score for this control
             control_score = len(matches) / len(patterns) if patterns else 0
             
+            # Determine confidence level and status
+            if control_score > 0.6:
+                status = 'High Confidence'
+                confidence = 'high'
+            elif control_score > 0.4:
+                status = 'Medium Confidence'
+                confidence = 'medium'
+            elif control_score > 0.25:
+                status = 'Low Confidence'
+                confidence = 'low'
+            else:
+                status = 'Non-compliant'
+                confidence = 'none'
+            
             results['details'].append({
                 'control_id': control_id,
                 'control_name': control_name,
                 'score': control_score,
                 'matches': matches,
-                'status': 'Compliant' if control_score > 0.5 else 'Non-compliant'
+                'status': status,
+                'confidence': confidence
             })
             
-            if control_score > 0.5:
+            if control_score > 0.25:
                 results['matched_controls'] += 1
         
         # Calculate overall compliance score

@@ -1,0 +1,200 @@
+2025-06-08 22:50:52,002 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-08 22:50:57,472 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-08 22:59:25,549 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-08 22:59:30,068 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-08 22:59:40,289 - compliance_checker - INFO - logger.py:53 - File upload | filename=1SecurityPolicy version 1.0.pdf | file_size=1575699 | method=enhanced | user_ip=127.0.0.1 | timestamp=2025-06-08T17:29:40.289218
+2025-06-08 22:59:41,436 - compliance_checker - INFO - logger.py:53 - Analysis started using enhanced method | method=enhanced | content_length=63325 | filename=1SecurityPolicy version 1.0.pdf
+2025-06-08 22:59:41,436 - compliance_checker - INFO - logger.py:53 - Using Enhanced Compliance Checker
+2025-06-08 22:59:42,052 - compliance_checker - INFO - logger.py:53 - Analysis completed using enhanced method | method=enhanced | compliance_score=100.0 | processing_time_seconds=0.6164031028747559 | filename=1SecurityPolicy version 1.0.pdf
+2025-06-08 22:59:42,052 - compliance_checker - INFO - logger.py:53 - Performance metrics for enhanced_analysis | operation=enhanced_analysis | duration_seconds=0.6164031028747559 | content_length=63325 | compliance_score=100.0 | matched_controls=93
+2025-06-08 23:00:25,728 - compliance_checker - INFO - logger.py:53 - File upload | filename=1SecurityPolicy version 1.0.pdf | file_size=1575699 | method=enhanced | user_ip=127.0.0.1 | timestamp=2025-06-08T17:30:25.728728
+2025-06-08 23:00:26,775 - compliance_checker - INFO - logger.py:53 - Analysis started using enhanced method | method=enhanced | content_length=63325 | filename=1SecurityPolicy version 1.0.pdf
+2025-06-08 23:00:26,775 - compliance_checker - INFO - logger.py:53 - Using Enhanced Compliance Checker
+2025-06-08 23:00:27,474 - compliance_checker - INFO - logger.py:53 - Analysis completed using enhanced method | method=enhanced | compliance_score=100.0 | processing_time_seconds=0.6988015174865723 | filename=1SecurityPolicy version 1.0.pdf
+2025-06-08 23:00:27,474 - compliance_checker - INFO - logger.py:53 - Performance metrics for enhanced_analysis | operation=enhanced_analysis | duration_seconds=0.6988015174865723 | content_length=63325 | compliance_score=100.0 | matched_controls=93
+2025-06-08 23:00:35,319 - compliance_checker - INFO - logger.py:53 - File upload | filename=1SecurityPolicy version 1.0.pdf | file_size=1575699 | method=semantic | user_ip=127.0.0.1 | timestamp=2025-06-08T17:30:35.319911
+2025-06-08 23:00:36,474 - compliance_checker - INFO - logger.py:53 - Analysis started using semantic method | method=semantic | content_length=63325 | filename=1SecurityPolicy version 1.0.pdf
+2025-06-08 23:00:36,474 - compliance_checker - INFO - logger.py:53 - Using Semantic Compliance Checker
+2025-06-08 23:00:36,474 - compliance_checker - INFO - logger.py:53 - Initializing semantic compliance checker
+2025-06-08 23:00:59,234 - compliance_checker - INFO - logger.py:53 - Semantic checker initialized | load_time_seconds=22.760310173034668
+2025-06-08 23:02:57,702 - compliance_checker - INFO - logger.py:53 - Analysis completed using semantic method | method=semantic | compliance_score=98.9247311827957 | processing_time_seconds=141.22828340530396 | filename=1SecurityPolicy version 1.0.pdf
+2025-06-08 23:02:57,703 - compliance_checker - INFO - logger.py:53 - Performance metrics for semantic_analysis | operation=semantic_analysis | duration_seconds=141.22828340530396 | content_length=63325 | compliance_score=98.9247311827957 | matched_controls=92
+2025-06-08 23:49:37,233 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-08 23:49:41,983 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-09 00:14:43,444 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-09 00:14:48,338 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-09 00:17:53,005 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-09 00:17:58,130 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-09 00:29:06,978 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-09 00:29:12,285 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-09 00:30:38,514 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-09 00:30:54,931 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-09 00:31:11,362 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-09 00:32:53,630 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-09 00:32:58,365 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-09 00:33:04,036 - compliance_checker - INFO - logger.py:53 - File upload | filename=1SecurityPolicy version 1.0.pdf | file_size=1575699 | method=enhanced | user_ip=127.0.0.1 | timestamp=2025-06-08T19:03:04.036053
+2025-06-09 00:33:05,318 - compliance_checker - INFO - logger.py:53 - Analysis started using enhanced method | method=enhanced | content_length=63325 | filename=1SecurityPolicy version 1.0.pdf
+2025-06-09 00:33:05,318 - compliance_checker - INFO - logger.py:53 - Using Enhanced Compliance Checker
+2025-06-09 00:33:06,219 - compliance_checker - INFO - logger.py:53 - Analysis completed using enhanced method | method=enhanced | compliance_score=100.0 | processing_time_seconds=0.9010298252105713 | filename=1SecurityPolicy version 1.0.pdf
+2025-06-09 00:33:06,233 - compliance_checker - ERROR - logger.py:69 - Unexpected error in /analyze | user_ip=127.0.0.1 | Exception: 'summary'
+2025-06-09 00:34:42,474 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-09 00:35:00,933 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-09 00:44:39,601 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-09 00:44:44,751 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-09 00:44:53,002 - compliance_checker - INFO - logger.py:53 - File upload | filename=1SecurityPolicy version 1.0.pdf | file_size=1575699 | method=semantic | user_ip=127.0.0.1 | timestamp=2025-06-08T19:14:53.002777
+2025-06-09 00:44:54,047 - compliance_checker - INFO - logger.py:53 - Analysis started using semantic method | method=semantic | content_length=63325 | filename=1SecurityPolicy version 1.0.pdf
+2025-06-09 00:44:54,047 - compliance_checker - INFO - logger.py:53 - Using Semantic Compliance Checker
+2025-06-09 00:44:54,048 - compliance_checker - INFO - logger.py:53 - Initializing semantic compliance checker
+2025-06-09 00:45:24,524 - compliance_checker - INFO - logger.py:53 - Semantic checker initialized | load_time_seconds=30.47580885887146
+2025-06-09 00:46:12,519 - compliance_checker - ERROR - logger.py:72 - Invalid compliance results | error=Missing required key in results: total_controls
+2025-06-09 00:47:58,216 - compliance_checker - INFO - logger.py:53 - File upload | filename=1SecurityPolicy version 1.0.pdf | file_size=1575699 | method=enhanced | user_ip=127.0.0.1 | timestamp=2025-06-08T19:17:58.216595
+2025-06-09 00:47:59,499 - compliance_checker - INFO - logger.py:53 - Analysis started using enhanced method | method=enhanced | content_length=63325 | filename=1SecurityPolicy version 1.0.pdf
+2025-06-09 00:47:59,502 - compliance_checker - INFO - logger.py:53 - Using Enhanced Compliance Checker
+2025-06-09 00:48:00,303 - compliance_checker - ERROR - logger.py:72 - Invalid compliance results | error=Missing required key in results: total_controls
+2025-06-09 00:49:09,918 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-09 00:53:35,555 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-09 00:53:40,552 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-09 00:53:46,852 - compliance_checker - INFO - logger.py:53 - File upload | filename=1SecurityPolicy version 1.0.pdf | file_size=1575699 | method=enhanced | user_ip=127.0.0.1 | timestamp=2025-06-08T19:23:46.852738
+2025-06-09 00:53:47,932 - compliance_checker - INFO - logger.py:53 - Analysis started using enhanced method | method=enhanced | content_length=63325 | filename=1SecurityPolicy version 1.0.pdf
+2025-06-09 00:53:47,932 - compliance_checker - INFO - logger.py:53 - Using Enhanced Compliance Checker
+2025-06-09 00:53:48,644 - compliance_checker - INFO - logger.py:53 - Analysis completed using enhanced method | method=enhanced | compliance_score=100.0 | processing_time_seconds=0.7115311622619629 | filename=1SecurityPolicy version 1.0.pdf
+2025-06-09 00:53:48,646 - compliance_checker - INFO - logger.py:53 - Performance metrics for enhanced_analysis | operation=enhanced_analysis | duration_seconds=0.7115311622619629 | content_length=63325 | compliance_score=100.0 | matched_controls=93
+2025-06-09 00:55:26,326 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-09 00:56:46,572 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-09 00:56:51,284 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-09 00:56:56,233 - compliance_checker - INFO - logger.py:53 - File upload | filename=1SecurityPolicy version 1.0.pdf | file_size=1575699 | method=enhanced | user_ip=127.0.0.1 | timestamp=2025-06-08T19:26:56.233411
+2025-06-09 00:56:57,707 - compliance_checker - INFO - logger.py:53 - Analysis started using enhanced method | method=enhanced | content_length=63325 | filename=1SecurityPolicy version 1.0.pdf
+2025-06-09 00:56:57,707 - compliance_checker - INFO - logger.py:53 - Using Enhanced Compliance Checker
+2025-06-09 00:56:58,562 - compliance_checker - INFO - logger.py:53 - Analysis completed using enhanced method | method=enhanced | compliance_score=100.0 | processing_time_seconds=0.8546187877655029 | filename=1SecurityPolicy version 1.0.pdf
+2025-06-09 00:56:58,562 - compliance_checker - INFO - logger.py:53 - Performance metrics for enhanced_analysis | operation=enhanced_analysis | duration_seconds=0.8546187877655029 | content_length=63325 | compliance_score=100.0 | matched_controls=93
+2025-06-09 00:57:21,888 - compliance_checker - INFO - logger.py:53 - File upload | filename=1SecurityPolicy version 1.0.pdf | file_size=1575699 | method=semantic | user_ip=127.0.0.1 | timestamp=2025-06-08T19:27:21.888358
+2025-06-09 00:57:23,336 - compliance_checker - INFO - logger.py:53 - Analysis started using semantic method | method=semantic | content_length=63325 | filename=1SecurityPolicy version 1.0.pdf
+2025-06-09 00:57:23,354 - compliance_checker - INFO - logger.py:53 - Using Semantic Compliance Checker
+2025-06-09 00:57:23,354 - compliance_checker - INFO - logger.py:53 - Initializing semantic compliance checker
+2025-06-09 00:58:35,547 - compliance_checker - INFO - logger.py:53 - Semantic checker initialized | load_time_seconds=72.17861819267273
+2025-06-09 00:59:30,080 - compliance_checker - INFO - logger.py:53 - Analysis completed using semantic method | method=semantic | compliance_score=98.9247311827957 | processing_time_seconds=126.72671175003052 | filename=1SecurityPolicy version 1.0.pdf
+2025-06-09 00:59:30,080 - compliance_checker - INFO - logger.py:53 - Performance metrics for semantic_analysis | operation=semantic_analysis | duration_seconds=126.72671175003052 | content_length=63325 | compliance_score=98.9247311827957 | matched_controls=93
+2025-06-09 01:01:47,371 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-09 01:05:24,693 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-09 01:05:29,373 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-09 01:05:36,459 - compliance_checker - INFO - logger.py:53 - File upload | filename=1SecurityPolicy version 1.0.pdf | file_size=1575699 | method=enhanced | user_ip=127.0.0.1 | timestamp=2025-06-08T19:35:36.459493
+2025-06-09 01:05:37,440 - compliance_checker - INFO - logger.py:53 - Analysis started using enhanced method | method=enhanced | content_length=63325 | filename=1SecurityPolicy version 1.0.pdf
+2025-06-09 01:05:37,440 - compliance_checker - INFO - logger.py:53 - Using Enhanced Compliance Checker
+2025-06-09 01:05:38,106 - compliance_checker - INFO - logger.py:53 - Analysis completed using enhanced method | method=enhanced | compliance_score=100.0 | processing_time_seconds=0.665508508682251 | filename=1SecurityPolicy version 1.0.pdf
+2025-06-09 01:05:38,106 - compliance_checker - INFO - logger.py:53 - Performance metrics for enhanced_analysis | operation=enhanced_analysis | duration_seconds=0.665508508682251 | content_length=63325 | compliance_score=100.0 | matched_controls=93
+2025-06-09 01:22:57,020 - compliance_checker - INFO - logger.py:53 - File upload | filename=1SecurityPolicy version 1.0.pdf | file_size=1575699 | method=enhanced | user_ip=127.0.0.1 | timestamp=2025-06-08T19:52:57.020875
+2025-06-09 01:22:57,888 - compliance_checker - INFO - logger.py:53 - Analysis started using enhanced method | method=enhanced | content_length=63325 | filename=1SecurityPolicy version 1.0.pdf
+2025-06-09 01:22:57,888 - compliance_checker - INFO - logger.py:53 - Using Enhanced Compliance Checker
+2025-06-09 01:22:58,574 - compliance_checker - INFO - logger.py:53 - Analysis completed using enhanced method | method=enhanced | compliance_score=100.0 | processing_time_seconds=0.6865568161010742 | filename=1SecurityPolicy version 1.0.pdf
+2025-06-09 01:22:58,574 - compliance_checker - INFO - logger.py:53 - Performance metrics for enhanced_analysis | operation=enhanced_analysis | duration_seconds=0.6865568161010742 | content_length=63325 | compliance_score=100.0 | matched_controls=93
+2025-06-09 11:03:41,915 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-09 11:03:58,960 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-09 11:04:09,088 - compliance_checker - INFO - logger.py:53 - File upload | filename=1SecurityPolicy version 1.0.pdf | file_size=1575699 | method=enhanced | user_ip=127.0.0.1 | timestamp=2025-06-09T05:34:09.088759
+2025-06-09 11:04:10,213 - compliance_checker - INFO - logger.py:53 - Analysis started using enhanced method | method=enhanced | content_length=63325 | filename=1SecurityPolicy version 1.0.pdf
+2025-06-09 11:04:10,213 - compliance_checker - INFO - logger.py:53 - Using Enhanced Compliance Checker
+2025-06-09 11:04:11,377 - compliance_checker - INFO - logger.py:53 - Analysis completed using enhanced method | method=enhanced | compliance_score=100.0 | processing_time_seconds=1.1638598442077637 | filename=1SecurityPolicy version 1.0.pdf
+2025-06-09 11:04:11,379 - compliance_checker - INFO - logger.py:53 - Performance metrics for enhanced_analysis | operation=enhanced_analysis | duration_seconds=1.1638598442077637 | content_length=63325 | compliance_score=100.0 | matched_controls=93
+2025-06-09 11:15:25,147 - compliance_checker - INFO - logger.py:53 - File upload | filename=Information_Security_Policy_paytm.pdf | file_size=584506 | method=enhanced | user_ip=127.0.0.1 | timestamp=2025-06-09T05:45:25.147322
+2025-06-09 11:15:25,708 - compliance_checker - INFO - logger.py:53 - Analysis started using enhanced method | method=enhanced | content_length=24003 | filename=Information_Security_Policy_paytm.pdf
+2025-06-09 11:15:25,708 - compliance_checker - INFO - logger.py:53 - Using Enhanced Compliance Checker
+2025-06-09 11:15:26,583 - compliance_checker - INFO - logger.py:53 - Analysis completed using enhanced method | method=enhanced | compliance_score=100.0 | processing_time_seconds=0.8753609657287598 | filename=Information_Security_Policy_paytm.pdf
+2025-06-09 11:15:26,583 - compliance_checker - INFO - logger.py:53 - Performance metrics for enhanced_analysis | operation=enhanced_analysis | duration_seconds=0.8753609657287598 | content_length=24003 | compliance_score=100.0 | matched_controls=93
+2025-06-09 11:16:40,953 - compliance_checker - INFO - logger.py:53 - File upload | filename=Information_Security_Policy_paytm.pdf | file_size=584506 | method=semantic | user_ip=127.0.0.1 | timestamp=2025-06-09T05:46:40.953467
+2025-06-09 11:16:41,961 - compliance_checker - INFO - logger.py:53 - Analysis started using semantic method | method=semantic | content_length=24003 | filename=Information_Security_Policy_paytm.pdf
+2025-06-09 11:16:41,961 - compliance_checker - INFO - logger.py:53 - Using Semantic Compliance Checker
+2025-06-09 11:16:41,964 - compliance_checker - INFO - logger.py:53 - Initializing semantic compliance checker
+2025-06-09 11:17:25,706 - compliance_checker - INFO - logger.py:53 - Semantic checker initialized | load_time_seconds=43.7420072555542
+2025-06-09 11:17:51,832 - compliance_checker - INFO - logger.py:53 - Analysis completed using semantic method | method=semantic | compliance_score=98.9247311827957 | processing_time_seconds=69.87087512016296 | filename=Information_Security_Policy_paytm.pdf
+2025-06-09 11:17:51,834 - compliance_checker - INFO - logger.py:53 - Performance metrics for semantic_analysis | operation=semantic_analysis | duration_seconds=69.87087512016296 | content_length=24003 | compliance_score=98.9247311827957 | matched_controls=93
+2025-06-16 22:44:03,565 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-16 22:44:08,812 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-16 22:45:28,989 - compliance_checker - INFO - logger.py:53 - File upload | filename=Information-Security-Policy_230209_EN.pdf | file_size=188381 | method=enhanced | user_ip=127.0.0.1 | timestamp=2025-06-16T17:15:28.989946
+2025-06-16 22:45:29,861 - compliance_checker - INFO - logger.py:53 - Analysis started using enhanced method | method=enhanced | content_length=24930 | filename=Information-Security-Policy_230209_EN.pdf
+2025-06-16 22:45:29,861 - compliance_checker - INFO - logger.py:53 - Using Enhanced Compliance Checker
+2025-06-16 22:45:30,401 - compliance_checker - INFO - logger.py:53 - Analysis completed using enhanced method | method=enhanced | compliance_score=98.9247311827957 | processing_time_seconds=0.5403192043304443 | filename=Information-Security-Policy_230209_EN.pdf
+2025-06-16 22:45:30,401 - compliance_checker - INFO - logger.py:53 - Performance metrics for enhanced_analysis | operation=enhanced_analysis | duration_seconds=0.5403192043304443 | content_length=24930 | compliance_score=98.9247311827957 | matched_controls=93
+2025-06-16 22:46:07,767 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-16 22:47:25,554 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-16 22:48:22,985 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-16 22:48:27,953 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-16 22:48:51,340 - compliance_checker - INFO - logger.py:53 - File upload | filename=InformationSecurityPolicy-godfreyphillips.pdf | file_size=912591 | method=semantic | user_ip=127.0.0.1 | timestamp=2025-06-16T17:18:51.340862
+2025-06-16 22:48:55,287 - compliance_checker - INFO - logger.py:53 - Analysis started using semantic method | method=semantic | content_length=106081 | filename=InformationSecurityPolicy-godfreyphillips.pdf
+2025-06-16 22:48:55,287 - compliance_checker - INFO - logger.py:53 - Using Semantic Compliance Checker
+2025-06-16 22:48:55,287 - compliance_checker - INFO - logger.py:53 - Initializing semantic compliance checker
+2025-06-16 22:48:55,907 - compliance_checker - ERROR - logger.py:69 - Unexpected error in /analyze | user_ip=127.0.0.1 | Exception: alibaba-damo/Qwen3-Embedding-0.6B is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `huggingface-cli login` or by passing `token=<your_token>`
+2025-06-16 22:59:43,398 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-16 23:03:42,299 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-16 23:03:59,669 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-16 23:04:04,358 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-16 23:04:33,377 - compliance_checker - INFO - logger.py:53 - File upload | filename=InformationSecurityPolicy-godfreyphillips.pdf | file_size=912591 | method=semantic | user_ip=127.0.0.1 | timestamp=2025-06-16T17:34:33.377870
+2025-06-16 23:04:39,869 - compliance_checker - INFO - logger.py:53 - Analysis started using semantic method | method=semantic | content_length=106081 | filename=InformationSecurityPolicy-godfreyphillips.pdf
+2025-06-16 23:04:39,869 - compliance_checker - INFO - logger.py:53 - Using Semantic Compliance Checker
+2025-06-16 23:04:39,869 - compliance_checker - INFO - logger.py:53 - Initializing semantic compliance checker
+2025-06-16 23:04:40,429 - compliance_checker - ERROR - logger.py:69 - Unexpected error in /analyze | user_ip=127.0.0.1 | Exception: Alibaba-NLP/Qwen3-Embedding-0.6B is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `huggingface-cli login` or by passing `token=<your_token>`
+2025-06-16 23:06:51,021 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-16 23:09:19,498 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-16 23:09:59,536 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-16 23:10:04,166 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-16 23:11:13,102 - compliance_checker - INFO - logger.py:53 - File upload | filename=InformationSecurityPolicy-godfreyphillips.pdf | file_size=912591 | method=semantic | user_ip=127.0.0.1 | timestamp=2025-06-16T17:41:13.101869
+2025-06-16 23:11:17,946 - compliance_checker - INFO - logger.py:53 - Analysis started using semantic method | method=semantic | content_length=106081 | filename=InformationSecurityPolicy-godfreyphillips.pdf
+2025-06-16 23:11:17,946 - compliance_checker - INFO - logger.py:53 - Using Semantic Compliance Checker
+2025-06-16 23:11:17,952 - compliance_checker - INFO - logger.py:53 - Initializing semantic compliance checker
+2025-06-16 23:13:18,943 - compliance_checker - INFO - logger.py:53 - Semantic checker initialized | load_time_seconds=120.9917962551117
+2025-06-16 23:15:12,694 - compliance_checker - INFO - logger.py:53 - Analysis completed using semantic method | method=semantic | compliance_score=100.0 | processing_time_seconds=234.7475471496582 | filename=InformationSecurityPolicy-godfreyphillips.pdf
+2025-06-16 23:15:12,696 - compliance_checker - INFO - logger.py:53 - Performance metrics for semantic_analysis | operation=semantic_analysis | duration_seconds=234.7475471496582 | content_length=106081 | compliance_score=100.0 | matched_controls=93
+2025-06-16 23:27:24,430 - compliance_checker - INFO - logger.py:53 - File upload | filename=InformationSecurityPolicy-godfreyphillips.pdf | file_size=912591 | method=semantic | user_ip=127.0.0.1 | timestamp=2025-06-16T17:57:24.430236
+2025-06-16 23:27:26,268 - compliance_checker - INFO - logger.py:53 - Analysis started using semantic method | method=semantic | content_length=106081 | filename=InformationSecurityPolicy-godfreyphillips.pdf
+2025-06-16 23:27:26,269 - compliance_checker - INFO - logger.py:53 - Using Semantic Compliance Checker
+2025-06-16 23:27:28,235 - compliance_checker - INFO - logger.py:53 - Analysis completed using semantic method | method=semantic | compliance_score=100.0 | processing_time_seconds=1.9662868976593018 | filename=InformationSecurityPolicy-godfreyphillips.pdf
+2025-06-16 23:27:28,235 - compliance_checker - INFO - logger.py:53 - Performance metrics for semantic_analysis | operation=semantic_analysis | duration_seconds=1.9662868976593018 | content_length=106081 | compliance_score=100.0 | matched_controls=93
+2025-06-16 23:32:37,582 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-16 23:34:03,918 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-16 23:34:19,629 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-16 23:34:33,135 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-16 23:34:42,931 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-16 23:36:05,224 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-16 23:36:28,859 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-16 23:37:08,535 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-16 23:37:24,936 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-16 23:37:36,617 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-16 23:37:47,995 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-16 23:37:53,235 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-16 23:37:55,839 - compliance_checker - INFO - logger.py:53 - File upload | filename=InformationSecurityPolicy-godfreyphillips.pdf | file_size=912591 | method=semantic | user_ip=127.0.0.1 | timestamp=2025-06-16T18:07:55.839104
+2025-06-16 23:37:58,919 - compliance_checker - INFO - logger.py:53 - Analysis started using semantic method | method=semantic | content_length=106081 | filename=InformationSecurityPolicy-godfreyphillips.pdf
+2025-06-16 23:37:58,921 - compliance_checker - INFO - logger.py:53 - Using Semantic Compliance Checker
+2025-06-16 23:37:58,921 - compliance_checker - INFO - logger.py:53 - Initializing semantic compliance checker
+2025-06-16 23:39:39,062 - compliance_checker - INFO - logger.py:53 - Semantic checker initialized | load_time_seconds=100.14082741737366
+2025-06-16 23:42:02,182 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-16 23:42:07,206 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-16 23:42:13,685 - compliance_checker - INFO - logger.py:53 - File upload | filename=InformationSecurityPolicy-godfreyphillips.pdf | file_size=912591 | method=semantic | user_ip=127.0.0.1 | timestamp=2025-06-16T18:12:13.684930
+2025-06-16 23:42:16,718 - compliance_checker - INFO - logger.py:53 - Analysis started using semantic method | method=semantic | content_length=106081 | filename=InformationSecurityPolicy-godfreyphillips.pdf
+2025-06-16 23:42:16,719 - compliance_checker - INFO - logger.py:53 - Using Semantic Compliance Checker
+2025-06-16 23:42:16,719 - compliance_checker - INFO - logger.py:53 - Initializing semantic compliance checker
+2025-06-16 23:44:23,303 - compliance_checker - INFO - logger.py:53 - Semantic checker initialized | load_time_seconds=126.58211374282837
+2025-06-16 23:47:08,340 - compliance_checker - INFO - logger.py:53 - Analysis completed using semantic method | method=semantic | compliance_score=100.0 | processing_time_seconds=291.620365858078 | filename=InformationSecurityPolicy-godfreyphillips.pdf
+2025-06-16 23:47:08,340 - compliance_checker - INFO - logger.py:53 - Performance metrics for semantic_analysis | operation=semantic_analysis | duration_seconds=291.620365858078 | content_length=106081 | compliance_score=100.0 | matched_controls=93
+2025-06-16 23:58:15,491 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-16 23:58:19,844 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-16 23:59:04,720 - compliance_checker - INFO - logger.py:53 - File upload | filename=InformationSecurityPolicy-godfreyphillips.pdf | file_size=912591 | method=semantic | user_ip=127.0.0.1 | timestamp=2025-06-16T18:29:04.720321
+2025-06-16 23:59:07,906 - compliance_checker - INFO - logger.py:53 - Analysis started using semantic method | method=semantic | content_length=106081 | filename=InformationSecurityPolicy-godfreyphillips.pdf
+2025-06-16 23:59:07,912 - compliance_checker - INFO - logger.py:53 - Using Semantic Compliance Checker
+2025-06-16 23:59:07,912 - compliance_checker - INFO - logger.py:53 - Initializing semantic compliance checker
+2025-06-17 00:06:27,706 - compliance_checker - INFO - logger.py:53 - Semantic checker initialized | load_time_seconds=439.7941746711731
+2025-06-17 00:09:25,429 - compliance_checker - INFO - logger.py:53 - Analysis completed using semantic method | method=semantic | compliance_score=100.0 | processing_time_seconds=617.5171782970428 | filename=InformationSecurityPolicy-godfreyphillips.pdf
+2025-06-17 00:09:25,431 - compliance_checker - INFO - logger.py:53 - Performance metrics for semantic_analysis | operation=semantic_analysis | duration_seconds=617.5171782970428 | content_length=106081 | compliance_score=100.0 | matched_controls=93
+2025-06-25 11:16:43,287 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-25 11:16:47,798 - compliance_checker - INFO - logger.py:53 - Application starting up | debug_mode=True | environment=unknown
+2025-06-25 11:16:52,616 - compliance_checker - INFO - logger.py:53 - File upload | filename=InformationSecurityPolicy-godfreyphillips.pdf | file_size=912591 | method=enhanced | user_ip=127.0.0.1 | timestamp=2025-06-25T05:46:52.616261
+2025-06-25 11:16:55,671 - compliance_checker - INFO - logger.py:53 - Analysis started using enhanced method | method=enhanced | content_length=106081 | filename=InformationSecurityPolicy-godfreyphillips.pdf
+2025-06-25 11:16:55,671 - compliance_checker - INFO - logger.py:53 - Using Enhanced Compliance Checker
+2025-06-25 11:16:58,332 - compliance_checker - INFO - logger.py:53 - Analysis completed using enhanced method | method=enhanced | compliance_score=100.0 | processing_time_seconds=2.6605184078216553 | filename=InformationSecurityPolicy-godfreyphillips.pdf
+2025-06-25 11:16:58,332 - compliance_checker - INFO - logger.py:53 - Performance metrics for enhanced_analysis | operation=enhanced_analysis | duration_seconds=2.6605184078216553 | content_length=106081 | compliance_score=100.0 | matched_controls=93
+2025-06-25 11:17:24,512 - compliance_checker - INFO - logger.py:53 - File upload | filename=InformationSecurityPolicy-godfreyphillips.pdf | file_size=912591 | method=semantic | user_ip=127.0.0.1 | timestamp=2025-06-25T05:47:24.512226
+2025-06-25 11:17:27,491 - compliance_checker - INFO - logger.py:53 - Analysis started using semantic method | method=semantic | content_length=106081 | filename=InformationSecurityPolicy-godfreyphillips.pdf
+2025-06-25 11:17:27,497 - compliance_checker - INFO - logger.py:53 - Using Semantic Compliance Checker
+2025-06-25 11:17:27,497 - compliance_checker - INFO - logger.py:53 - Initializing semantic compliance checker
+2025-06-25 11:19:23,878 - compliance_checker - INFO - logger.py:53 - Semantic checker initialized | load_time_seconds=116.38056254386902
+2025-06-25 11:22:30,869 - compliance_checker - INFO - logger.py:53 - Analysis completed using semantic method | method=semantic | compliance_score=100.0 | processing_time_seconds=303.3725173473358 | filename=InformationSecurityPolicy-godfreyphillips.pdf
+2025-06-25 11:22:30,869 - compliance_checker - INFO - logger.py:53 - Performance metrics for semantic_analysis | operation=semantic_analysis | duration_seconds=303.3725173473358 | content_length=106081 | compliance_score=100.0 | matched_controls=93

@@ -1,228 +1,661 @@
 {
+    "metadata": {
+        "standard": "ISO/IEC 27002:2022",
+        "title": "Information security controls",
+        "total_controls": 93,
+        "themes": 4,
+        "categories": 14,
+        "last_updated": "2024-01-01"
+    },
     "5.1": {
         "name": "Information security policies",
+        "category": "Organizational controls",
+        "theme": "People",
         "description": "A set of policies for information security should be defined, approved by management, published and communicated to employees and relevant external parties.",
-        "controls": [
-            "Information security policy document",
-            "Review of the information security policy"
-        ]
+        "keywords": ["policy", "policies", "information security", "governance", "management approval", "document", "communication", "review"]
     },
     "5.2": {
         "name": "Information security roles and responsibilities",
+        "category": "Organizational controls", 
+        "theme": "People",
         "description": "All information security responsibilities should be clearly defined and allocated.",
-        "controls": [
-            "Confidentiality agreements",
-            "Contact with authorities",
-            "Contact with special interest groups",
-            "Information security in project management"
-        ]
+        "keywords": ["roles", "responsibilities", "confidentiality", "agreement", "authorities", "contact", "allocation", "definition"]
+    },
+    "5.3": {
+        "name": "Segregation of duties",
+        "category": "Organizational controls",
+        "theme": "People", 
+        "description": "Conflicting duties and areas of responsibility should be segregated to reduce opportunities for unauthorized or unintentional modification or misuse of the organization's assets.",
+        "keywords": ["segregation", "duties", "separation", "conflict", "unauthorized", "modification", "responsibility"]
+    },
+    "5.4": {
+        "name": "Management responsibilities",
+        "category": "Organizational controls",
+        "theme": "People",
+        "description": "Management should require all personnel to apply information security in accordance with the established policies and procedures of the organization.",
+        "keywords": ["management", "responsibilities", "personnel", "apply", "established", "procedures", "requirement"]
+    },
+    "5.5": {
+        "name": "Contact with authorities",
+        "category": "Organizational controls",
+        "theme": "People",
+        "description": "Appropriate contacts with relevant authorities should be maintained.",
+        "keywords": ["contact", "authorities", "relevant", "maintained", "law enforcement", "regulatory", "government"]
+    },
+    "5.6": {
+        "name": "Contact with special interest groups",
+        "category": "Organizational controls", 
+        "theme": "People",
+        "description": "Appropriate contacts with special interest groups or other specialist security forums and professional associations should be maintained.",
+        "keywords": ["special interest", "groups", "forums", "professional", "associations", "specialist", "security"]
+    },
+    "5.7": {
+        "name": "Threat intelligence",
+        "category": "Organizational controls",
+        "theme": "People",
+        "description": "Information relating to information security threats should be collected and analyzed to produce threat intelligence.",
+        "keywords": ["threat", "intelligence", "collected", "analyzed", "information", "security threats", "monitoring"]
+    },
+    "5.8": {
+        "name": "Information security in project management",
+        "category": "Organizational controls",
+        "theme": "People", 
+        "description": "Information security should be integrated into project management.",
+        "keywords": ["project management", "integrated", "information security", "projects", "methodology", "lifecycle"]
+    },
+    "5.9": {
+        "name": "Inventory of information and other associated assets",
+        "category": "Organizational controls",
+        "theme": "People",
+        "description": "An inventory of information and other associated assets, including owners, should be developed and maintained.",
+        "keywords": ["inventory", "information", "assets", "owners", "developed", "maintained", "associated", "register"]
+    },
+    "5.10": {
+        "name": "Acceptable use of information and other associated assets",
+        "category": "Organizational controls",
+        "theme": "People",
+        "description": "Rules for the acceptable use of information and other associated assets should be identified, documented and implemented.",
+        "keywords": ["acceptable use", "rules", "information", "assets", "identified", "documented", "implemented"]
+    },
+    "5.11": {
+        "name": "Return of assets",
+        "category": "Organizational controls",
+        "theme": "People",
+        "description": "All employees and external party users should return all of the organizational assets in their possession upon termination of their employment, contract or agreement.",
+        "keywords": ["return", "assets", "employees", "external", "termination", "employment", "contract", "agreement"]
+    },
+    "5.12": {
+        "name": "Classification of information",
+        "category": "Organizational controls", 
+        "theme": "People",
+        "description": "Information should be classified according to the information security needs of the organization based on confidentiality, integrity and availability.",
+        "keywords": ["classification", "information", "security needs", "confidentiality", "integrity", "availability", "levels"]
+    },
+    "5.13": {
+        "name": "Labelling of information",
+        "category": "Organizational controls",
+        "theme": "People", 
+        "description": "An appropriate set of procedures for information labelling should be developed and implemented in accordance with the information classification scheme adopted by the organization.",
+        "keywords": ["labelling", "information", "procedures", "classification scheme", "developed", "implemented", "marking"]
+    },
+    "5.14": {
+        "name": "Information transfer",
+        "category": "Organizational controls",
+        "theme": "People",
+        "description": "Information transfer rules, procedures or agreements should be in place for all types of transfer facilities within the organization and between the organization and other parties.",
+        "keywords": ["information transfer", "rules", "procedures", "agreements", "facilities", "organization", "parties"]
+    },
+    "5.15": {
+        "name": "Access control",
+        "category": "Organizational controls",
+        "theme": "People",
+        "description": "Rules to control physical and logical access to information and other associated assets should be established and implemented based on business and information security requirements.",
+        "keywords": ["access control", "physical", "logical", "information", "assets", "business", "security requirements"]
+    },
+    "5.16": {
+        "name": "Identity management",
+        "category": "Organizational controls",
+        "theme": "People", 
+        "description": "The full life cycle of identities should be managed.",
+        "keywords": ["identity management", "life cycle", "identities", "managed", "provisioning", "deprovisioning"]
+    },
+    "5.17": {
+        "name": "Authentication information",
+        "category": "Organizational controls",
+        "theme": "People",
+        "description": "Allocation and management of authentication information should be controlled by a management process.",
+        "keywords": ["authentication", "information", "allocation", "management", "controlled", "process", "credentials"]
+    },
+    "5.18": {
+        "name": "Access rights",
+        "category": "Organizational controls",
+        "theme": "People",
+        "description": "Access rights to information and other associated assets should be provisioned, reviewed, modified and removed in accordance with the organization's topic-specific policy on access control.",
+        "keywords": ["access rights", "provisioned", "reviewed", "modified", "removed", "policy", "access control"]
+    },
+    "5.19": {
+        "name": "Information security in supplier relationships",
+        "category": "Organizational controls",
+        "theme": "People",
+        "description": "Processes and procedures should be defined and implemented to manage the information security risks associated with the use of supplier's products or services.",
+        "keywords": ["supplier relationships", "processes", "procedures", "information security", "risks", "products", "services"]
+    },
+    "5.20": {
+        "name": "Addressing information security within supplier agreements",
+        "category": "Organizational controls",
+        "theme": "People", 
+        "description": "Relevant information security requirements should be established and agreed with each supplier that can access, process, store, communicate, or provide IT infrastructure components for, the organization's information.",
+        "keywords": ["supplier agreements", "information security", "requirements", "established", "agreed", "access", "process"]
+    },
+    "5.21": {
+        "name": "Managing information security in the ICT supply chain",
+        "category": "Organizational controls",
+        "theme": "People",
+        "description": "Processes and procedures should be defined and implemented to manage the information security risks associated with the ICT products and services supply chain.",
+        "keywords": ["ICT supply chain", "processes", "procedures", "information security", "risks", "products", "services"]
+    },
+    "5.22": {
+        "name": "Monitoring, review and change management of supplier services",
+        "category": "Organizational controls",
+        "theme": "People",
+        "description": "The organization should regularly monitor, review and audit supplier service delivery.",
+        "keywords": ["monitoring", "review", "change management", "supplier services", "audit", "service delivery"]
+    },
+    "5.23": {
+        "name": "Information security for use of cloud services",
+        "category": "Organizational controls",
+        "theme": "People",
+        "description": "Processes for acquisition, use, management and exit from cloud services should be established in accordance with the organization's information security requirements.",
+        "keywords": ["cloud services", "acquisition", "use", "management", "exit", "information security", "requirements"]
+    },
+    "5.24": {
+        "name": "Information security incident management planning and preparation",
+        "category": "Organizational controls",
+        "theme": "People",
+        "description": "The organization should plan and prepare for managing information security incidents by defining, establishing and communicating information security incident management processes, roles and responsibilities.",
+        "keywords": ["incident management", "planning", "preparation", "processes", "roles", "responsibilities", "communicating"]
+    },
+    "5.25": {
+        "name": "Assessment and decision on information security events",
+        "category": "Organizational controls",
+        "theme": "People",
+        "description": "The organization should assess information security events and decide if they are to be categorized as information security incidents.",
+        "keywords": ["assessment", "decision", "information security", "events", "categorized", "incidents", "evaluation"]
+    },
+    "5.26": {
+        "name": "Response to information security incidents",
+        "category": "Organizational controls",
+        "theme": "People",
+        "description": "Information security incidents should be responded to in accordance with the documented procedures.",
+        "keywords": ["response", "information security", "incidents", "documented", "procedures", "incident response"]
+    },
+    "5.27": {
+        "name": "Learning from information security incidents",
+        "category": "Organizational controls",
+        "theme": "People", 
+        "description": "Knowledge gained from analyzing and resolving information security incidents should be used to reduce the likelihood or impact of future incidents.",
+        "keywords": ["learning", "information security", "incidents", "analyzing", "resolving", "knowledge", "future"]
+    },
+    "5.28": {
+        "name": "Collection of evidence",
+        "category": "Organizational controls",
+        "theme": "People",
+        "description": "The organization should establish and implement procedures for the identification, collection, acquisition and preservation of information that can serve as evidence.",
+        "keywords": ["collection", "evidence", "procedures", "identification", "acquisition", "preservation", "forensics"]
+    },
+    "5.29": {
+        "name": "Information security during disruption",
+        "category": "Organizational controls",
+        "theme": "People",
+        "description": "The organization should plan how to maintain information security at an appropriate level during disruption.",
+        "keywords": ["information security", "disruption", "maintain", "appropriate level", "plan", "business continuity"]
+    },
+    "5.30": {
+        "name": "ICT readiness for business continuity",
+        "category": "Organizational controls",
+        "theme": "People",
+        "description": "ICT readiness should be planned, implemented, maintained and tested based on business continuity objectives and ICT continuity requirements.",
+        "keywords": ["ICT readiness", "business continuity", "planned", "implemented", "maintained", "tested", "objectives"]
+    },
+    "5.31": {
+        "name": "Legal, statutory, regulatory and contractual requirements",
+        "category": "Organizational controls",
+        "theme": "People",
+        "description": "Legal, statutory, regulatory and contractual requirements relevant to information security and the organization's approach to meet these requirements should be identified, documented and kept up to date.",
+        "keywords": ["legal", "statutory", "regulatory", "contractual", "requirements", "information security", "compliance"]
+    },
+    "5.32": {
+        "name": "Intellectual property rights",
+        "category": "Organizational controls",
+        "theme": "People",
+        "description": "The organization should implement appropriate procedures to protect intellectual property rights.",
+        "keywords": ["intellectual property", "rights", "procedures", "protect", "copyright", "patents", "trademarks"]
+    },
+    "5.33": {
+        "name": "Protection of records",
+        "category": "Organizational controls",
+        "theme": "People",
+        "description": "Records should be protected from loss, destruction, falsification, unauthorized access and unauthorized release.",
+        "keywords": ["protection", "records", "loss", "destruction", "falsification", "unauthorized", "access", "release"]
+    },
+    "5.34": {
+        "name": "Privacy and protection of PII",
+        "category": "Organizational controls",
+        "theme": "People",
+        "description": "The organization should identify and meet requirements regarding the preservation of privacy and protection of PII according to applicable laws and regulations and contractual requirements.",
+        "keywords": ["privacy", "protection", "PII", "personally identifiable", "laws", "regulations", "contractual"]
+    },
+    "5.35": {
+        "name": "Independent review of information security",
+        "category": "Organizational controls",
+        "theme": "People",
+        "description": "The organization's approach to managing information security and its implementation should be reviewed independently at planned intervals or when significant changes occur.",
+        "keywords": ["independent review", "information security", "management", "implementation", "planned intervals", "audit"]
+    },
+    "5.36": {
+        "name": "Compliance with policies, rules and standards for information security",
+        "category": "Organizational controls",
+        "theme": "People",
+        "description": "Compliance with the organization's information security policies, topic-specific policies, rules and standards should be regularly reviewed.",
+        "keywords": ["compliance", "policies", "rules", "standards", "information security", "regularly reviewed"]
+    },
+    "5.37": {
+        "name": "Documented operating procedures",
+        "category": "Organizational controls",
+        "theme": "People",
+        "description": "Operating procedures for information processing facilities should be documented and made available to users who need them.",
+        "keywords": ["documented", "operating procedures", "information processing", "facilities", "available", "users"]
     },
     "6.1": {
-        "name": "Internal organization",
-        "description": "A management framework should be established to initiate and control the implementation and operation of information security within the organization.",
-        "controls": [
-            "Information security roles and responsibilities",
-            "Segregation of duties",
-            "Contact with authorities",
-            "Contact with special interest groups",
-            "Information security in project management"
-        ]
+        "name": "Screening",
+        "category": "People controls",
+        "theme": "People",
+        "description": "Background verification checks on all candidates for employment should be carried out in accordance with relevant laws, regulations and ethics and should be proportional to the business requirements, the classification of the information to be accessed and the perceived risks.",
+        "keywords": ["screening", "background verification", "employment", "laws", "regulations", "ethics", "business requirements"]
     },
     "6.2": {
-        "name": "Mobile device policy",
-        "description": "Security measures should be implemented to manage the risks introduced by using mobile devices.",
-        "controls": [
-            "Registration of mobile devices",
-            "Physical protection",
-            "Secure configuration",
-            "Secure disposal"
-        ]
+        "name": "Terms and conditions of employment",
+        "category": "People controls",
+        "theme": "People",
+        "description": "The contractual agreements with employees and contractors should state their and the organization's responsibilities for information security.",
+        "keywords": ["terms", "conditions", "employment", "contractual", "agreements", "employees", "contractors", "responsibilities"]
+    },
+    "6.3": {
+        "name": "Information security awareness, education and training",
+        "category": "People controls",
+        "theme": "People",
+        "description": "Personnel of the organization and relevant interested parties should receive appropriate information security awareness, education and training and regular updates on the organization's information security policy, topic-specific policies and procedures.",
+        "keywords": ["awareness", "education", "training", "personnel", "updates", "information security", "policy", "procedures"]
+    },
+    "6.4": {
+        "name": "Disciplinary process",
+        "category": "People controls",
+        "theme": "People", 
+        "description": "A formal and communicated disciplinary process should be in place to take action against personnel who have committed an information security breach.",
+        "keywords": ["disciplinary", "process", "formal", "communicated", "personnel", "information security", "breach"]
+    },
+    "6.5": {
+        "name": "Responsibilities after termination or change of employment",
+        "category": "People controls",
+        "theme": "People",
+        "description": "Information security responsibilities and duties that remain valid after termination or change of employment should be defined, enforced and communicated to relevant personnel and other interested parties.",
+        "keywords": ["responsibilities", "termination", "change", "employment", "defined", "enforced", "communicated"]
+    },
+    "6.6": {
+        "name": "Confidentiality or non-disclosure agreements",
+        "category": "People controls",
+        "theme": "People",
+        "description": "Confidentiality or non-disclosure agreements reflecting the organization's needs for the protection of information should be identified, documented, regularly reviewed and signed by personnel and other relevant interested parties.",
+        "keywords": ["confidentiality", "non-disclosure", "agreements", "protection", "information", "documented", "reviewed"]
+    },
+    "6.7": {
+        "name": "Remote working",
+        "category": "People controls",
+        "theme": "People",
+        "description": "Security measures should be implemented when personnel are working remotely to protect information accessed, processed or stored outside the organization's premises.",
+        "keywords": ["remote working", "security measures", "personnel", "information", "accessed", "processed", "stored"]
+    },
+    "6.8": {
+        "name": "Information security event reporting",
+        "category": "People controls",
+        "theme": "People",
+        "description": "The organization should provide a mechanism for personnel to report observed or suspected information security events through appropriate channels in a timely manner.",
+        "keywords": ["information security", "event reporting", "mechanism", "personnel", "observed", "suspected", "channels"]
     },
     "7.1": {
-        "name": "Human resource security",
-        "description": "Security responsibilities should be addressed prior to employment, during employment, and after employment.",
-        "controls": [
-            "Screening",
-            "Terms and conditions of employment"
-        ]
+        "name": "Physical security perimeters",
+        "category": "Physical controls",
+        "theme": "Technology",
+        "description": "Physical security perimeters should be defined and used to protect areas that contain information processing facilities.",
+        "keywords": ["physical security", "perimeters", "defined", "protect", "areas", "information processing", "facilities"]
     },
     "7.2": {
-        "name": "During employment",
-        "description": "All employees and contractors should be aware of information security threats and concerns, their responsibilities and liabilities.",
-        "controls": [
-            "Management responsibilities",
-            "Information security awareness, education and training",
-            "Disciplinary process"
-        ]
+        "name": "Physical entry",
+        "category": "Physical controls",
+        "theme": "Technology",
+        "description": "Secure areas should be protected by appropriate entry controls to ensure that only authorized personnel are allowed access.",
+        "keywords": ["physical entry", "secure areas", "entry controls", "authorized", "personnel", "access"]
     },
     "7.3": {
-        "name": "Termination and change of employment",
-        "description": "Security responsibilities and duties that remain valid after termination or change of employment should be defined, communicated to the employee or contractor and enforced.",
-        "controls": [
-            "Return of assets",
-            "Removal of access rights"
-        ]
+        "name": "Protection against external and environmental threats",
+        "category": "Physical controls",
+        "theme": "Technology",
+        "description": "Physical protection against natural disasters, malicious attacks or accidents should be designed and implemented.",
+        "keywords": ["protection", "external", "environmental", "threats", "natural disasters", "malicious attacks", "accidents"]
+    },
+    "7.4": {
+        "name": "Working in secure areas",
+        "category": "Physical controls", 
+        "theme": "Technology",
+        "description": "Procedures for working in secure areas should be designed and implemented.",
+        "keywords": ["working", "secure areas", "procedures", "designed", "implemented", "protocols"]
+    },
+    "7.5": {
+        "name": "Desk, screen and device clear policy",
+        "category": "Physical controls",
+        "theme": "Technology",
+        "description": "A desk, screen and device clear policy should be implemented to reduce the risks of unauthorized access, loss of, and damage to information.",
+        "keywords": ["desk", "screen", "device", "clear policy", "unauthorized access", "loss", "damage", "information"]
+    },
+    "7.6": {
+        "name": "Protection of equipment",
+        "category": "Physical controls",
+        "theme": "Technology",
+        "description": "Equipment should be protected against power failures and other disruptions caused by failures in supporting utilities.",
+        "keywords": ["protection", "equipment", "power failures", "disruptions", "failures", "supporting utilities"]
+    },
+    "7.7": {
+        "name": "Secure disposal or reuse of equipment",
+        "category": "Physical controls",
+        "theme": "Technology",
+        "description": "Items of equipment containing storage media should be verified to ensure that any sensitive data and licensed software has been removed or securely overwritten prior to disposal or reuse.",
+        "keywords": ["secure disposal", "reuse", "equipment", "storage media", "verified", "sensitive data", "licensed software"]
+    },
+    "7.8": {
+        "name": "Unattended user equipment",
+        "category": "Physical controls",
+        "theme": "Technology",
+        "description": "Users should ensure that unattended equipment has appropriate protection.",
+        "keywords": ["unattended", "user equipment", "appropriate protection", "users", "ensure"]
+    },
+    "7.9": {
+        "name": "Secure disposal or reuse of storage media",
+        "category": "Physical controls",
+        "theme": "Technology",
+        "description": "Storage media should be disposed of securely when no longer required, using formal procedures.",
+        "keywords": ["secure disposal", "reuse", "storage media", "disposed", "securely", "formal procedures"]
+    },
+    "7.10": {
+        "name": "Storage media",
+        "category": "Physical controls",
+        "theme": "Technology",
+        "description": "Storage media should be managed in accordance with the classification scheme adopted by the organization.",
+        "keywords": ["storage media", "managed", "classification scheme", "organization", "adopted"]
+    },
+    "7.11": {
+        "name": "Supporting utilities",
+        "category": "Physical controls",
+        "theme": "Technology",
+        "description": "Information processing facilities should be protected from power failures and other disruptions caused by failures in supporting utilities.",
+        "keywords": ["supporting utilities", "information processing", "facilities", "protected", "power failures", "disruptions"]
+    },
+    "7.12": {
+        "name": "Cabling security",
+        "category": "Physical controls",
+        "theme": "Technology",
+        "description": "Cables carrying or supporting information services should be protected from interception, interference or damage.",
+        "keywords": ["cabling security", "cables", "information services", "protected", "interception", "interference", "damage"]
+    },
+    "7.13": {
+        "name": "Equipment maintenance",
+        "category": "Physical controls",
+        "theme": "Technology",
+        "description": "Equipment should be correctly maintained to ensure its continued availability and integrity.",
+        "keywords": ["equipment maintenance", "correctly maintained", "continued availability", "integrity", "ensure"]
+    },
+    "7.14": {
+        "name": "Secure disposal or reuse of information processing facilities",
+        "category": "Physical controls",
+        "theme": "Technology",
+        "description": "Information processing facilities should be securely disposed of or reused when no longer required.",
+        "keywords": ["secure disposal", "reuse", "information processing", "facilities", "securely disposed", "no longer required"]
     },
     "8.1": {
-        "name": "Asset management",
-        "description": "Assets should be identified and an inventory of all important assets should be drawn up and maintained.",
-        "controls": [
-            "Inventory of assets",
-            "Ownership of assets",
-            "Acceptable use of assets",
-            "Return of assets"
-        ]
+        "name": "User endpoint devices",
+        "category": "Technological controls",
+        "theme": "Technology",
+        "description": "Information stored on, processed by or accessible via user endpoint devices should be protected.",
+        "keywords": ["user endpoint", "devices", "information", "stored", "processed", "accessible", "protected"]
     },
     "8.2": {
-        "name": "Information classification",
-        "description": "Information should be classified according to the security needs of the organization.",
-        "controls": [
-            "Classification guidelines",
-            "Information labeling and handling"
-        ]
+        "name": "Privileged access rights",
+        "category": "Technological controls",
+        "theme": "Technology",
+        "description": "The allocation and use of privileged access rights should be restricted and managed.",
+        "keywords": ["privileged access", "rights", "allocation", "use", "restricted", "managed", "administrative"]
     },
     "8.3": {
-        "name": "Media handling",
-        "description": "Appropriate procedures should be implemented for the handling and storage of information to protect it from unauthorized disclosure or misuse.",
-        "controls": [
-            "Management of removable media",
-            "Disposal of media",
-            "Physical media transfer"
-        ]
+        "name": "Information access restriction",
+        "category": "Technological controls",
+        "theme": "Technology",
+        "description": "Access to information and application system functions should be restricted in accordance with the access control policy.",
+        "keywords": ["information access", "restriction", "application system", "functions", "access control", "policy"]
     },
-    "9.1": {
-        "name": "Access control",
-        "description": "Access to information and information processing facilities should be controlled on the basis of business and security requirements.",
-        "controls": [
-            "Access control policy",
-            "User registration and de-registration",
-            "User access provisioning",
-            "Management of privileged access rights",
-            "Management of secret authentication information of users",
-            "Review of user access rights",
-            "Removal or adjustment of access rights"
-        ]
+    "8.4": {
+        "name": "Access to source code",
+        "category": "Technological controls",
+        "theme": "Technology",
+        "description": "Read and write access to source code, development tools and software libraries should be appropriately managed.",
+        "keywords": ["access", "source code", "development tools", "software libraries", "appropriately managed", "read", "write"]
     },
-    "9.2": {
-        "name": "User access management",
-        "description": "Formal user registration and de-registration procedures should be implemented to enable assignment of access rights.",
-        "controls": [
-            "User registration",
-            "Privilege management",
-            "User password management",
-            "Review of user access rights"
-        ]
+    "8.5": {
+        "name": "Secure authentication",
+        "category": "Technological controls",
+        "theme": "Technology",
+        "description": "Secure authentication technologies and procedures should be implemented based on information access restrictions and the topic-specific policy on access control.",
+        "keywords": ["secure authentication", "technologies", "procedures", "implemented", "information access", "restrictions"]
     },
-    "9.3": {
-        "name": "User responsibilities",
-        "description": "Users should be made aware of their responsibilities for maintaining effective access controls.",
-        "controls": [
-            "Use of secret authentication information",
-            "Information access restriction",
-            "Secure log-on procedures",
-            "Password management system",
-            "Use of privileged utility programs",
-            "Access control to program source code"
-        ]
+    "8.6": {
+        "name": "Capacity management",
+        "category": "Technological controls",
+        "theme": "Technology",
+        "description": "The use of resources should be monitored and tuned, and projections of future capacity requirements should be made to ensure the required system performance.",
+        "keywords": ["capacity management", "resources", "monitored", "tuned", "projections", "future capacity", "system performance"]
     },
-    "9.4": {
-        "name": "System and application access control",
-        "description": "Access to systems and applications should be controlled by a secure log-on procedure.",
-        "controls": [
-            "Information access restriction",
-            "Secure log-on procedures",
-            "Password management system",
-            "Use of privileged utility programs",
-            "Access control to program source code"
-        ]
+    "8.7": {
+        "name": "Protection against malware",
+        "category": "Technological controls",
+        "theme": "Technology",
+        "description": "Protection against malware should be implemented and supported by appropriate user awareness.",
+        "keywords": ["protection", "malware", "implemented", "supported", "user awareness", "antivirus", "threats"]
     },
-    "10.1": {
-        "name": "Cryptographic controls",
-        "description": "Cryptographic controls should be used to protect the confidentiality, authenticity and/or integrity of information.",
-        "controls": [
-            "Policy on the use of cryptographic controls",
-            "Key management"
-        ]
+    "8.8": {
+        "name": "Management of technical vulnerabilities",
+        "category": "Technological controls",
+        "theme": "Technology",
+        "description": "Information about technical vulnerabilities of information systems being used should be obtained, the organization's exposure to such vulnerabilities evaluated and appropriate measures taken.",
+        "keywords": ["management", "technical vulnerabilities", "information systems", "obtained", "exposure", "evaluated", "measures"]
     },
-    "11.1": {
-        "name": "Physical and environmental security",
-        "description": "Secure areas should be used to protect information processing facilities.",
-        "controls": [
-            "Physical security perimeter",
-            "Physical entry controls",
-            "Securing offices, rooms and facilities",
-            "Protecting against external and environmental threats",
-            "Working in secure areas",
-            "Delivery and loading areas"
-        ]
+    "8.9": {
+        "name": "Configuration management",
+        "category": "Technological controls",
+        "theme": "Technology",
+        "description": "Configurations, including security configurations, of hardware, software, services and networks should be established, documented, implemented, monitored and reviewed.",
+        "keywords": ["configuration management", "security configurations", "hardware", "software", "services", "networks"]
     },
-    "12.1": {
-        "name": "Operational security",
-        "description": "Operational procedures and responsibilities should be established and maintained.",
-        "controls": [
-            "Documented operating procedures",
-            "Change management",
-            "Capacity management",
-            "Separation of development, testing and operational environments"
-        ]
+    "8.10": {
+        "name": "Information deletion",
+        "category": "Technological controls",
+        "theme": "Technology",
+        "description": "Information stored in information systems, devices or in any other storage media should be deleted when no longer required.",
+        "keywords": ["information deletion", "information systems", "devices", "storage media", "deleted", "no longer required"]
     },
-    "13.1": {
-        "name": "Communications security",
-        "description": "Networks should be managed and controlled to protect information in systems and applications.",
-        "controls": [
-            "Network controls",
-            "Security of network services",
-            "Segregation in networks"
-        ]
+    "8.11": {
+        "name": "Data masking",
+        "category": "Technological controls",
+        "theme": "Technology",
+        "description": "Data masking should be used in accordance with the organization's topic-specific policy on access control and other related topic-specific policies, and business requirements, taking applicable legislation into consideration.",
+        "keywords": ["data masking", "topic-specific policy", "access control", "business requirements", "applicable legislation"]
     },
-    "14.1": {
-        "name": "System acquisition, development and maintenance",
-        "description": "Security should be built into information systems.",
-        "controls": [
-            "Security requirements analysis and specification",
-            "Securing application services on public networks",
-            "Protecting application services transactions"
-        ]
+    "8.12": {
+        "name": "Data leakage prevention",
+        "category": "Technological controls",
+        "theme": "Technology",
+        "description": "Data leakage prevention measures should be applied to systems, networks and any other devices that process, store or transmit sensitive information.",
+        "keywords": ["data leakage", "prevention", "measures", "systems", "networks", "devices", "sensitive information"]
     },
-    "15.1": {
-        "name": "Supplier relationships",
-        "description": "Security requirements for mitigating the risks associated with supplier's access to the organization's assets should be agreed with the supplier.",
-        "controls": [
-            "Supplier service delivery management",
-            "Managing changes to supplier services"
-        ]
+    "8.13": {
+        "name": "Information backup",
+        "category": "Technological controls",
+        "theme": "Technology",
+        "description": "Backup copies of information, software and systems should be maintained and regularly tested in accordance with the agreed topic-specific policy on backup.",
+        "keywords": ["information backup", "backup copies", "software", "systems", "maintained", "regularly tested", "policy"]
     },
-    "16.1": {
-        "name": "Incident management",
-        "description": "Events and information security incidents should be reported and managed.",
-        "controls": [
-            "Responsibilities and procedures",
-            "Reporting information security events",
-            "Reporting information security weaknesses",
-            "Assessment of and decision on information security events",
-            "Response to information security incidents",
-            "Learning from information security incidents",
-            "Collection of evidence"
-        ]
+    "8.14": {
+        "name": "Redundancy of information processing facilities",
+        "category": "Technological controls",
+        "theme": "Technology", 
+        "description": "Information processing facilities should be implemented with redundancy sufficient to meet availability requirements.",
+        "keywords": ["redundancy", "information processing", "facilities", "implemented", "availability", "requirements"]
     },
-    "17.1": {
-        "name": "Business continuity management",
-        "description": "Information security continuity should be embedded in the organization's business continuity management systems.",
-        "controls": [
-            "Planning information security continuity",
-            "Implementing information security continuity",
-            "Verify, review and evaluate information security continuity"
-        ]
+    "8.15": {
+        "name": "Logging",
+        "category": "Technological controls",
+        "theme": "Technology",
+        "description": "Logs that record activities, exceptions, faults and other relevant security events should be produced, stored, protected and analyzed.",
+        "keywords": ["logging", "logs", "activities", "exceptions", "faults", "security events", "produced", "stored", "protected"]
     },
-    "18.1": {
-        "name": "Compliance",
-        "description": "The organization should avoid breaches of legal, statutory, regulatory or contractual obligations related to information security.",
-        "controls": [
-            "Identification of applicable legislation and contractual requirements",
-            "Intellectual property rights",
-            "Protection of organizational records",
-            "Privacy and protection of PII",
-            "Regulation of cryptographic controls"
-        ]
+    "8.16": {
+        "name": "Monitoring activities",
+        "category": "Technological controls",
+        "theme": "Technology",
+        "description": "Networks, systems and applications should be monitored for anomalous behaviour and appropriate actions taken to evaluate potential information security incidents.",
+        "keywords": ["monitoring", "activities", "networks", "systems", "applications", "anomalous behaviour", "security incidents"]
+    },
+    "8.17": {
+        "name": "Clock synchronization",
+        "category": "Technological controls",
+        "theme": "Technology",
+        "description": "The clocks of information processing systems used by the organization should be synchronized to approved time sources.",
+        "keywords": ["clock synchronization", "information processing", "systems", "synchronized", "approved", "time sources"]
+    },
+    "8.18": {
+        "name": "Use of privileged utility programs",
+        "category": "Technological controls",
+        "theme": "Technology",
+        "description": "The use of utility programs that might be capable of overriding system and application controls should be restricted and tightly controlled.",
+        "keywords": ["privileged utility", "programs", "overriding", "system", "application controls", "restricted", "controlled"]
+    },
+    "8.19": {
+        "name": "Installation of software on operational systems",
+        "category": "Technological controls",
+        "theme": "Technology",
+        "description": "Procedures should be implemented to control the installation of software on operational systems.",
+        "keywords": ["installation", "software", "operational systems", "procedures", "implemented", "control"]
+    },
+    "8.20": {
+        "name": "Networks security management",
+        "category": "Technological controls",
+        "theme": "Technology",
+        "description": "Networks and network devices should be managed and controlled to protect information in systems and applications.",
+        "keywords": ["networks", "security management", "network devices", "managed", "controlled", "protect", "information"]
+    },
+    "8.21": {
+        "name": "Security of network services",
+        "category": "Technological controls",
+        "theme": "Technology",
+        "description": "Security mechanisms, service levels and service requirements of network services should be identified, implemented and monitored.",
+        "keywords": ["security", "network services", "security mechanisms", "service levels", "requirements", "identified", "monitored"]
+    },
+    "8.22": {
+        "name": "Segregation of networks",
+        "category": "Technological controls",
+        "theme": "Technology",
+        "description": "Groups of information services, users and information systems should be segregated in the organization's networks.",
+        "keywords": ["segregation", "networks", "information services", "users", "information systems", "organization"]
+    },
+    "8.23": {
+        "name": "Web filtering",
+        "category": "Technological controls",
+        "theme": "Technology",
+        "description": "Access to external websites should be managed to reduce exposure to malicious content.",
+        "keywords": ["web filtering", "external websites", "managed", "reduce exposure", "malicious content", "internet"]
+    },
+    "8.24": {
+        "name": "Use of cryptography",
+        "category": "Technological controls",
+        "theme": "Technology",
+        "description": "Rules for the effective use of cryptography, including cryptographic key management, should be defined and implemented.",
+        "keywords": ["cryptography", "rules", "effective use", "cryptographic", "key management", "defined", "implemented"]
+    },
+    "8.25": {
+        "name": "Secure system development life cycle",
+        "category": "Technological controls",
+        "theme": "Technology",
+        "description": "Rules for the secure development of software and systems should be established and applied.",
+        "keywords": ["secure system", "development life cycle", "rules", "secure development", "software", "systems", "established"]
+    },
+    "8.26": {
+        "name": "Application security requirements",
+        "category": "Technological controls",
+        "theme": "Technology",
+        "description": "Information security requirements should be identified, specified and approved when developing or acquiring applications.",
+        "keywords": ["application security", "requirements", "identified", "specified", "approved", "developing", "acquiring"]
+    },
+    "8.27": {
+        "name": "Secure system architecture and engineering principles",
+        "category": "Technological controls",
+        "theme": "Technology",
+        "description": "Principles for engineering secure systems should be established, documented, maintained and applied to any information system development activities.",
+        "keywords": ["secure system", "architecture", "engineering principles", "established", "documented", "maintained", "development"]
+    },
+    "8.28": {
+        "name": "Secure coding",
+        "category": "Technological controls",
+        "theme": "Technology",
+        "description": "Secure coding principles should be applied to software development.",
+        "keywords": ["secure coding", "principles", "applied", "software development", "programming", "development"]
+    },
+    "8.29": {
+        "name": "Security testing in development and acceptance",
+        "category": "Technological controls",
+        "theme": "Technology",
+        "description": "Security testing processes should be defined and implemented in the development lifecycle to ensure that applications meet the organizational information security requirements.",
+        "keywords": ["security testing", "development", "acceptance", "processes", "defined", "implemented", "lifecycle"]
+    },
+    "8.30": {
+        "name": "Outsourced system development",
+        "category": "Technological controls",
+        "theme": "Technology",
+        "description": "The organization should direct, monitor and review the activities related to outsourced system development.",
+        "keywords": ["outsourced", "system development", "direct", "monitor", "review", "activities", "organization"]
+    },
+    "8.31": {
+        "name": "Separation of development, test and production environments",
+        "category": "Technological controls",
+        "theme": "Technology",
+        "description": "Development, testing and production environments should be separated and secured.",
+        "keywords": ["separation", "development", "test", "production", "environments", "separated", "secured"]
+    },
+    "8.32": {
+        "name": "Change management",
+        "category": "Technological controls",
+        "theme": "Technology",
+        "description": "Changes to information processing facilities and information systems should be subject to change management procedures.",
+        "keywords": ["change management", "information processing", "facilities", "information systems", "procedures"]
+    },
+    "8.33": {
+        "name": "Test information",
+        "category": "Technological controls",
+        "theme": "Technology",
+        "description": "Test information should be appropriately selected, protected and managed.",
+        "keywords": ["test information", "appropriately selected", "protected", "managed", "testing"]
+    },
+    "8.34": {
+        "name": "Protection of information systems during audit testing",
+        "category": "Technological controls",
+        "theme": "Technology",
+        "description": "Audit tests and other assurance activities involving assessment of operational systems should be planned and agreed between the tester and appropriate management.",
+        "keywords": ["protection", "information systems", "audit testing", "assurance activities", "operational systems", "planned"]
     }
 } 
