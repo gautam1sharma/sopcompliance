@@ -281,6 +281,19 @@ def get_content_hash(content: str) -> str:
     """Generate a hash for content to use as cache key."""
     return hashlib.sha256(content.encode()).hexdigest()[:16]  # Use first 16 chars
 
+def cache_iso_standards(standards: Dict, ttl: int = 86400 * 7):
+    """Cache ISO standards (7-day TTL by default)."""
+    cache = get_cache_manager()
+    key = "iso_standards_27002"
+    cache.set(key, standards, ttl, disk=True)
+
+def get_cached_iso_standards() -> Optional[Dict]:
+    """Get cached ISO standards."""
+    cache = get_cache_manager()
+    key = "iso_standards_27002"
+    return cache.get(key)
+
+
 def setup_cache_cleanup_task():
     """Setup periodic cache cleanup (call this in app initialization)."""
     import threading

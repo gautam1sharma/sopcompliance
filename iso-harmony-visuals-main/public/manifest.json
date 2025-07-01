@@ -1,0 +1,41 @@
+{
+  "name": "ISO 27002 Compliance Checker",
+  "short_name": "ISO Compliance",
+  "description": "Modern ISO 27002 compliance analysis platform with AI-powered insights",
+  "theme_color": "#3b82f6",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "placeholder.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity", "security"],
+  "shortcuts": [
+    {
+      "name": "Upload Document",
+      "short_name": "Upload",
+      "description": "Quick document upload for analysis",
+      "url": "/?action=upload",
+      "icons": [{ "src": "placeholder.svg", "sizes": "96x96" }]
+    },
+    {
+      "name": "Dashboard",
+      "short_name": "Dashboard",
+      "description": "View compliance dashboard",
+      "url": "/?view=dashboard",
+      "icons": [{ "src": "placeholder.svg", "sizes": "96x96" }]
+    }
+  ]
+} 
