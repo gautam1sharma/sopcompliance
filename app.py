@@ -221,8 +221,8 @@ def create_app(config_name='default'):
                     matched_controls=compliance_results['summary']['total_controls']
                 )
                 
-                return jsonify({
-                    'message': 'File processed successfully',
+                # Store results in session for results page
+                session['analysis_results'] = {
                     'compliance_score': compliance_results['compliance_score'],
                     'summary': {
                         **compliance_results['summary'],
@@ -232,6 +232,11 @@ def create_app(config_name='default'):
                     'filename': original_filename,
                     'method_used': method,
                     'processing_time': round(analysis_time, 2)
+                }
+                
+                return jsonify({
+                    'message': 'File processed successfully',
+                    'redirect': '/results'
                 })
             
             except RequestEntityTooLarge:
@@ -244,6 +249,18 @@ def create_app(config_name='default'):
                 return jsonify({'error': 'An unexpected error occurred. Please try again.'}), 500
 
         return render_template('analyze.html')
+    
+    @app.route('/results')
+    def results():
+        """Display analysis results page."""
+        # Get results from session
+        analysis_results = session.get('analysis_results')
+        
+        if not analysis_results:
+            # Redirect to analyze page if no results
+            return render_template('analyze.html')
+        
+        return render_template('results.html', results=analysis_results)
     
     @app.route('/export', methods=['POST'])
     def export_report():
@@ -357,4 +374,4 @@ if __name__ == '__main__':
         debug=app.config.get('DEBUG', False),
         host='0.0.0.0',
         port=int(os.environ.get('PORT', 5000))
-    ) 
+    )

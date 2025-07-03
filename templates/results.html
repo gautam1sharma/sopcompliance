@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISO Compliance - Analysis Results</title>
+
+    <!-- Meta Information -->
+    <meta name="description" content="ISO 27002 compliance analysis results with detailed insights" />
+    <meta name="author" content="ISO Compliance" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+    <!-- External CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-50: #eff6ff;
+            --primary-100: #dbeafe;
+            --primary-500: #3b82f6;
+            --primary-600: #2563eb;
+            --primary-700: #1d4ed8;
+            --primary-800: #1e40af;
+            --primary-900: #1e3a8a;
+
+            --slate-50: #f8fafc;
+            --slate-100: #f1f5f9;
+            --slate-200: #e2e8f0;
+            --slate-300: #cbd5e1;
+            --slate-400: #94a3b8;
+            --slate-500: #64748b;
+            --slate-600: #475569;
+            --slate-700: #334155;
+            --slate-800: #1e293b;
+            --slate-900: #0f172a;
+
+            --success-50: #ecfdf5;
+            --success-100: #d1fae5;
+            --success-500: #10b981;
+            --success-600: #059669;
+            --warning-50: #fffbeb;
+            --warning-100: #fef3c7;
+            --warning-500: #f59e0b;
+            --warning-600: #d97706;
+            --orange-50: #fff7ed;
+            --orange-100: #ffedd5;
+            --orange-500: #f97316;
+            --orange-600: #ea580c;
+            --danger-50: #fef2f2;
+            --danger-100: #fee2e2;
+            --danger-500: #ef4444;
+            --danger-600: #dc2626;
+
+            --gradient-primary: linear-gradient(135deg, var(--primary-500), var(--primary-700));
+            --gradient-bg: linear-gradient(135deg, var(--primary-50) 0%, #e0f2fe 100%);
+            --gradient-success: linear-gradient(135deg, var(--success-500), var(--success-600));
+            --gradient-warning: linear-gradient(135deg, var(--warning-500), var(--warning-600));
+            --gradient-danger: linear-gradient(135deg, var(--danger-500), var(--danger-600));
+
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            background: var(--gradient-bg);
+            min-height: 100vh;
+            color: var(--slate-800);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Animated Background */
+        .animated-background {
+            position: fixed;
+            inset: 0;
+            z-index: -10;
+            overflow: hidden;
+        }
+
+        .floating-shape {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .shape-1 {
+            top: -10rem;
+            right: -10rem;
+            width: 24rem;
+            height: 24rem;
+            background: var(--primary-400);
+            filter: blur(3rem);
+        }
+
+        .shape-2 {
+            top: 50%;
+            left: 5rem;
+            width: 16rem;
+            height: 16rem;
+            background: var(--primary-300);
+            filter: blur(3rem);
+            animation-delay: -1s;
+        }
+
+        .shape-3 {
+            bottom: 10rem;
+            right: 5rem;
+            width: 20rem;
+            height: 20rem;
+            background: var(--primary-500);
+            filter: blur(3rem);
+            animation-delay: -2s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* Navigation */
+        .navbar {
+            background: rgba(255, 255, 255, 0.8) !important;
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--slate-800) !important;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        .navbar-brand .logo {
+            width: 2rem;
+            height: 2rem;
+            background: var(--gradient-primary);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 2s infinite;
+        }
+
+        .navbar-brand .logo i {
+            color: white;
+            font-size: 1rem;
+        }
+
+        .back-button {
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid var(--slate-300);
+            color: var(--slate-700);
+            padding: 0.5rem 1rem;
+            border-radius: 0.75rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(12px);
+            font-weight: 500;
+        }
+
+        .back-button:hover {
+            background: white;
+            border-color: var(--primary-300);
+            color: var(--primary-600);
+            transform: translateX(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Glass Card Component */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 1rem;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .glass-card-header {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1.5rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        /* Results Header */
+        .results-header {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .compliance-score-display {
+            text-align: center;
+            position: relative;
+        }
+
+        .score-circle {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 1rem;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .score-circle svg {
+            transform: rotate(-90deg);
+            width: 100%;
+            height: 100%;
+        }
+
+        .score-circle .background {
+            fill: none;
+            stroke: var(--slate-200);
+            stroke-width: 8;
+        }
+
+        .score-circle .progress {
+            fill: none;
+            stroke-width: 8;
+            stroke-linecap: round;
+            transition: stroke-dasharray 2s ease-in-out;
+        }
+
+        .score-circle .score-text {
+            position: absolute;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--slate-800);
+        }
+
+        .score-circle .score-label {
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.875rem;
+            color: var(--slate-600);
+            font-weight: 500;
+        }
+
+        /* Method Badge */
+        .method-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .method-badge.enhanced {
+            background: var(--gradient-warning);
+        }
+
+        .method-badge.semantic {
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            border-radius: 1rem 1rem 0 0;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .stat-card.success::before { background: var(--gradient-success); }
+        .stat-card.warning::before { background: var(--gradient-warning); }
+        .stat-card.orange::before { background: linear-gradient(135deg, var(--orange-500), var(--orange-600)); }
+        .stat-card.danger::before { background: var(--gradient-danger); }
+        .stat-card.primary::before { background: var(--gradient-primary); }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .stat-card.success .stat-number { color: var(--success-600); }
+        .stat-card.warning .stat-number { color: var(--warning-600); }
+        .stat-card.orange .stat-number { color: var(--orange-600); }
+        .stat-card.danger .stat-number { color: var(--danger-600); }
+        .stat-card.primary .stat-number { color: var(--primary-600); }
+
+        .stat-label {
+            color: var(--slate-600);
+            font-weight: 600;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .stat-description {
+            color: var(--slate-500);
+            font-size: 0.75rem;
+            margin-top: 0.25rem;
+        }
+
+        /* Controls Section */
+        .controls-section {
+            margin-top: 3rem;
+        }
+
+        .controls-filter {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .filter-buttons {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1rem;
+            border: 2px solid var(--slate-300);
+            background: white;
+            color: var(--slate-700);
+            border-radius: 0.75rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .filter-btn:hover {
+            border-color: var(--primary-400);
+            background: var(--primary-50);
+            color: var(--primary-700);
+        }
+
+        .filter-btn.active {
+            border-color: var(--primary-500);
+            background: var(--primary-500);
+            color: white;
+        }
+
+        .controls-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .control-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .control-card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+        }
+
+        .control-card.high-confidence::before { background: var(--success-500); }
+        .control-card.medium-confidence::before { background: var(--warning-500); }
+        .control-card.low-confidence::before { background: var(--orange-500); }
+        .control-card.non-compliant::before { background: var(--danger-500); }
+
+        .control-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .control-header {
+            display: flex;
+            justify-content: between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .control-id {
+            font-size: 0.875rem;
+            font-weight: 700;
+            color: var(--primary-600);
+            background: var(--primary-50);
+            padding: 0.25rem 0.75rem;
+            border-radius: 0.5rem;
+            margin-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .control-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--slate-800);
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+
+        .control-status {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .status-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .status-badge.high-confidence {
+            background: var(--success-100);
+            color: var(--success-700);
+        }
+
+        .status-badge.medium-confidence {
+            background: var(--warning-100);
+            color: var(--warning-700);
+        }
+
+        .status-badge.low-confidence {
+            background: var(--orange-100);
+            color: var(--orange-700);
+        }
+
+        .status-badge.non-compliant {
+            background: var(--danger-100);
+            color: var(--danger-700);
+        }
+
+        .control-score {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-left: auto;
+        }
+
+        .control-score.high { color: var(--success-600); }
+        .control-score.medium { color: var(--warning-600); }
+        .control-score.low { color: var(--orange-600); }
+        .control-score.none { color: var(--danger-600); }
+
+        .control-evidence {
+            background: var(--slate-50);
+            border-radius: 0.75rem;
+            padding: 1rem;
+            margin-top: 1rem;
+            border-left: 3px solid var(--primary-400);
+        }
+
+        .evidence-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--slate-600);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .evidence-text {
+            font-size: 0.875rem;
+            color: var(--slate-700);
+            line-height: 1.5;
+            font-style: italic;
+        }
+
+        /* Action Buttons */
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary-custom {
+            background: var(--gradient-primary);
+            border: none;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 0.75rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-primary-custom:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+            color: white;
+        }
+
+        .btn-outline-custom {
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid var(--slate-300);
+            color: var(--slate-700);
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 0.75rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(12px);
+        }
+
+        .btn-outline-custom:hover {
+            background: white;
+            border-color: var(--primary-300);
+            color: var(--primary-600);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Animations */
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        @keyframes fade-in {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slide-in-left {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .animate-fade-in { animation: fade-in 0.6s ease-out; }
+        .animate-fade-in-delay { animation: fade-in 0.6s ease-out 0.2s both; }
+        .animate-slide-in-left { animation: slide-in-left 0.6s ease-out; }
+
+        .staggered-fade {
+            opacity: 0;
+            animation: fade-in 0.6s ease-out forwards;
+        }
+
+        .staggered-fade:nth-child(1) { animation-delay: 0.1s; }
+        .staggered-fade:nth-child(2) { animation-delay: 0.2s; }
+        .staggered-fade:nth-child(3) { animation-delay: 0.3s; }
+        .staggered-fade:nth-child(4) { animation-delay: 0.4s; }
+        .staggered-fade:nth-child(5) { animation-delay: 0.5s; }
+        .staggered-fade:nth-child(6) { animation-delay: 0.6s; }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .controls-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 1rem;
+            }
+            
+            .score-circle {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .score-circle .score-text {
+                font-size: 2rem;
+            }
+            
+            .filter-buttons {
+                justify-content: center;
+            }
+            
+            .action-buttons {
+                justify-content: center;
+            }
+        }
+
+        /* Loading States */
+        .loading-shimmer {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+        }
+
+        @keyframes loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="animated-background">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <div class="logo">
+                    <i class="fas fa-shield-check"></i>
+                </div>
+                <span>ISO Compliance</span>
+            </a>
+            <div class="navbar-nav ms-auto">
+                <a href="/analyze" class="back-button">
+                    <i class="fas fa-arrow-left"></i>
+                    New Analysis
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container py-4">
+        <!-- Results Header -->
+        <div class="results-header animate-fade-in">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <div class="method-badge {{ results.method_used or 'enhanced' }}">
+                        <i class="fas fa-{{ 'brain' if results.method_used == 'semantic' else 'bolt' }}"></i>
+                        {{ results.method_used.title() if results.method_used else 'Enhanced' }} Analysis
+                    </div>
+                    <h1 class="display-6 fw-bold text-slate-800 mb-3">
+                        <i class="fas fa-chart-line me-3"></i>
+                        Analysis Results
+                    </h1>
+                    <p class="lead text-slate-600 mb-0">
+                        Document: <strong>{{ results.filename or 'Unknown Document' }}</strong>
+                    </p>
+                    <p class="text-slate-500 small">
+                        Analyzed on {{ moment().format('MMMM Do, YYYY [at] h:mm A') if moment else 'Recently' }}
+                        {% if results.processing_time %}
+                        • Processing time: {{ "%.2f"|format(results.processing_time) }}s
+                        {% endif %}
+                    </p>
+                </div>
+                <div class="col-lg-4">
+                    <div class="compliance-score-display">
+                        <div class="score-circle">
+                            <svg viewBox="0 0 120 120">
+                                <circle class="background" cx="60" cy="60" r="54"></circle>
+                                <circle class="progress" cx="60" cy="60" r="54" 
+                                        stroke="url(#scoreGradient)"
+                                        stroke-dasharray="0 339.292"
+                                        data-score="{{ results.compliance_score or 0 }}"></circle>
+                                <defs>
+                                    <linearGradient id="scoreGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        {% if (results.compliance_score or 0) >= 80 %}
+                                        <stop offset="0%" style="stop-color:#10b981"/>
+                                        <stop offset="100%" style="stop-color:#059669"/>
+                                        {% elif (results.compliance_score or 0) >= 60 %}
+                                        <stop offset="0%" style="stop-color:#f59e0b"/>
+                                        <stop offset="100%" style="stop-color:#d97706"/>
+                                        {% else %}
+                                        <stop offset="0%" style="stop-color:#ef4444"/>
+                                        <stop offset="100%" style="stop-color:#dc2626"/>
+                                        {% endif %}
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <div class="score-text">{{ "%.0f"|format(results.compliance_score or 0) }}%</div>
+                            <div class="score-label">Compliance Score</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Statistics Grid -->
+        <div class="stats-grid animate-fade-in-delay">
+            <div class="stat-card success staggered-fade">
+                <span class="stat-number">{{ results.summary.high_confidence or 0 }}</span>
+                <div class="stat-label">High Confidence</div>
+                <div class="stat-description">Strong evidence found</div>
+            </div>
+            <div class="stat-card warning staggered-fade">
+                <span class="stat-number">{{ results.summary.medium_confidence or 0 }}</span>
+                <div class="stat-label">Medium Confidence</div>
+                <div class="stat-description">Moderate evidence found</div>
+            </div>
+            <div class="stat-card orange staggered-fade">
+                <span class="stat-number">{{ results.summary.low_confidence or 0 }}</span>
+                <div class="stat-label">Low Confidence</div>
+                <div class="stat-description">Limited evidence found</div>
+            </div>
+            <div class="stat-card danger staggered-fade">
+                <span class="stat-number">{{ results.summary.non_compliant or 0 }}</span>
+                <div class="stat-label">Non-Compliant</div>
+                <div class="stat-description">No evidence found</div>
+            </div>
+            <div class="stat-card primary staggered-fade">
+                <span class="stat-number">{{ results.summary.total_controls or 0 }}</span>
+                <div class="stat-label">Total Controls</div>
+                <div class="stat-description">ISO 27002 controls</div>
+            </div>
+            {% if results.summary.document_length %}
+            <div class="stat-card primary staggered-fade">
+                <span class="stat-number">{{ "{:,}".format(results.summary.document_length) }}</span>
+                <div class="stat-label">Characters</div>
+                <div class="stat-description">Document length</div>
+            </div>
+            {% endif %}
+        </div>
+
+        <!-- Controls Section -->
+        <div class="controls-section">
+            <div class="glass-card animate-slide-in-left">
+                <div class="glass-card-header">
+                    <i class="fas fa-list-check"></i>
+                    <span>Detailed Control Analysis</span>
+                </div>
+                
+                <!-- Filter Controls -->
+                <div class="controls-filter">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h6 class="mb-0 fw-bold text-slate-700">Filter by Status:</h6>
+                        <span class="text-slate-500 small" id="controlCount">
+                            Showing {{ results.details|length if results.details else 0 }} controls
+                        </span>
+                    </div>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">
+                            <i class="fas fa-list"></i>
+                            All Controls
+                        </button>
+                        <button class="filter-btn" data-filter="high-confidence">
+                            <i class="fas fa-check-circle text-success"></i>
+                            High Confidence
+                        </button>
+                        <button class="filter-btn" data-filter="medium-confidence">
+                            <i class="fas fa-check-circle text-warning"></i>
+                            Medium Confidence
+                        </button>
+                        <button class="filter-btn" data-filter="low-confidence">
+                            <i class="fas fa-exclamation-circle text-warning"></i>
+                            Low Confidence
+                        </button>
+                        <button class="filter-btn" data-filter="non-compliant">
+                            <i class="fas fa-times-circle text-danger"></i>
+                            Non-Compliant
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Controls Grid -->
+                <div class="p-4">
+                    <div class="controls-grid" id="controlsGrid">
+                        {% for detail in results.details %}
+                        <div class="control-card {{ detail.confidence or 'non-compliant' }}-confidence" 
+                             data-status="{{ detail.confidence or 'non-compliant' }}-confidence">
+                            <div class="control-header">
+                                <div>
+                                    <div class="control-id">{{ detail.id or detail.control_id }}</div>
+                                    <h6 class="control-title">{{ detail.name or detail.control_name }}</h6>
+                                </div>
+                            </div>
+                            
+                            <div class="control-status">
+                                <span class="status-badge {{ detail.confidence or 'non-compliant' }}-confidence">
+                                    {% if detail.confidence == 'high' %}
+                                        <i class="fas fa-check-circle me-1"></i>High Confidence
+                                    {% elif detail.confidence == 'medium' %}
+                                        <i class="fas fa-check-circle me-1"></i>Medium Confidence
+                                    {% elif detail.confidence == 'low' %}
+                                        <i class="fas fa-exclamation-circle me-1"></i>Low Confidence
+                                    {% else %}
+                                        <i class="fas fa-times-circle me-1"></i>Non-Compliant
+                                    {% endif %}
+                                </span>
+                                <span class="control-score {{ detail.confidence or 'none' }}">
+                                    {{ "%.0f"|format((detail.score or 0) * 100) }}%
+                                </span>
+                            </div>
+
+                            {% if detail.rationale %}
+                            <div class="control-evidence">
+                                <div class="evidence-label">Evidence Found:</div>
+                                <div class="evidence-text">
+                                    {{ detail.rationale[:200] }}{% if detail.rationale|length > 200 %}...{% endif %}
+                                </div>
+                            </div>
+                            {% endif %}
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons animate-fade-in">
+            <a href="/analyze" class="btn-primary-custom">
+                <i class="fas fa-plus"></i>
+                New Analysis
+            </a>
+            <button class="btn-outline-custom" onclick="exportReport()">
+                <i class="fas fa-download"></i>
+                Export Report
+            </button>
+            <button class="btn-outline-custom" onclick="window.print()">
+                <i class="fas fa-print"></i>
+                Print Results
+            </button>
+            <a href="/" class="btn-outline-custom">
+                <i class="fas fa-home"></i>
+                Back to Home
+            </a>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate compliance score circle
+            const progressCircle = document.querySelector('.progress');
+            const scoreValue = parseFloat(progressCircle.dataset.score) || 0;
+            const circumference = 2 * Math.PI * 54; // radius = 54
+            const offset = circumference - (scoreValue / 100) * circumference;
+            
+            setTimeout(() => {
+                progressCircle.style.strokeDasharray = `${circumference - offset} ${circumference}`;
+            }, 500);
+
+            // Filter functionality
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const controlCards = document.querySelectorAll('.control-card');
+            const controlCount = document.getElementById('controlCount');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    const filter = button.dataset.filter;
+                    let visibleCount = 0;
+
+                    controlCards.forEach(card => {
+                        if (filter === 'all' || card.dataset.status === filter) {
+                            card.style.display = 'block';
+                            visibleCount++;
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+
+                    // Update count
+                    controlCount.textContent = `Showing ${visibleCount} controls`;
+                });
+            });
+
+            // Add staggered animation to control cards
+            controlCards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.1}s`;
+                card.classList.add('staggered-fade');
+            });
+        });
+
+        function exportReport() {
+            // Placeholder for export functionality
+            alert('Export functionality will be implemented soon!');
+        }
+
+        // Add smooth scrolling for any anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
